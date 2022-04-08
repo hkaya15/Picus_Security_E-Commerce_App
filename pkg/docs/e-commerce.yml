@@ -1,0 +1,95 @@
+swagger: "2.0"
+info:
+  title: "E-commerce App"
+  version: "1.0.0"
+  description: "This is a sample E-commerce server. "
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "kayahuseyin15@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+basePath: "/api/v1/e-commerce-api"
+tags:
+  - name: "user"
+    description: "Everything about User"
+schemes:
+  - "https"
+  - "http"
+paths:
+  /user/signup:
+    post:
+      tags:
+        - "user"
+      summary: "Signup user"
+      description: "It works to create new user"
+      operationId: "signupUser"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "User object that needs to be added to the app"
+          required: true
+          schema:
+            $ref: "#/definitions/SignUp"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponseSignUp"
+          headers:
+            X-Rate-Limit:
+              type: "integer"
+              format: "int32"
+              description: "calls per hour allowed by the user"
+            X-Expires-After:
+              type: "string"
+              format: "date-time"
+              description: "date in UTC when token expires"
+        "405":
+          description: "Invalid input"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
+
+definitions:
+  SignUp:
+    type: "object"
+    required:
+      - email
+      - password
+      - firstname
+      - lastname
+    properties:
+      firstname:
+        type: "string"
+      lastname:
+        type: "string"
+      email:
+        type: "string"
+      password:
+        type: "string"
+  ApiResponseSignUp:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      token:
+        type: "string"
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+      message:
+        type: "string"
+      details:
+        description: a (key, value) map.
+        type: object
+      

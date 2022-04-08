@@ -1,0 +1,376 @@
+2022-04-08T17:24:43+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"c1362726-d911-40ca-96ae-751b80d1233a","FirstName":"H","LastName":"K","Email":"","Password":"12345","Roles":"st"}}
+2022-04-08T21:16:47+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"b5915ed2-4f97-4f62-86e8-f05aab63baae","FirstName":"H","LastName":"K","Email":"","Password":"12345","IsAdmin":false,"Order":null}}
+2022-04-08T21:18:58+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"8bb97d41-eb1c-4d64-b07f-90ffdae24e1e","FirstName":"H","LastName":"K","Email":"","Password":"12345","IsAdmin":false,"Order":null}}
+2022-04-08T21:21:19+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"85725585-e87f-49c8-a2ea-9fb971cc296c","FirstName":"H","LastName":"K","Email":"","Password":"12345","IsAdmin":false,"Order":null}}
+2022-04-08T21:24:30+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"f195f45d-9e0c-416d-ba1b-16665421b860","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null}}
+2022-04-08T21:25:08+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"d7e084da-dcb9-4fbf-bfe6-c731392f1074","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null}}
+2022-04-08T21:25:08+03:00	[31mERROR[0m	repository/userrepo.go:30	user.repo.Save failed to create user	{"error": "ERROR: relation \"users\" does not exist (SQLSTATE 42P01)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:30
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:22
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-08T21:26:20+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"5c885369-8e36-412f-ac7c-deaa9b972c56","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null}}
+2022-04-08T21:26:20+03:00	[31mERROR[0m	repository/userrepo.go:30	user.repo.Save failed to create user	{"error": "ERROR: relation \"users\" does not exist (SQLSTATE 42P01)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:30
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:22
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:40
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-08T21:27:15+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"42c5c167-ae65-4a37-86f8-4ba07d4fb1da","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false}}
+2022-04-09T00:06:47+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"c42873e6-e710-41e9-acf1-f21186f212d6","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:09:22+03:00	[35mDEBUG[0m	repository/userrepo.go:28	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"09ba3d33-1f18-4f1b-a9bd-d816b0834fb0","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:24:00+03:00	[35mDEBUG[0m	repository/userrepo.go:24	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:24:00+03:00	[31mERROR[0m	repository/userrepo.go:26	user.repo.Check failed to user e-mail	{"error": "unsupported data type: users: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:26
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:27:11+03:00	[35mDEBUG[0m	repository/userrepo.go:24	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:27:11+03:00	[31mERROR[0m	repository/userrepo.go:26	user.repo.Check failed to user e-mail	{"error": "unsupported data type: users: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:26
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:27:33+03:00	[35mDEBUG[0m	repository/userrepo.go:24	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:27:33+03:00	[31mERROR[0m	repository/userrepo.go:26	user.repo.Check failed to user e-mail	{"error": "unsupported data type: users: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:26
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:28:23+03:00	[35mDEBUG[0m	repository/userrepo.go:26	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:28:23+03:00	[31mERROR[0m	repository/userrepo.go:28	user.repo.Check failed to user e-mail	{"error": "unsupported data type: users: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:28
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:30:27+03:00	[35mDEBUG[0m	repository/userrepo.go:26	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:30:27+03:00	[31mERROR[0m	repository/userrepo.go:28	user.repo.Check failed to user e-mail	{"error": "unsupported data type: users: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:28
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:32:55+03:00	[35mDEBUG[0m	repository/userrepo.go:26	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:32:55+03:00	[31mERROR[0m	repository/userrepo.go:28	user.repo.Check failed to user e-mail	{"error": "unsupported data type: 0x140000b01f8: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:28
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:41:37+03:00	[35mDEBUG[0m	repository/userrepo.go:26	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:41:37+03:00	[31mERROR[0m	repository/userrepo.go:28	user.repo.Check failed to user e-mail	{"error": "ERROR: syntax error at or near \"AND\" (SQLSTATE 42601)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:28
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:42:21+03:00	[35mDEBUG[0m	repository/userrepo.go:26	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:42:21+03:00	[31mERROR[0m	repository/userrepo.go:28	user.repo.Check failed to user e-mail	{"error": "ERROR: syntax error at or near \"AND\" (SQLSTATE 42601)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:28
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:46:34+03:00	[35mDEBUG[0m	repository/userrepo.go:26	user.repo.check	{"mail": "kayahuseyin15@gmail.com"}
+2022-04-09T00:46:34+03:00	[31mERROR[0m	repository/userrepo.go:28	user.repo.Check failed to user e-mail	{"error": "unsupported data type: 0x140003d5b08: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Check
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:28
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).CheckUser
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:18
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:35
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T00:49:36+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"b1cc0040-070d-4b3d-97d9-bee7336e4d41","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:49:50+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"a8a939be-8739-416a-8e32-68f0df98b2f7","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:50:17+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"af3eef5d-8202-4ffe-bb82-e2a09a8680c7","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:50:19+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"f918779e-507f-4fc3-b4c6-9c140bc6b611","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:50:20+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"bde5d5fd-4ede-409e-84a0-1613096b38fc","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:50:22+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"b4ac1538-ef97-4855-83cc-bef0f783b3ec","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:54:59+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"06fe4bd5-0ffd-4b68-a616-d3df6d92b306","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T00:55:00+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"4ed84a82-3366-4129-90d1-e1c223ba7bf9","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"12345","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:37:22+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"e4a2df73-cbf8-4c58-97b3-e418c40d8e12","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:39:06+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"7bfc4b23-c2df-4ff1-bc7d-1aabec806fab","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:39:09+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"027c4ef0-0cd0-47da-b17e-5cc3096c6bd2","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:39:52+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"212c944a-c927-4144-92b1-b9d7ebd8b393","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:39:52+03:00	[31mERROR[0m	repository/userrepo.go:43	user.repo.Save failed to create user	{"error": "ERROR: relation \"users\" does not exist (SQLSTATE 42P01)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:43
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:22
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:57
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T01:40:42+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"6ee311e4-8393-43c0-99e1-bc6a58d2e6d3","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:40:42+03:00	[31mERROR[0m	repository/userrepo.go:43	user.repo.Save failed to create user	{"error": "ERROR: relation \"users\" does not exist (SQLSTATE 42P01)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:43
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).Save
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:22
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:57
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-09T01:43:15+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"084fc97b-5544-4b3d-a82b-6fd11e53b7b1","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:44:25+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"111d0d71-7ff0-47ae-854c-e023adea1b32","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:45:18+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"33bc4123-2725-4169-b0a7-c2e50639fda5","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:47:26+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"0eb9eb48-09a8-429e-821f-5b25c8d38105","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:47:28+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"21aae013-1118-4e63-9ea4-01a8b89e0da2","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:47:41+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"7c6e1e2b-769e-4a10-ba49-fcb8133c7e1c","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:47:59+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"727efacd-3cde-4639-b7ec-0aeb51910efd","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T01:48:13+03:00	[35mDEBUG[0m	repository/userrepo.go:41	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"6303e193-6313-41d2-8e17-b3f7d9c7ef59","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"fAl123.","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:03:43+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"fc7b9793-ac9f-427a-b359-da68b709a644","FirstName":"H","LastName":"K","Email":"kaya@com","Password":"123A5632.l","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:04:35+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"1a0434ed-41bc-4d9c-ac1a-05121d0dbac1","FirstName":"H","LastName":"K","Email":"kaya32434@com","Password":"123A5632.l","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:04:57+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"26173681-acfc-4b45-8e36-2560d1ca30dd","FirstName":"H","LastName":"K","Email":"kaya32434@com","Password":"123A5632.l","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:06:00+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"764563b7-855b-4abe-82b1-cf22a65c880d","FirstName":"H","LastName":"K","Email":"kaya32434@com","Password":"123A5632.l","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:06:28+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"532cfdef-4b11-48e8-a350-6e43dd19fbe2","FirstName":"H","LastName":"K","Email":"kayamik@com","Password":"Ab.45sagh","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:06:52+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"5504c0be-5e84-46ea-9673-f3cdc8674fad","FirstName":"H","LastName":"K","Email":"kayamik@com","Password":"Ab.45sagy","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:23:41+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"dc3ebe25-8cdd-4291-922e-99ef801ac389","FirstName":"H","LastName":"K","Email":"kayamik@com","Password":"Ab.45sagy","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:23:57+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"a180538e-8d26-4ea0-8dad-54cc355dc18d","FirstName":"H","LastName":"K","Email":"kayamikpp@com","Password":"Ab.45sagy","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:23:57+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"fd715627-2453-4184-a05a-30dae42aa298","FirstName":"H","LastName":"K","Email":"kayamikpp@com","Password":"Ab.45sagy","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:24:01+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"f744c55d-8b59-4fea-be58-e722b2c30d99","FirstName":"H","LastName":"K","Email":"kayamikpp@com","Password":"Ab.45sagy","IsAdmin":false,"Order":null,"OrderId":""}}
+2022-04-09T02:24:25+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"58d23383-5353-4865-ba87-9d24dbe3374b","FirstName":"H","LastName":"K","Email":"kaya@gmail.com","Password":"Ab.45sagy","IsAdmin":false,"Order":null,"OrderId":""}}
