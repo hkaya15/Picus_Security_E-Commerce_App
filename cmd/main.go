@@ -1,8 +1,15 @@
 package main
 
 import (
+	"fmt"
 	"log"
+	"net/http"
+	"time"
 
+	"github.com/gin-gonic/gin"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/db"
 	logger "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/log"
@@ -26,6 +33,24 @@ func main() {
 	if err != nil {
 		zap.L().Fatal("DB cannot init", zap.Error(err))
 	}
-	log.Println(db)
-	
+
+	g := gin.Default()
+
+	srv := &http.Server{
+		Addr:         fmt.Sprintf(":%s", cfg.ServerConfig.Port),
+		Handler:      g,
+		ReadTimeout:  time.Duration(cfg.ServerConfig.ReadTimeoutSecs * int64(time.Second)),
+		WriteTimeout: time.Duration(cfg.ServerConfig.WriteTimeoutSecs * int64(time.Second)),
+	}
+
+	rootRouter := g.Group(cfg.ServerConfig.RoutePrefix)
+	authRooter := rootRouter.Group("/user")
+
+	userRepo := NewUserRepository(db)
+	userService := NewUserService(userRepo)
+	NewUserHandler(authRooter, userService, cfg)
+
+	srv.ListenAndServe()
+
 }
+
