@@ -12,6 +12,7 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/db"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/graceful"
 	logger "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/log"
 	"go.uber.org/zap"
 )
@@ -50,7 +51,12 @@ func main() {
 	userService := NewUserService(userRepo)
 	NewUserHandler(authRooter, userService, cfg)
 
-	srv.ListenAndServe()
+	go func() {
+		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			zap.L().Fatal("main.listenandserve: ",zap.Error(err))
+		}
+	}()
+	zap.L().Debug("Server started")
+	ShutdownGin(srv, time.Duration(cfg.ServerConfig.TimeoutSecs*int64(time.Second)))
 
 }
-
