@@ -35,21 +35,12 @@ paths:
             $ref: "#/definitions/SignUp"
       responses:
         "200":
-          description: "successful operation"
+          description: "Successful Operation"
           schema:
             type: "string"
             $ref: "#/definitions/ApiResponseSignUp"
-          headers:
-            X-Rate-Limit:
-              type: "integer"
-              format: "int32"
-              description: "calls per hour allowed by the user"
-            X-Expires-After:
-              type: "string"
-              format: "date-time"
-              description: "date in UTC when token expires"
-        "405":
-          description: "Invalid input"
+        "400":
+          description: "Bad Request"
           schema:
             $ref: "#/definitions/ApiResponse"
         default:
