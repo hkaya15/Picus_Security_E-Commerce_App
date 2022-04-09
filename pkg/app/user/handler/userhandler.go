@@ -49,7 +49,7 @@ func (u *UserHandler) signup(c *gin.Context) {
 		c.JSON(ErrorResponse(err))
 		return
 	}
-	c.JSON(http.StatusOK, APIResponseSignUp{Code: http.StatusOK, Token: user.UserId})
+	c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: user.UserId})
 
 }
 
