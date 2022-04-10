@@ -1171,3 +1171,30 @@ net/http.(*conn).serve
 2022-04-10T03:07:05+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"f8efee79-1f1b-4a48-b0fe-89bdeb076695","FirstName":"H","LastName":"K","Email":"meryemana2@gmail.com","Password":"$2a$14$5dHA88LSgWig0cb5XUUTbeANG0pij2oVIOJVtYvT69idLuDo0bnEm","IsAdmin":false,"Order":null}}
 2022-04-10T03:08:22+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-10T03:08:22+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-10T03:17:48+03:00	[35mDEBUG[0m	cmd/main.go:59	Server started
+2022-04-10T03:17:55+03:00	[35mDEBUG[0m	repository/userrepo.go:33	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"25d9b9e6-15c4-4296-b356-7826fde265e7","FirstName":"H","LastName":"K","Email":"meryemana2@gmail.com","Password":"Ab.45mer","IsAdmin":false,"Order":null}}
+2022-04-10T03:17:55+03:00	[31mERROR[0m	handler/userhandler.go:49	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:49
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-10T03:18:02+03:00	[35mDEBUG[0m	repository/userrepo.go:33	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"87925405-5dbf-462e-9b5f-308be909fc1c","FirstName":"H","LastName":"K","Email":"meryemana3@gmail.com","Password":"Ab.45mer","IsAdmin":false,"Order":null}}
+2022-04-10T03:18:03+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"7d35a461-20e9-4502-b402-88823995b234","FirstName":"H","LastName":"K","Email":"meryemana3@gmail.com","Password":"$2a$14$M17xh1nDH.yOq1XbRcOzT.WFjdh739usW9G2EZ78.AFmDK13aS0EC","IsAdmin":false,"Order":null}}
+2022-04-10T03:18:14+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-10T03:18:14+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting

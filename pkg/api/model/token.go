@@ -18,10 +18,10 @@ import (
 type Token struct {
 
 	// access token
-	AccessToken string `json:"access token,omitempty"`
+	AccessToken string `json:"access_token,omitempty"`
 
 	// refresh token
-	RefreshToken string `json:"refresh token,omitempty"`
+	RefreshToken string `json:"refresh_token,omitempty"`
 }
 
 // Validate validates this token

@@ -77,9 +77,9 @@ definitions:
   Token:
     type: "object"
     properties:
-      access token:
+      access_token:
         type: "string"
-      refresh token:
+      refresh_token:
         type: "string"
   ApiResponse:
     type: "object"
