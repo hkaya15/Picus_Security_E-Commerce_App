@@ -14,6 +14,5 @@ type User struct {
 	Email     string
 	Password  string
 	IsAdmin   bool `gorm:"default:false"`
-	Order []Order `gorm:"foreignKey:OrderId; references: OrderId"`
-	OrderId string
+	Order []Order 
 }

@@ -14,6 +14,7 @@ func ResponseToUser(u *SignUp) *User {
 		Password:  *u.Password,
 		Email:  *u.Email,
 		IsAdmin: false,
+		Order: nil,
 	}
 }
 

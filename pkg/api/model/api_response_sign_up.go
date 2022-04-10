@@ -8,6 +8,7 @@ package model
 import (
 	"context"
 
+	"github.com/go-openapi/errors"
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 )
@@ -21,16 +22,69 @@ type APIResponseSignUp struct {
 	Code int32 `json:"code,omitempty"`
 
 	// token
-	Token string `json:"token,omitempty"`
+	Token *Token `json:"token,omitempty"`
 }
 
 // Validate validates this Api response sign up
 func (m *APIResponseSignUp) Validate(formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.validateToken(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
 	return nil
 }
 
-// ContextValidate validates this Api response sign up based on context it is used
+func (m *APIResponseSignUp) validateToken(formats strfmt.Registry) error {
+	if swag.IsZero(m.Token) { // not required
+		return nil
+	}
+
+	if m.Token != nil {
+		if err := m.Token.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("token")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("token")
+			}
+			return err
+		}
+	}
+
+	return nil
+}
+
+// ContextValidate validate this Api response sign up based on the context it is used
 func (m *APIResponseSignUp) ContextValidate(ctx context.Context, formats strfmt.Registry) error {
+	var res []error
+
+	if err := m.contextValidateToken(ctx, formats); err != nil {
+		res = append(res, err)
+	}
+
+	if len(res) > 0 {
+		return errors.CompositeValidationError(res...)
+	}
+	return nil
+}
+
+func (m *APIResponseSignUp) contextValidateToken(ctx context.Context, formats strfmt.Registry) error {
+
+	if m.Token != nil {
+		if err := m.Token.ContextValidate(ctx, formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("token")
+			} else if ce, ok := err.(*errors.CompositeError); ok {
+				return ce.ValidateName("token")
+			}
+			return err
+		}
+	}
+
 	return nil
 }
 

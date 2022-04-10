@@ -28,13 +28,12 @@ func (u *UserRepository) Save(user *User) (*User, error) {
 }
 
 func (u *UserRepository) CheckUser(user *User) (bool,error){
+	var us *User
 	var exists bool = false
-	zap.L().Debug("user.repo.checkuser", zap.Reflect("user", user))
-	if err := u.db.Raw("SELECT EXISTS(SELECT 1 FROM users WHERE email = ?)",
-    user.Email).Scan(&exists).Error; err != nil {
-		zap.L().Error("user.repo.CheckUser failed to check user", zap.Error(err))
-		return false, err
+	zap.L().Debug("user.repo.checkuser", zap.Reflect("user", user))	
+	r:=u.db.Where("email=?",user.Email).Limit(1).Find(&us)
+	if r.RowsAffected>0{
+		exists=true
 	}
-	
 	return exists, nil
 }

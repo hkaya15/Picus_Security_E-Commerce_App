@@ -10,6 +10,9 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
+	."github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/jwt"
+
+	"go.uber.org/zap"
 )
 
 type UserHandler struct {
@@ -26,31 +29,43 @@ func NewUserHandler(r *gin.RouterGroup, u *UserService, cfg *config.Config) {
 func (u *UserHandler) signup(c *gin.Context) {
 	var req SignUp
 	if err := c.Bind(&req); err != nil {
+		zap.L().Error("user.handler.signup", zap.Error(err))
 		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, "Check your request body", nil)))
 		return
 	}
 
 	if err := req.Validate(strfmt.NewFormats()); err != nil {
+		zap.L().Error("user.handler.signup", zap.Error(err))
 		c.JSON(ErrorResponse(err))
 		return
 	}
-	res,err:= u.userService.CheckUser(ResponseToUser(&req))
-	if err!=nil{
+	res, err := u.userService.CheckUser(ResponseToUser(&req))
+	if err != nil {
+		zap.L().Error("user.handler.signup", zap.Error(err))
 		c.JSON(ErrorResponse(err))
 		return
 	}
-	if res{
+	if res {
+		zap.L().Error("user.handler.signup: User Already exist")
 		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, "User already exists", nil)))
 		return
 	}
-	
+
 	user, err := u.userService.Save(ResponseToUser(&req))
 	if err != nil {
+		zap.L().Error("user.handler.signup", zap.Error(err))
 		c.JSON(ErrorResponse(err))
 		return
 	}
-	c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: user.UserId})
 
+	tkn, err := GenerateToken(user, u.cfg)
+	if err!=nil{
+		zap.L().Error("user.handler.signup: generatetoken", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+
+	c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
 }
 
 func (u *UserHandler) Migrate() {

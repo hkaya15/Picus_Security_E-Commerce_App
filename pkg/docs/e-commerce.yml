@@ -72,6 +72,14 @@ definitions:
         type: "integer"
         format: "int32"
       token:
+        type: "object"
+        $ref: "#/definitions/Token"
+  Token:
+    type: "object"
+    properties:
+      access token:
+        type: "string"
+      refresh token:
         type: "string"
   ApiResponse:
     type: "object"
