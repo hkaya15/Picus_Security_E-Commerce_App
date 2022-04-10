@@ -11,6 +11,7 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/helper"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/jwt"
 
 	"go.uber.org/zap"
@@ -25,6 +26,7 @@ func NewUserHandler(r *gin.RouterGroup, u *UserService, cfg *config.Config) {
 	h := &UserHandler{userService: u, cfg: cfg}
 	u.Migrate()
 	r.POST("/signup", h.signup)
+	r.GET("/login", h.login)
 }
 
 func (u *UserHandler) signup(c *gin.Context) {
@@ -66,8 +68,6 @@ func (u *UserHandler) signup(c *gin.Context) {
 		return
 	}
 
-	
-
 	var hashKey = []byte("very-secret")
 	var s = securecookie.New(hashKey, nil)
 	encoded, err := s.Encode("token", tkn)
@@ -84,8 +84,36 @@ func (u *UserHandler) signup(c *gin.Context) {
 
 		c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
 
-
 	}
+}
+
+func (u *UserHandler) login(c *gin.Context) {
+	value, err := DecodeToken(c.Request)
+	if err != nil {
+		zap.L().Error("user.handler.login: decodetoken", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	tokendetails, err := VerifyACToken(value, u.cfg)
+	if err != nil {
+		zap.L().Error("user.handler.login: verifyactoken", zap.Error(err))
+		if err.Error() == "Token is expired" {
+			rftokendetails, err := VerifyRFToken(value, u.cfg)
+			if err != nil {
+				zap.L().Error("user.handler.login: verifyrftoken", zap.Error(err))
+				c.JSON(ErrorResponse(err))
+				return
+			}
+			c.JSON(http.StatusOK, rftokendetails)
+			return
+
+		}
+		c.JSON(ErrorResponse(err))
+		return
+	}
+
+	c.JSON(http.StatusOK, tokendetails)
+
 }
 
 func (u *UserHandler) Migrate() {

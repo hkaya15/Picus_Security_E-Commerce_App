@@ -1,9 +1,12 @@
 package helper
 
 import (
+	"net/http"
 	"net/mail"
 	"unicode"
 
+	"github.com/gorilla/securecookie"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -41,4 +44,17 @@ func VerifyPassword(s string) bool {
 func HashPassword(password string) (string, error) {
 	bytes, err := bcrypt.GenerateFromPassword([]byte(password), 14)
 	return string(bytes), err
+}
+
+func DecodeToken(req *http.Request) (*Token,error){
+	var hashKey = []byte("very-secret")
+	var s = securecookie.New(hashKey, nil)
+	var value Token
+	if cookie, err := req.Cookie("token"); err == nil {
+		if err = s.Decode("token", cookie.Value, &value); err != nil {
+			return nil,err
+		}
+		
+	}
+	return &value,nil
 }
