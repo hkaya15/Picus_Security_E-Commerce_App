@@ -5,12 +5,13 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-openapi/strfmt"
+	"github.com/gorilla/securecookie"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
-	."github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/jwt"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/jwt"
 
 	"go.uber.org/zap"
 )
@@ -59,16 +60,34 @@ func (u *UserHandler) signup(c *gin.Context) {
 	}
 
 	tkn, err := GenerateToken(user, u.cfg)
-	if err!=nil{
+	if err != nil {
 		zap.L().Error("user.handler.signup: generatetoken", zap.Error(err))
 		c.JSON(ErrorResponse(err))
 		return
 	}
 
-	c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
+	
+
+	var hashKey = []byte("very-secret")
+	var s = securecookie.New(hashKey, nil)
+	encoded, err := s.Encode("token", tkn)
+	if err == nil {
+		cookie := &http.Cookie{
+			Name:     "token",
+			Value:    encoded,
+			Path:     "/",
+			Domain:   "127.0.0.1",
+			Secure:   false,
+			HttpOnly: false,
+		}
+		http.SetCookie(c.Writer, cookie)
+
+		c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
+
+
+	}
 }
 
 func (u *UserHandler) Migrate() {
 	u.userService.Migrate()
-
 }

@@ -36,6 +36,7 @@ func main() {
 	}
 
 	g := gin.Default()
+	gin.SetMode(gin.ReleaseMode)
 
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%s", cfg.ServerConfig.Port),
@@ -53,7 +54,7 @@ func main() {
 
 	go func() {
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			zap.L().Fatal("main.listenandserve: ",zap.Error(err))
+			zap.L().Fatal("main.listenandserve: ", zap.Error(err))
 		}
 	}()
 	zap.L().Debug("Server started")
