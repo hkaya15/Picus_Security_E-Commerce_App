@@ -11,6 +11,7 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
+
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/helper"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/jwt"
 
@@ -26,7 +27,7 @@ func NewUserHandler(r *gin.RouterGroup, u *UserService, cfg *config.Config) {
 	h := &UserHandler{userService: u, cfg: cfg}
 	u.Migrate()
 	r.POST("/signup", h.signup)
-	r.GET("/login", h.login)
+	r.POST("/login", h.login)
 }
 
 func (u *UserHandler) signup(c *gin.Context) {
@@ -88,6 +89,22 @@ func (u *UserHandler) signup(c *gin.Context) {
 }
 
 func (u *UserHandler) login(c *gin.Context) {
+	var req Login
+	if err := c.Bind(&req); err != nil {
+		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, "Check your request body", nil)))
+	}
+	if err := req.Validate(strfmt.NewFormats()); err != nil {
+		zap.L().Error("user.handler.login", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+
+	user, err := u.userService.Login(*req.Email, *req.Password)
+	if err != nil {
+		c.JSON(ErrorResponse(err))
+		return
+	}
+
 	value, err := DecodeToken(c.Request)
 	if err != nil {
 		zap.L().Error("user.handler.login: decodetoken", zap.Error(err))
@@ -101,18 +118,50 @@ func (u *UserHandler) login(c *gin.Context) {
 			rftokendetails, err := VerifyRFToken(value, u.cfg)
 			if err != nil {
 				zap.L().Error("user.handler.login: verifyrftoken", zap.Error(err))
+				if err.Error() == "Token is expired" {
+					tkn, err := GenerateToken(user, u.cfg)
+					if err != nil {
+						zap.L().Error("user.handler.signup: generatetoken", zap.Error(err))
+						c.JSON(ErrorResponse(err))
+						return
+					}
+
+					var hashKey = []byte("very-secret")
+					var s = securecookie.New(hashKey, nil)
+					encoded, err := s.Encode("token", tkn)
+					if err == nil {
+						cookie := &http.Cookie{
+							Name:     "token",
+							Value:    encoded,
+							Path:     "/",
+							Domain:   "127.0.0.1",
+							Secure:   false,
+							HttpOnly: false,
+						}
+						http.SetCookie(c.Writer, cookie)
+
+						c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
+						return
+					}
+
+				}
 				c.JSON(ErrorResponse(err))
 				return
 			}
-			c.JSON(http.StatusOK, rftokendetails)
-			return
+			if rftokendetails.UserID == user.UserId {
+				c.JSON(http.StatusOK, SoleToken{Code: http.StatusOK, Token: rftokendetails.RefreshToken})
+				return
+			}
 
 		}
 		c.JSON(ErrorResponse(err))
 		return
 	}
 
-	c.JSON(http.StatusOK, tokendetails)
+	if tokendetails.UserID == user.UserId {
+		c.JSON(http.StatusOK, SoleToken{Code: http.StatusOK, Token: tokendetails.AccessToken})
+		return
+	}
 
 }
 

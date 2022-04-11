@@ -96,13 +96,6 @@ func VerifyACToken(token *Token, cfg *config.Config) (*AccessTokenDetails, error
 	})
 	if err != nil {
 		zap.L().Debug("jwt.verifytokenParse: ", zap.Error(err))
-		// if err.Error()=="Token is expired"{
-		// 	rftokendetails,err:=VerifyRFToken(token,cfg); if err!=nil{
-		// 		zap.L().Error("user.handler.login: verifyrftoken", zap.Error(err))
-		// 		return nil, NewRestError(http.StatusBadRequest, "Refresh token is not refreshed", nil)
-		// 	}
-		// 	return rftokendetails,nil
-		// }
 		return nil, err
 	}
 
@@ -133,7 +126,7 @@ func VerifyRFToken(token *Token, cfg *config.Config) (*RefreshTokenDetails, erro
 	})
 	if err != nil {
 		zap.L().Debug("jwt.verifytokenParse: ", zap.Error(err))
-		return nil, NewRestError(http.StatusBadRequest, "Issue on verifying refresh token", nil)
+		return nil, err
 	}
 
 	if !refreshtoken.Valid {

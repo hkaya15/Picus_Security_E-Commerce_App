@@ -37,6 +37,18 @@ func (u *UserService) Save(user *User) (*User, error) {
 	return nil, NewRestError(http.StatusBadRequest, "Please enter a valid e-mail", nil)
 }
 
+func (u *UserService) Login(email string, password string) (*User,error){
+	user,err:= u.UserRepo.Login(email)
+	if err != nil {
+		return nil, NewRestError(http.StatusBadRequest, "Problem on decoding password", nil)
+	}
+	res:=CheckPasswordHash(password,user.Password)
+	if !res{
+		return nil, NewRestError(http.StatusBadRequest, "Wrong e-mail or password", nil)
+	}
+	return user,nil
+}
+
 func (u *UserService) Migrate() {
 	u.UserRepo.Migrate()
 }

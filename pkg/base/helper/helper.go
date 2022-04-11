@@ -46,6 +46,11 @@ func HashPassword(password string) (string, error) {
 	return string(bytes), err
 }
 
+func CheckPasswordHash(password, hash string) bool {
+    err := bcrypt.CompareHashAndPassword([]byte(hash), []byte(password))
+    return err == nil
+}
+
 func DecodeToken(req *http.Request) (*Token,error){
 	var hashKey = []byte("very-secret")
 	var s = securecookie.New(hashKey, nil)

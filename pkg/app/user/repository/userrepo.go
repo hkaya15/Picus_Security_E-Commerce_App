@@ -27,6 +27,16 @@ func (u *UserRepository) Save(user *User) (*User, error) {
 	return user, nil
 }
 
+func (u *UserRepository) Login(email string) (*User,error){
+	var user User
+	zap.L().Debug("user.repo.login", zap.String("email", email))
+	if err := u.db.Where("email = ?",email).Find(&user).Error ; err != nil {
+		zap.L().Error("user.repo.Login failed to login user", zap.Error(err))
+		return nil, err
+	}
+	return &user, nil
+}
+
 func (u *UserRepository) CheckUser(user *User) (bool,error){
 	var us *User
 	var exists bool = false

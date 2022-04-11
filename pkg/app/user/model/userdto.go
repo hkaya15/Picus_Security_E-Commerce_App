@@ -23,3 +23,7 @@ func createId() string {
 	return id
 }
 
+func ResponseToLogin(u *Login) (email,password string){
+	return *u.Email,*u.Password
+}
+

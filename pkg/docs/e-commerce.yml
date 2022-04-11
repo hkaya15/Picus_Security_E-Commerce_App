@@ -47,6 +47,36 @@ paths:
           description: Generic error response
           schema:
             $ref: "#/definitions/ApiResponse"
+  /user/login:
+    post:
+      tags:
+        - "user"
+      summary: "Login user"
+      description: "It works to login on system"
+      operationId: "loginUser"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Login object that needs to be added to the app"
+          required: true
+          schema:
+            $ref: "#/definitions/Login"
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/SoleToken"
+        "400":
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
 
 definitions:
   SignUp:
@@ -81,6 +111,14 @@ definitions:
         type: "string"
       refresh_token:
         type: "string"
+  SoleToken:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      token:
+        type: "string"
   ApiResponse:
     type: "object"
     properties:
@@ -91,4 +129,14 @@ definitions:
       details:
         description: a (key, value) map.
         type: object
+  Login:
+    type: "object"
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
       

@@ -3161,3 +3161,588 @@ net/http.(*conn).serve
 2022-04-11T01:01:43+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"10de4b0b-babd-4484-b0b8-5ed3e713f59c","FirstName":"H","LastName":"K","Email":"meryemana73@gmail.com","Password":"$2a$14$89Scpq18SbQDB./6fGYdJ.ZQJdIC9r68IBJO7DAW2XoF9K5m5IfE.","IsAdmin":false,"Order":null}}
 2022-04-11T01:02:58+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-11T01:02:58+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T01:50:48+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T01:53:21+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T01:53:21+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T01:53:46+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T01:54:51+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T01:54:51+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T01:54:54+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:00:04+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:00:04+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:00:06+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:00:52+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:00:52+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:00:54+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:01:00+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "Email"}
+2022-04-11T02:08:10+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:08:10+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:08:11+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:11:51+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:11:51+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:11:53+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:13:21+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:13:21+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:13:22+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:15:29+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:15:29+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:16:14+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:16:20+03:00	[31mERROR[0m	handler/userhandler.go:97	user.handler.login	{"error": "validation failure list:\nemail in body is required\npassword in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:97
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:18:31+03:00	[31mERROR[0m	handler/userhandler.go:97	user.handler.login	{"error": "validation failure list:\nemail in body is required\npassword in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:97
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:19:59+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:19:59+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:20:23+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:20:29+03:00	[31mERROR[0m	handler/userhandler.go:98	user.handler.login	{"error": "validation failure list:\nemail in body is required\npassword in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:98
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:21:13+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:21:13+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:21:14+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:24:11+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:24:11+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:24:12+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:25:03+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:25:03+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:25:13+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:26:32+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:26:32+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:26:34+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:27:58+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:27:58+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:28:00+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:28:04+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:29:21+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:29:21+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:29:24+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:29:28+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:29:28+03:00	[31mERROR[0m	repository/userrepo.go:34	user.repo.Login failed to login user	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:34
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).Login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:41
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:32:03+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:32:03+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:32:19+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:32:22+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:34:03+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:34:03+03:00	[31mERROR[0m	repository/userrepo.go:34	user.repo.Login failed to login user	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:34
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).Login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:41
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:34:22+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:34:22+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:34:24+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:34:28+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:34:28+03:00	[31mERROR[0m	repository/userrepo.go:34	user.repo.Login failed to login user	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository.(*UserRepository).Login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/repository/userrepo.go:34
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service.(*UserService).Login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/service/userservice.go:41
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:102
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:36:42+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:36:42+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:36:44+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:36:50+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:37:17+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:37:17+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:37:24+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:37:29+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:37:31+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:37:49+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana75@gmail.com"}
+2022-04-11T02:37:55+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:38:19+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:38:56+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:39:22+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:39:28+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:39:37+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana72@gmail.com"}
+2022-04-11T02:39:42+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:39:47+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:39:54+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:42:00+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:42:00+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:45:16+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:45:26+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana74@gmail.com"}
+2022-04-11T02:45:31+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:45:33+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T02:45:33+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:45:53+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:46:03+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana75@gmail.com"}
+2022-04-11T02:46:10+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:46:11+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T02:46:11+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:46:55+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:46:55+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:46:57+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:47:05+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:47:06+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T02:47:06+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:47:54+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T02:47:54+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T02:57:38+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T02:57:44+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:57:45+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T02:57:45+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T02:58:05+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana76@gmail.com"}
+2022-04-11T02:58:12+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T02:58:13+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T02:58:13+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:08:01+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T03:08:01+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T03:08:33+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T03:09:01+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"9b3da4b3-0ce0-4fd8-aca0-2d5a404a1e50","FirstName":"H","LastName":"K","Email":"mkgmail.com","Password":"Ab.45mer","IsAdmin":false,"Order":null}}
+2022-04-11T03:09:01+03:00	[31mERROR[0m	handler/userhandler.go:60	user.handler.signup	{"error": "status: 400 - errors: Please enter a valid e-mail - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:60
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:09:48+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"2dc2e536-6722-4359-9d93-796853c93876","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"1Asdf","IsAdmin":false,"Order":null}}
+2022-04-11T03:09:48+03:00	[31mERROR[0m	handler/userhandler.go:60	user.handler.signup	{"error": "status: 400 - errors: Password is weak! Please Enter password that contains 1 Number, 1 Upper, 1 Lower, 1 Special Char and 7 length - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:60
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:10:02+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"f1553a0b-e22f-4c86-b624-4469dea54e92","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"1Asdfgh","IsAdmin":false,"Order":null}}
+2022-04-11T03:10:02+03:00	[31mERROR[0m	handler/userhandler.go:60	user.handler.signup	{"error": "status: 400 - errors: Password is weak! Please Enter password that contains 1 Number, 1 Upper, 1 Lower, 1 Special Char and 7 length - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:60
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:10:07+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"936ab64a-6d92-4f35-9176-06841b3dea60","FirstName":"H","LastName":"K","Email":"kayahuseyin15@gmail.com","Password":"1Asdfghjk","IsAdmin":false,"Order":null}}
+2022-04-11T03:10:07+03:00	[31mERROR[0m	handler/userhandler.go:60	user.handler.signup	{"error": "status: 400 - errors: Password is weak! Please Enter password that contains 1 Number, 1 Upper, 1 Lower, 1 Special Char and 7 length - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:60
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:10:31+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"e1d3efd1-66cb-4ce0-a85c-a7c9e3eaa9cc","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin15@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-11T03:10:32+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"35f1bfaa-535f-4ffd-9a2a-0ef8f5228ba1","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin15@gmail.com","Password":"$2a$14$P4BVud.ugpj1guUoQjQ5/eqNDcJyr3rRIInS3PoSBgmHA7nl0HTrO","IsAdmin":false,"Order":null}}
+2022-04-11T03:10:45+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "meryemana73@gmail.com"}
+2022-04-11T03:11:01+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin15@gmail.com"}
+2022-04-11T03:11:31+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin15@gmail.com"}
+2022-04-11T03:13:05+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T03:13:05+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T03:15:36+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T03:15:43+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"4e8790ad-2ec6-4bb3-bf0b-31e78c99482e","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin15@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-11T03:15:44+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"4e4f6cf4-abaf-4c81-9a89-b64f365afa65","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin15@gmail.com","Password":"$2a$14$gRmT/jwJFoU8CRRVIj8y3OxojtgEcFcB6NG/3fYLjCp253m5OT5CG","IsAdmin":false,"Order":null}}
+2022-04-11T03:15:56+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin15@gmail.com"}
+2022-04-11T03:15:57+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T03:15:57+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:18:09+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin15@gmail.com"}
+2022-04-11T03:18:10+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T03:18:10+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:18:10+03:00	[35mDEBUG[0m	jwt/jwt.go:128	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T03:18:10+03:00	[31mERROR[0m	handler/userhandler.go:120	user.handler.login: verifyrftoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:120
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:19:11+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin15@gmail.com"}
+2022-04-11T03:19:12+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T03:19:12+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:20:51+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T03:20:51+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T03:21:10+03:00	[35mDEBUG[0m	cmd/main.go:60	Server started
+2022-04-11T03:21:21+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin15@gmail.com"}
+2022-04-11T03:21:22+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T03:21:22+03:00	[31mERROR[0m	handler/userhandler.go:116	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:116
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:21:22+03:00	[35mDEBUG[0m	jwt/jwt.go:128	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T03:21:22+03:00	[31mERROR[0m	handler/userhandler.go:120	user.handler.login: verifyrftoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:120
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T03:22:26+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T03:22:26+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
