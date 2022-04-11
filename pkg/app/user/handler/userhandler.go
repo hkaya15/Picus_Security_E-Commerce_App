@@ -74,15 +74,15 @@ func (u *UserHandler) signup(c *gin.Context) {
 	encoded, err := s.Encode("token", tkn)
 	if err == nil {
 		cookie := &http.Cookie{
-			Name:     "token",
+			Name:     user.UserId,
 			Value:    encoded,
 			Path:     "/",
 			Domain:   "127.0.0.1",
 			Secure:   false,
-			HttpOnly: false,
+			HttpOnly: true,
 		}
 		http.SetCookie(c.Writer, cookie)
-
+		//c.Header("Access-Control-Allow-Credentials","true")
 		c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
 
 	}
@@ -105,7 +105,7 @@ func (u *UserHandler) login(c *gin.Context) {
 		return
 	}
 
-	value, err := DecodeToken(c.Request)
+	value, err := DecodeToken(c.Request, user)
 	if err != nil {
 		zap.L().Error("user.handler.login: decodetoken", zap.Error(err))
 		c.JSON(ErrorResponse(err))
@@ -131,14 +131,15 @@ func (u *UserHandler) login(c *gin.Context) {
 					encoded, err := s.Encode("token", tkn)
 					if err == nil {
 						cookie := &http.Cookie{
-							Name:     "token",
+							Name:     user.UserId,
 							Value:    encoded,
 							Path:     "/",
 							Domain:   "127.0.0.1",
 							Secure:   false,
-							HttpOnly: false,
+							HttpOnly: true,
 						}
 						http.SetCookie(c.Writer, cookie)
+						//c.Header("Access-Control-Allow-Credentials","true")
 
 						c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
 						return

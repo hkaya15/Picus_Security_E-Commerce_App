@@ -7,6 +7,7 @@ import (
 
 	"github.com/gorilla/securecookie"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/model"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -51,11 +52,11 @@ func CheckPasswordHash(password, hash string) bool {
     return err == nil
 }
 
-func DecodeToken(req *http.Request) (*Token,error){
+func DecodeToken(req *http.Request, user *User) (*Token,error){
 	var hashKey = []byte("very-secret")
 	var s = securecookie.New(hashKey, nil)
 	var value Token
-	if cookie, err := req.Cookie("token"); err == nil {
+	if cookie, err := req.Cookie(user.UserId); err == nil {
 		if err = s.Decode("token", cookie.Value, &value); err != nil {
 			return nil,err
 		}

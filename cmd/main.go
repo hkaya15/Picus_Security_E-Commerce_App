@@ -35,8 +35,25 @@ func main() {
 		zap.L().Fatal("DB cannot init", zap.Error(err))
 	}
 
-	g := gin.Default()
 	gin.SetMode(gin.ReleaseMode)
+	g := gin.Default()
+
+	g.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
+		// your custom format
+		message := fmt.Sprintf("%s - [%s] \"%s %s %s %d %s \"%s\" %s\"\n",
+			param.ClientIP,
+			param.TimeStamp.Format(time.RFC1123),
+			param.Method,
+			param.Path,
+			param.Request.Proto,
+			param.StatusCode,
+			param.Latency,
+			param.Request.UserAgent(),
+			param.ErrorMessage,
+		)
+		zap.L().Info(message)
+		return message
+	}))
 
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%s", cfg.ServerConfig.Port),
