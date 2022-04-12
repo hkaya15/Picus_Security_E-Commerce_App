@@ -2,6 +2,7 @@ package jwtpack
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -39,23 +40,23 @@ type RefreshTokenDetails struct {
 	jwt.StandardClaims
 }
 
-
 func GenerateToken(user *User, cfg *config.Config) (*Token, error) {
 	td := &TokenDetails{}
 	tkn := &Token{}
 
-
 	// AccessToken Create
-	td.AccessTokenDetails.AtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.AccessSessionTime) * time.Second).Unix() // 15 minute 
+	td.AccessTokenDetails.AtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.AccessSessionTime) * time.Second).Unix() // 15 minute
 	td.AccessTokenDetails.AccessUuid = uuid.New().String()
 	td.AccessTokenDetails.UserID = user.UserId
 	td.AccessTokenDetails.Email = user.Email
-	
+	td.AccessTokenDetails.Role = user.IsAdmin
+
 	// RefreshToken Create
 	td.RefreshTokenDetails.UserID = user.UserId
 	td.RefreshTokenDetails.Email = user.Email
 	td.RefreshTokenDetails.RtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.RefreshSessionTime) * time.Second).Unix() // 7 days
 	td.RefreshTokenDetails.RefreshUuid = uuid.New().String()
+	td.RefreshTokenDetails.Role = user.IsAdmin
 
 	// AccessToken Claim
 	atClaims := jwt.MapClaims{}
@@ -149,6 +150,34 @@ func VerifyRFToken(token *Token, cfg *config.Config) (*RefreshTokenDetails, erro
 	json.Unmarshal(jsonStringRef, &refreshTokenDetails)
 
 	refreshTokenDetails.RefreshToken = token.RefreshToken
-	
+
 	return &refreshTokenDetails, nil
+}
+
+// VerifyTokenMiddleware helps the middleware for authorization
+func VerifyTokenMiddleware(token string, cfg *config.Config) (*AccessTokenDetails, error) {
+	hmacSecretString := cfg.JWTConfig.SecretKey
+	hmacSecretRf := []byte(hmacSecretString)
+	parsedtoken, err := jwt.Parse(token, func(token *jwt.Token) (interface{}, error) {
+		return hmacSecretRf, nil
+	})
+
+	if err != nil {
+		zap.L().Debug("jwt.verifytokenMiddleware: ", zap.Error(err))
+		return nil, err
+	}
+
+	if !parsedtoken.Valid {
+		zap.L().Debug("jwt.verifytoken.middleware.Valid: Token is not valid!")
+		return nil, NewRestError(http.StatusBadRequest, "Token is not valid!", nil)
+	}
+
+	decodedClaims := parsedtoken.Claims.(jwt.MapClaims)
+
+	var tokenDetails AccessTokenDetails
+
+	jsonStringRef, _ := json.Marshal(decodedClaims)
+	json.Unmarshal(jsonStringRef, &tokenDetails)
+	fmt.Println(decodedClaims)
+	return &tokenDetails, nil
 }

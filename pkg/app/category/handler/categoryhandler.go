@@ -10,6 +10,7 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware"
 	"go.uber.org/zap"
 )
 
@@ -21,7 +22,7 @@ type CategoryHandler struct {
 func NewCategoryHandler(r *gin.RouterGroup, c *CategoryService, cfg *config.Config) {
 	h := &CategoryHandler{categoryService: c, cfg: cfg}
 	c.Migrate()
-	r.POST("/upload", h.upload)
+	r.POST("/upload",AuthorizationMiddleware(h.cfg), h.upload)
 
 }
 
