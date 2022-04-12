@@ -8,8 +8,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/repository"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/db"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/graceful"
@@ -64,10 +67,16 @@ func main() {
 
 	rootRouter := g.Group(cfg.ServerConfig.RoutePrefix)
 	authRooter := rootRouter.Group("/user")
+	categoryRooter := rootRouter.Group("/category")
 
 	userRepo := NewUserRepository(db)
 	userService := NewUserService(userRepo)
 	NewUserHandler(authRooter, userService, cfg)
+
+
+	categoryRepo := NewCategoryRepository(db)
+	categoryService := NewCategoryService(categoryRepo)
+	NewCategoryHandler(categoryRooter, categoryService, cfg)
 
 	go func() {
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {

@@ -4396,3 +4396,1136 @@ net/http.(*conn).serve
 
 2022-04-11T12:29:35+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-11T12:29:35+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T15:53:39+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-11T15:53:49+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin45@gmail.com"}
+2022-04-11T15:53:50+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T15:53:50+03:00	[31mERROR[0m	handler/userhandler.go:117	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:117
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T15:53:50+03:00	[34mINFO[0m	cmd/main.go:54	127.0.0.1 - [Mon, 11 Apr 2022 15:53:50 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 200 1.118292916s "PostmanRuntime/7.29.0" "
+
+2022-04-11T15:54:07+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin46@gmail.com"}
+2022-04-11T15:54:09+03:00	[35mDEBUG[0m	jwt/jwt.go:98	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-11T15:54:09+03:00	[31mERROR[0m	handler/userhandler.go:117	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:117
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-11T15:54:09+03:00	[34mINFO[0m	cmd/main.go:54	127.0.0.1 - [Mon, 11 Apr 2022 15:54:09 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 200 1.116370167s "PostmanRuntime/7.29.0" "
+
+2022-04-11T15:54:20+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T15:54:20+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T22:26:32+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-11T22:29:34+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T22:29:34+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T22:29:36+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-11T22:30:31+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T22:30:31+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T22:30:33+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-11T22:30:44+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T22:30:44+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T22:30:46+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-11T22:31:00+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T22:31:00+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T22:31:02+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-11T22:32:54+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Mon, 11 Apr 2022 22:32:54 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 58.75µs "PostmanRuntime/7.29.0" "
+
+2022-04-11T23:10:24+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T23:10:24+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-11T23:13:16+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-11T23:13:20+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Mon, 11 Apr 2022 23:13:20 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 51.375µs "PostmanRuntime/7.29.0" "
+
+2022-04-11T23:15:23+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-11T23:15:23+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T02:16:52+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T02:17:02+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T02:17:02+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T02:17:02+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T02:17:35+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T02:17:35+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T02:17:38+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T02:17:41+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T02:17:41+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T02:17:41+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T02:17:41+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 02:17:41 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 14.853166ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T02:20:50+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T02:20:50+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T09:30:28+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T09:30:46+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T09:30:46+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 142\n"}
+2022-04-12T09:30:46+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T09:30:46+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 09:30:46 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 37.143625ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T09:35:12+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T09:35:12+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:29:31+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:29:47+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:29:47+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:29:47+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:29:47+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:29:47 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 37.315709ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:30:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T10:30:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 142\n"}
+2022-04-12T10:30:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:30:39+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "ERROR: duplicate key value violates unique constraint \"categories_pkey\" (SQLSTATE 23505)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T10:30:39+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:30:39 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 30.421958ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:32:18+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:32:18+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:32:21+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:32:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T10:32:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 142\n"}
+2022-04-12T10:32:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:32:39+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:32:39 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 31.658708ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:32:48+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:32:48+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:33:25+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:33:52+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T10:33:52+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 142\n"}
+2022-04-12T10:33:52+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:35:15+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:35:15+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:35:20+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:35:25+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T10:35:25+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 142\n"}
+2022-04-12T10:35:25+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:35:25+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:35:25 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 8.174083ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:35:59+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:35:59+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:35:59+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:36:00+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "ERROR: duplicate key value violates unique constraint \"categories_pkey\" (SQLSTATE 23505)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T10:36:00+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:36:00 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 33.224583ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:37:38+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:37:38+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:37:43+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:37:48+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:37:48+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:37:48+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:37:48+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:37:48 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 45.415667ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:38:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:38:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:38:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:38:01+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:38:01 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 31.134084ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:38:17+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:38:17+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:38:17+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:38:17+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:38:17 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 32.569417ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:38:27+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:38:27+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:46:27+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:46:57+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:46:57+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:46:57+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:46:57+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "ERROR: relation \"categories\" does not exist (SQLSTATE 42P01)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T10:46:57+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:46:57 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 27.124084ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:50:33+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:50:33+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:50:59+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:51:10+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:51:10+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:51:10+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:53:22+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:53:22+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:53:33+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:53:36+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:53:36+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:53:36+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:54:16+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:54:16+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:54:17+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:54:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:54:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:54:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:54:20+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 10:54:20 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 14.366458ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T10:55:37+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:55:37+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T10:55:57+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T10:56:03+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T10:56:03+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T10:56:03+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T10:56:09+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T10:56:09+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:04:02+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:04:45+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:04:45+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:04:47+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:04:53+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:04:53+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:04:53+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:04:53+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "empty slice found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:04:53+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:04:53 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 31.869958ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:05:43+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:05:43+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:06:07+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:06:10+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:06:10+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:06:10+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:06:10+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "empty slice found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:06:10+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:06:10 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 10.654917ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:07:04+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:07:04+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:07:38+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:07:44+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:07:44+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:07:44+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:07:44+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "empty slice found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:07:44+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:07:44 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 31.306458ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:07:58+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:07:58+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:07:58+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:07:58+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "empty slice found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:07:58+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:07:58 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 28.741708ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:10:26+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:10:26+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:10:28+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:10:32+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:10:32+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:10:32+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:10:32+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "empty slice found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:10:32+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:10:32 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 6.991ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:12:03+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:12:03+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:12:07+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:12:13+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:12:13+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:12:13+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:12:13+03:00	[31mERROR[0m	repository/categoryrepo.go:32	category.repo.create	{"error": "empty slice found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/repository.(*CategoryRepository).Upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/repository/categoryrepo.go:32
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service.(*CategoryService).Upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/service/categoryservice.go:47
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:42
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:12:13+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "empty slice found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:12:13+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:12:13 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 52.226208ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:13:55+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:13:55+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:13:57+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:14:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:14:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:14:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:14:04+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:14:04 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 36.241ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:14:56+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:14:56+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:19:52+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:19:59+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:19:59+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:19:59+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:19:59+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "unsupported data type: map[icon_URL:https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png]: Table not set, please set it like: db.Model(&user) or db.Table(\"users\"); unsupported data type: map[icon_URL:https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png]: Table not set, please set it like: db.Model(&user) or db.Table(\"users\")"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:19:59+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:19:59 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 25.680959ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:21:37+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:21:37+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:21:39+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:21:44+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:21:44+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:21:44+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:21:44+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "WHERE conditions required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:21:44+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:21:44 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 26.537333ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:22:30+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:22:30+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:23:56+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:24:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:24:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:24:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:24:01+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "ERROR: argument of AND must be type boolean, not type text (SQLSTATE 42804)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:24:01+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:24:01 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 7.029291ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:26:00+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:26:00+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:26:02+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:26:07+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:26:07+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:26:07+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:26:07+03:00	[31mERROR[0m	handler/categoryhandler.go:45	category.handler.upload	{"error": "ERROR: column \"icon_URL\" of relation \"categories\" does not exist (SQLSTATE 42703)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T11:26:07+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:26:07 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 5.365792ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:26:37+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:26:37+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:26:39+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:26:43+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:26:43+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:26:43+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:26:43+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:26:43 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 131.185916ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:26:46+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:26:46+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:26:46+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:26:46+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:26:46 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 249.613791ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:29:46+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:29:46+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:29:48+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:29:51+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:29:51+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:29:51+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:29:58+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:29:58+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:29:58+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:29:58+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:29:58 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 6.69838375s "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:30:03+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:30:03 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 4.845756875s "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:30:08+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:30:08+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:30:09+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:30:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:30:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:30:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:30:38+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:30:38 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 17.510234959s "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:39:58+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:39:58+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:41:25+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:41:32+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:41:32+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:41:32+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:41:32+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:41:32 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 31.539ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:45:56+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:45:56+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:53:58+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:54:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T11:54:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T11:54:01+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:54:01+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:54:01 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 2.785458ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:54:27+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T11:54:27+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 142\n"}
+2022-04-12T11:54:27+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:54:27+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:54:27 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 23.127792ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:55:49+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T11:55:49+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 171\n"}
+2022-04-12T11:55:49+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:55:49+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:55:49 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 33.602375ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:57:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T11:57:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 180\n"}
+2022-04-12T11:57:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:57:34+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:57:34 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 34.775167ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:59:15+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T11:59:15+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T11:59:29+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T11:59:55+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T11:59:55+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 190\n"}
+2022-04-12T11:59:55+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:59:55+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:59:55 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 32.559167ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T11:59:56+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T11:59:56+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 190\n"}
+2022-04-12T11:59:56+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T11:59:56+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 11:59:56 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 990.167µs "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:00:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:00:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 200\n"}
+2022-04-12T12:00:20+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:00:20+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:00:20 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 36.133791ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:01:36+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:01:36+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:02:03+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:02:19+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:02:19+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 209\n"}
+2022-04-12T12:02:19+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:02:19+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:02:19 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 32.694ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:02:27+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:02:27+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 209\n"}
+2022-04-12T12:02:27+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:02:27+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:02:27 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 26.456041ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:02:36+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T12:02:36+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T12:02:36+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:02:36+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:02:36 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 29.098334ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:03:24+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:03:24+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:03:26+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:03:35+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:03:35+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 209\n"}
+2022-04-12T12:03:35+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:03:35+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:03:35 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 32.023625ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:04:16+03:00	[35mDEBUG[0m	handler/categoryhandler.go:38	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T12:04:16+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T12:04:16+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:04:16+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:04:16 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 38.211375ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:04:41+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:04:41+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:14:07+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:14:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T12:14:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T12:14:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:14:15+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:14:15 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 27.380625ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:14:41+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:14:41+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:19:12+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:19:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T12:19:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T12:19:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:19:15+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:19:15 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 2.627083ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:19:36+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:19:36+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:19:39+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:19:42+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T12:19:42+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T12:19:42+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:19:42+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:19:42 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 4.554208ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:19:53+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:19:53+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 209\n"}
+2022-04-12T12:19:53+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:19:53+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:19:53 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 26.972167ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:20:00+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T12:20:00+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T12:20:00+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:20:00+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:20:00 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 24.419125ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:20:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:20:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 217\n"}
+2022-04-12T12:20:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:20:34+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:20:34 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 34.120958ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:21:43+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:21:43+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:21:46+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:21:49+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:21:49+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 217\n"}
+2022-04-12T12:21:49+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:21:49+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:21:49 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 4.868333ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:22:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:22:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 224\n"}
+2022-04-12T12:22:34+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:22:34+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:22:34 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 36.773959ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:22:38+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:22:38+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 224\n"}
+2022-04-12T12:22:38+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:22:38+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:22:38 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 1.496ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:22:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:22:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 224\n"}
+2022-04-12T12:22:39+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:22:39+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:22:39 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 761.959µs "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:22:40+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:22:40+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 224\n"}
+2022-04-12T12:22:40+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:22:40+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:22:40 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 25.847375ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:22:47+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:22:47+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:26:38+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:26:41+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:26:41+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 224\n"}
+2022-04-12T12:26:41+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:26:41+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:26:41 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 4.584583ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:27:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:27:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 229\n"}
+2022-04-12T12:27:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:27:04+03:00	[31mERROR[0m	service/categoryservice.go:31	category.service.readcsv	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service.(*CategoryService).Upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/service/categoryservice.go:31
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:43
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:27:04+03:00	[31mERROR[0m	handler/categoryhandler.go:46	category.handler.upload	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:46
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:27:04+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:27:04 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 1.186166ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:28:45+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:28:45+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:28:47+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:28:52+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:28:52+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 229\n"}
+2022-04-12T12:28:52+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:28:52+03:00	[31mERROR[0m	service/categoryservice.go:31	category.service.readcsv	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service.(*CategoryService).Upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/service/categoryservice.go:31
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:43
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:28:52+03:00	[31mERROR[0m	handler/categoryhandler.go:46	category.handler.upload	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:46
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:29:25+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:29:25+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:29:28+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:29:30+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:29:30+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 229\n"}
+2022-04-12T12:29:30+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:29:30+03:00	[31mERROR[0m	service/categoryservice.go:31	category.service.readcsv	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service.(*CategoryService).Upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/service/categoryservice.go:31
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:43
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:29:30+03:00	[31mERROR[0m	handler/categoryhandler.go:46	category.handler.upload	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:46
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:29:30+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:29:30 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 716.5µs "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:30:11+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:30:11+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:30:13+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:30:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:30:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 229\n"}
+2022-04-12T12:30:15+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:30:15+03:00	[31mERROR[0m	service/categoryservice.go:31	category.service.readcsv	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service.(*CategoryService).Upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/service/categoryservice.go:31
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:43
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:30:15+03:00	[31mERROR[0m	handler/categoryhandler.go:46	category.handler.upload	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:46
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:30:15+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:30:15 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 606µs "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:30:52+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:30:52+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:30:55+03:00	[35mDEBUG[0m	cmd/main.go:86	Server started
+2022-04-12T12:30:57+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:30:57+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 229\n"}
+2022-04-12T12:30:57+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:30:57+03:00	[31mERROR[0m	service/categoryservice.go:31	category.service.readcsv	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service.(*CategoryService).Upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/service/categoryservice.go:31
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:43
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:30:57+03:00	[31mERROR[0m	handler/categoryhandler.go:46	category.handler.upload	{"error": "record on line 11: wrong number of fields"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler.(*CategoryHandler).upload
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/category/handler/categoryhandler.go:46
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T12:30:57+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:30:57 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 500 1.225458ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:31:43+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:31:43+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 233\n"}
+2022-04-12T12:31:43+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:31:43+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:31:43 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 38.06825ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:31:54+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:31:54+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 233\n"}
+2022-04-12T12:31:54+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:31:54+03:00	[34mINFO[0m	cmd/main.go:57	127.0.0.1 - [Tue, 12 Apr 2022 12:31:54 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 22.965667ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:33:35+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:33:35+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting

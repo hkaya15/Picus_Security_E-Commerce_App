@@ -1,0 +1,62 @@
+package service
+
+import (
+	"mime/multipart"
+
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/model"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/repository"
+	"go.uber.org/zap"
+
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/helper"
+)
+
+type CategoryService struct {
+	CategoryRepo *CategoryRepository
+}
+
+func NewCategoryService(c *CategoryRepository) *CategoryService {
+	return &CategoryService{CategoryRepo: c}
+}
+
+func (c *CategoryService) Migrate() {
+	c.CategoryRepo.Migrate()
+}
+
+func (c *CategoryService) Upload(file *multipart.File) (int, string, error) {
+	var count int
+	var str string
+
+	categorylist, err := ReadCSV(file)
+	if err != nil {
+		zap.L().Error("category.service.readcsv", zap.Error(err))
+		return 0,"Error", err
+	}
+	categoriesOnDb, err := c.GetAll()
+	if err != nil {
+		return 0,"Error", err
+	}
+
+	if len(*categoriesOnDb) > 0 {
+		compared := CompareCategories(categoriesOnDb, &categorylist)
+		if len(compared) > 0 {
+			count,str, err = c.CategoryRepo.Upload(&compared)
+			if err != nil {
+				return count,"Error", err
+			}
+			return count,str,nil
+			
+		}
+		return 0,"Every Item is same with db",nil
+	}
+	count,str, err = c.CategoryRepo.Upload(&categorylist)
+	if err != nil {
+		return count,"Error", err
+	}
+
+	return count,str, nil
+
+}
+
+func (c *CategoryService) GetAll() (*CategoryList, error) {
+	return c.CategoryRepo.GetAll()
+}
