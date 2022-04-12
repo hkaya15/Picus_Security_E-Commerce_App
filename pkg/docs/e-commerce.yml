@@ -13,6 +13,8 @@ basePath: "/api/v1/e-commerce-api"
 tags:
   - name: "user"
     description: "Everything about User"
+  - name: "category"
+    description: "Everything about Category"
 schemes:
   - "https"
   - "http"
@@ -71,6 +73,43 @@ paths:
             $ref: "#/definitions/SoleToken"
         "400":
           description: "Bad Request"
+          schema:
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  /category/upload:
+    post:
+      tags:
+        - "category"
+      summary: "Upload category"
+      description: "It works for creating bulk category"
+      operationId: "uploadCategory"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+        - name: "file"
+          in: "formData"
+          description: "Upload category file"
+          required: false
+          type: "file"
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        "401":
+          description: "Status Unauthorized "
+          schema:
+            $ref: "#/definitions/ApiResponse"
+        "403":
+          description: "Status Forbidden"
           schema:
             $ref: "#/definitions/ApiResponse"
         default:

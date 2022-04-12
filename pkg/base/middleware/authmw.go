@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/jwt"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	"go.uber.org/zap"
 )
 // AuthorizationMiddleware checks that user is admin
@@ -21,12 +22,12 @@ func AuthorizationMiddleware(cfg *config.Config) gin.HandlerFunc {
 				c.Abort()
 				return
 			}
-
-			c.JSON(http.StatusForbidden, gin.H{"error": "You are not allowed to use this endpoint!"})
+			
+			c.JSON(http.StatusForbidden, APIResponse{Code: http.StatusForbidden,Message: "You are not allowed to use this endpoint!"})
 			c.Abort()
 			return
 		} else {
-			c.JSON(http.StatusUnauthorized, gin.H{"error": "You are not authorized!"})
+			c.JSON(http.StatusUnauthorized, APIResponse{Code: http.StatusUnauthorized,Message: "You are not authorized!"})
 		}
 		c.Abort()
 		return
