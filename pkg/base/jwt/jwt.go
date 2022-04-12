@@ -2,7 +2,6 @@ package jwtpack
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"time"
 
@@ -178,6 +177,5 @@ func VerifyTokenMiddleware(token string, cfg *config.Config) (*AccessTokenDetail
 
 	jsonStringRef, _ := json.Marshal(decodedClaims)
 	json.Unmarshal(jsonStringRef, &tokenDetails)
-	fmt.Println(decodedClaims)
 	return &tokenDetails, nil
 }

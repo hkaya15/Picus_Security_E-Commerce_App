@@ -1,19 +1,19 @@
 package model
 
-import "gorm.io/gorm"
+import (
+	"gorm.io/gorm"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/model"
+)
 
-
-type Product struct{
+type ProductBase struct{
 	gorm.Model
-	ProductId string
+	ProductId string `gorm:"unique"`
 	ProductName string
 	ProductDescription string
-	ProductQantity uint
-	CategoryId int
+	ProductQuantity uint
+	CategoryId string `json:"categoryId"`
+	Category Category `gorm:"foreignKey:CategoryID; references:CategoryId"`
 	ImageURL string
 	Price float64
-	DiscountedPrice float64
-	StoreId string
-	Counter uint
-	UserId string
+	Counter uint `gorm:"default:0"`
 }

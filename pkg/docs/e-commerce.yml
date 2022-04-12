@@ -15,6 +15,8 @@ tags:
     description: "Everything about User"
   - name: "category"
     description: "Everything about Category"
+  - name: "product"
+    description: "Everything about Product"
 schemes:
   - "https"
   - "http"
@@ -116,6 +118,32 @@ paths:
           description: Generic error response
           schema:
             $ref: "#/definitions/ApiResponse"
+  /product/create:
+    post:
+      tags:
+        - "product"
+      summary: "Create product"
+      description: "It works for creating product"
+      operationId: "createProduct"
+      produces:
+        - "application/json"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Create product"
+          required: true
+          schema:
+            $ref: "#/definitions/Product"
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
 
 definitions:
   SignUp:
@@ -178,4 +206,28 @@ definitions:
         type: "string"
       password:
         type: "string"
+  Product:
+    type: "object"
+    required:
+      - name
+      - description
+      - quantity
+      - categoryId
+      - imageUrl
+      - price
+    properties:
+      name:
+        type: "string"
+      description:
+        type: "string"
+      quantity:
+        type: "integer"
+        format: "int"
+      categoryId:
+        type: "string"
+      imageUrl:
+        type: "string"
+      price:
+        type: "number"
+        format: "float64"
       

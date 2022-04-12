@@ -14,6 +14,9 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/db"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/graceful"
@@ -73,6 +76,7 @@ func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	rootRouter := g.Group(cfg.ServerConfig.RoutePrefix)
 	userRooter := rootRouter.Group("/user")
 	categoryRooter := rootRouter.Group("/category")
+	productRooter := rootRouter.Group("/product")
 
 	userRepo := NewUserRepository(db)
 	userService := NewUserService(userRepo)
@@ -81,4 +85,8 @@ func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	categoryRepo := NewCategoryRepository(db)
 	categoryService := NewCategoryService(categoryRepo)
 	NewCategoryHandler(categoryRooter, categoryService, cfg)
+
+	productRepo := NewProductRepository(db)
+	productService := NewProductService(productRepo)
+	NewProductHandler(productRooter, productService, cfg)
 }
