@@ -1,6 +1,8 @@
 package repository
 
 import (
+	"os"
+
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/model"
 	"gorm.io/gorm"
 )
@@ -20,7 +22,7 @@ func (c *CategoryRepository) Migrate() {
 func (c *CategoryRepository) Upload(categories *CategoryList) (int,string, error) {
 	var count int64
 	err := c.db.Create(&categories).Count(&count).Error
-	return int(count),"Created!", err
+	return int(count),os.Getenv("CREATE_FILE"), err
 }
 
 func (c *CategoryRepository) GetAll() (*CategoryList, error) {

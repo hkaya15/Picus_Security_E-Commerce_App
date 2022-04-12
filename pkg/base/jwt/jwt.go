@@ -39,20 +39,25 @@ type RefreshTokenDetails struct {
 	jwt.StandardClaims
 }
 
+
 func GenerateToken(user *User, cfg *config.Config) (*Token, error) {
 	td := &TokenDetails{}
 	tkn := &Token{}
 
-	td.AccessTokenDetails.AtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.AccessSessionTime) * time.Second).Unix()
+
+	// AccessToken Create
+	td.AccessTokenDetails.AtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.AccessSessionTime) * time.Second).Unix() // 15 minute 
 	td.AccessTokenDetails.AccessUuid = uuid.New().String()
 	td.AccessTokenDetails.UserID = user.UserId
 	td.AccessTokenDetails.Email = user.Email
+	
+	// RefreshToken Create
 	td.RefreshTokenDetails.UserID = user.UserId
 	td.RefreshTokenDetails.Email = user.Email
-
-	td.RefreshTokenDetails.RtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.RefreshSessionTime) * time.Second).Unix()
+	td.RefreshTokenDetails.RtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.RefreshSessionTime) * time.Second).Unix() // 7 days
 	td.RefreshTokenDetails.RefreshUuid = uuid.New().String()
 
+	// AccessToken Claim
 	atClaims := jwt.MapClaims{}
 	atClaims["access_uuid"] = td.AccessTokenDetails.AccessUuid
 	atClaims["user_id"] = td.AccessTokenDetails.UserID
@@ -65,9 +70,11 @@ func GenerateToken(user *User, cfg *config.Config) (*Token, error) {
 		zap.L().Debug("generatetoken.accesstoken: ", zap.Error(err))
 		return nil, NewRestError(http.StatusBadRequest, "Issue on generating access token", nil)
 	}
-	td.AccessTokenDetails.AccessToken = accessTokenResult
-	//atClaims["access_token"]=td.AccessToken
 
+	// Token Details
+	td.AccessTokenDetails.AccessToken = accessTokenResult
+
+	// RefreshToken Claim
 	rtClaims := jwt.MapClaims{}
 	rtClaims["refresh_uuid"] = td.RefreshTokenDetails.RefreshUuid
 	rtClaims["user_id"] = td.RefreshTokenDetails.UserID
@@ -80,13 +87,13 @@ func GenerateToken(user *User, cfg *config.Config) (*Token, error) {
 		zap.L().Debug("generatetoken.refreshtoken: ", zap.Error(err))
 		return nil, NewRestError(http.StatusBadRequest, "Issue on generating refresh token", nil)
 	}
-	//rtClaims["refresh_token"]=td.RefreshToken
 
 	tkn.AccessToken = td.AccessTokenDetails.AccessToken
 	tkn.RefreshToken = td.RefreshTokenDetails.RefreshToken
 	return tkn, nil
 }
 
+// VerifyACToken returns access token if it is not expired
 func VerifyACToken(token *Token, cfg *config.Config) (*AccessTokenDetails, error) {
 	hmacSecretString := cfg.JWTConfig.SecretKey
 	hmacSecretAc := []byte(hmacSecretString)
@@ -106,18 +113,18 @@ func VerifyACToken(token *Token, cfg *config.Config) (*AccessTokenDetails, error
 
 	decodedClaims := accesstoken.Claims.(jwt.MapClaims)
 
-	//var decodedTokenDetails TokenDetails
 	var accessTokenDetails AccessTokenDetails
+
 	jsonStringAT, _ := json.Marshal(decodedClaims)
 	json.Unmarshal(jsonStringAT, &accessTokenDetails)
 
-	//decodedTokenDetails.AccessTokenDetails=accessTokenDetails
 	accessTokenDetails.AccessToken = token.AccessToken
 
 	return &accessTokenDetails, nil
 
 }
 
+// VerifyRFToken returns refresh token if it is not expired.
 func VerifyRFToken(token *Token, cfg *config.Config) (*RefreshTokenDetails, error) {
 	hmacSecretString := cfg.JWTConfig.SecretKey
 	hmacSecretRf := []byte(hmacSecretString)
@@ -135,10 +142,13 @@ func VerifyRFToken(token *Token, cfg *config.Config) (*RefreshTokenDetails, erro
 	}
 
 	decodedClaimsRT := refreshtoken.Claims.(jwt.MapClaims)
+
 	var refreshTokenDetails RefreshTokenDetails
+
 	jsonStringRef, _ := json.Marshal(decodedClaimsRT)
-	//fmt.Println(string(jsonStringRef))
 	json.Unmarshal(jsonStringRef, &refreshTokenDetails)
+
 	refreshTokenDetails.RefreshToken = token.RefreshToken
+	
 	return &refreshTokenDetails, nil
 }

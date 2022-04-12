@@ -19,7 +19,6 @@ var (
 	CannotBindGivenData = errors.New("Could not bind given data")
 	ValidationError     = errors.New("Validation failed for given payload")
 	UniqueError         = errors.New("Item should be unique on database")
-	TokenExpired        = errors.New("Token is expired")
 )
 
 type RestError APIResponse
@@ -69,8 +68,6 @@ func ParseErrors(err error) RestErr {
 		return NewRestError(http.StatusBadRequest, CannotBindGivenData.Error(), err)
 	case errors.Is(err, gorm.ErrRecordNotFound):
 		return NewRestError(http.StatusNotFound, gorm.ErrRecordNotFound.Error(), err)
-	case errors.Is(err, TokenExpired):
-		return NewRestError(http.StatusInternalServerError, "Token is expired", err)
 	case strings.Contains(err.Error(), "validation"):
 		return NewRestError(http.StatusBadRequest, ValidationError.Error(), err)
 	case strings.Contains(err.Error(), "23505"):

@@ -5529,3 +5529,484 @@ net/http.(*conn).serve
 
 2022-04-12T12:33:35+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-12T12:33:35+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:57:05+03:00	[35mDEBUG[0m	cmd/main.go:62	
+2022-04-12T12:57:22+03:00	[35mDEBUG[0m	handler/categoryhandler.go:39	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T12:57:22+03:00	[35mDEBUG[0m	handler/categoryhandler.go:40	category.handler.upload:	{"filesize": "File Size: 233\n"}
+2022-04-12T12:57:22+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T12:57:22+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 12:57:22 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 25.639167ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T12:58:06+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:58:06+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T12:59:17+03:00	[35mDEBUG[0m	cmd/main.go:62	
+2022-04-12T12:59:24+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T12:59:24+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T13:04:17+03:00	[35mDEBUG[0m	cmd/main.go:65	
+2022-04-12T13:04:26+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:04:26+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T13:05:22+03:00	[31mFATAL[0m	cmd/main.go:39	Error loading .env file
+main.main
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:39
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-04-12T13:06:27+03:00	[31mFATAL[0m	cmd/main.go:39	Error loading .env file
+main.main
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:39
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-04-12T13:06:39+03:00	[31mFATAL[0m	cmd/main.go:39	Error loading .env file
+main.main
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:39
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-04-12T13:06:45+03:00	[31mFATAL[0m	cmd/main.go:39	Error loading .env file
+main.main
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:39
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-04-12T13:07:59+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T13:10:00+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:10:00+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T13:10:26+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T13:10:36+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:10:36+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown Server exiting
+2022-04-12T13:33:19+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T13:34:00+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:34:00+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T13:34:02+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T13:34:22+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"e6623eec-70b9-4b69-8983-a335ff3b89c0","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin1@gmail.com","Password":"1Asdfghjk","IsAdmin":false,"Order":null}}
+2022-04-12T13:34:22+03:00	[31mERROR[0m	handler/userhandler.go:61	user.handler.signup	{"error": "status: 400 - errors: Password is weak! Please Enter password that contains 1 Number, 1 Upper, 1 Lower, 1 Special Char and 7 length - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:61
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T13:34:22+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 13:34:22 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 28.784041ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T13:34:30+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"770ad770-e363-4460-b6c1-d2ab7cb4bfae","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin1gmail.com","Password":"1Asdfghjk","IsAdmin":false,"Order":null}}
+2022-04-12T13:34:30+03:00	[31mERROR[0m	handler/userhandler.go:61	user.handler.signup	{"error": "status: 400 - errors: Please enter a valid e-mail - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:61
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T13:34:30+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 13:34:30 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 28.722083ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T13:34:37+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"f287b1d4-f61e-4cab-a493-1ebccf53d451","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin1@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T13:34:38+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"8f944cd4-d95d-4dd4-baab-915be667cfd6","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin1@gmail.com","Password":"$2a$14$YZ3jP7TE59PdR2kiSlZ59uBp30mPaEDlIcnkTNXVSZ4CiPO1f6UNm","IsAdmin":false,"Order":null}}
+2022-04-12T13:34:38+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 13:34:38 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 201 1.134463334s "PostmanRuntime/7.29.0" "
+
+2022-04-12T13:35:21+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:35:21+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T13:35:58+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T13:35:59+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:35:59+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T13:36:09+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T13:36:13+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"8f46edaa-bca4-43f1-8275-28a5c2635e78","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin1@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T13:36:13+03:00	[31mERROR[0m	handler/userhandler.go:54	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:54
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T13:36:13+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 13:36:13 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 3.304833ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T13:36:49+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:36:49+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T13:36:51+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T13:36:54+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"33351135-137b-4f52-8712-a23465f9b94e","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin1@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T13:36:54+03:00	[31mERROR[0m	handler/userhandler.go:54	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:54
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T13:36:54+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 13:36:54 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 3.224667ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T13:37:17+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"140b88f5-bcf1-4b27-a264-72789d562352","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin2@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T13:37:18+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"8a914743-cd5e-4818-971d-00b18f5d0f6e","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin2@gmail.com","Password":"$2a$14$o82oqIuUXDg6rIr/RdBj3.a5M.JfDe7ChvdR.AADhLfrc2DhZN56C","IsAdmin":false,"Order":null}}
+2022-04-12T13:37:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 13:37:18 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 201 1.126039542s "PostmanRuntime/7.29.0" "
+
+2022-04-12T13:37:43+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T13:37:43+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T14:16:14+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T14:16:22+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"6d48da7b-2a8c-4631-90f5-dc7542662439","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin2@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:16:22+03:00	[31mERROR[0m	handler/userhandler.go:55	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:55
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:16:22+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:16:22 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 31.161917ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:16:28+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin46@gmail.com"}
+2022-04-12T14:16:28+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:16:28 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 400 28.570625ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:16:43+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"67619576-d00c-48bd-8460-29bf3c3e0f0a","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin3@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:16:44+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"e9a6bde0-33d4-4f3c-a526-e30e42bb6f1a","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin3@gmail.com","Password":"$2a$14$Fw.cEqm7kDjqXJpDhGgeiupeicg4xdqo1B2oiIAhX2/RgmV4Y9xne","IsAdmin":false,"Order":null}}
+2022-04-12T14:16:44+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:16:44 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 201 1.127102792s "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:17:11+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"8e580977-13c8-4db9-8307-1ab6ff155d83","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyingmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:17:11+03:00	[31mERROR[0m	handler/userhandler.go:62	user.handler.signup	{"error": "status: 400 - errors: Please enter a valid e-mail - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:62
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:17:11+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:17:11 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 27.63425ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:17:27+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"350f2ded-8a01-4638-a209-bb6f4d7a2907","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin@gmail.com","Password":"1Asdfghjk","IsAdmin":false,"Order":null}}
+2022-04-12T14:17:27+03:00	[31mERROR[0m	handler/userhandler.go:62	user.handler.signup	{"error": "status: 400 - errors: Password is weak! Please Enter password that contains 1 Number, 1 Upper, 1 Lower, 1 Special Char and 7 length - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:62
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:17:27+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:17:27 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 29.994708ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:17:37+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"c4c39869-a090-4882-b87f-449e2eefd276","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin2@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:17:37+03:00	[31mERROR[0m	handler/userhandler.go:55	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:55
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:17:37+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:17:37 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 29.522042ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:17:59+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T14:17:59+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T14:45:59+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T14:46:07+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"ee81ca2b-cf6a-4543-8604-fdd01c77f488","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin2@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:46:07+03:00	[31mERROR[0m	handler/userhandler.go:54	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:54
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:46:07+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:46:07 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 30.710375ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:46:13+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin@gmail.com"}
+2022-04-12T14:46:13+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:46:13 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 400 24.63425ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:46:17+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin3@gmail.com"}
+2022-04-12T14:46:18+03:00	[35mDEBUG[0m	jwt/jwt.go:105	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-12T14:46:18+03:00	[31mERROR[0m	handler/userhandler.go:108	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:46:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:46:18 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 200 1.091414459s "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:46:38+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"af795aa5-2880-43a8-ad88-06b19b8e5f37","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin3@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:46:38+03:00	[31mERROR[0m	handler/userhandler.go:54	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:54
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:46:38+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:46:38 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 29.064083ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:46:39+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"748d4cd6-a504-4200-96dc-4d139d5392f8","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin3@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:46:39+03:00	[31mERROR[0m	handler/userhandler.go:54	user.handler.signup: User Already exist
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).signup
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:54
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:46:39+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:46:39 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 400 1.214167ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:46:48+03:00	[35mDEBUG[0m	repository/userrepo.go:43	user.repo.checkuser	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"7b7b028a-8fee-41cb-b3e6-e66e2565833d","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin4@gmail.com","Password":"1Asdfghjk.","IsAdmin":false,"Order":null}}
+2022-04-12T14:46:49+03:00	[35mDEBUG[0m	repository/userrepo.go:22	user.repo.save	{"user": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"7c5e6059-a971-46f5-9b61-b04d46e05a9b","FirstName":"Hüseyin","LastName":"Kaya","Email":"kayahuseyin4@gmail.com","Password":"$2a$14$6D4KQa5rOAjW5jVcz4YLH.kAPsg/LlkNm4ClGwwre6TJth0vejaPe","IsAdmin":false,"Order":null}}
+2022-04-12T14:46:49+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:46:49 +03] "POST /api/v1/e-commerce-api/user/signup HTTP/1.1 201 1.129587042s "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:47:02+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin4@gmail.com"}
+2022-04-12T14:47:03+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:47:03 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 200 1.112284208s "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:47:17+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "kayahuseyin3@gmail.com"}
+2022-04-12T14:47:18+03:00	[35mDEBUG[0m	jwt/jwt.go:105	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-12T14:47:18+03:00	[31mERROR[0m	handler/userhandler.go:108	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-12T14:47:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:47:18 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 200 1.113478542s "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:47:33+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T14:47:33+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T14:55:28+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T14:55:38+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T14:55:38+03:00	[35mDEBUG[0m	handler/categoryhandler.go:42	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T14:55:38+03:00	[35mDEBUG[0m	handler/categoryhandler.go:43	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T14:55:38+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:55:38 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 28.574ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T14:55:58+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T14:55:58+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T14:56:00+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T14:56:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"filename": "Uploaded File: categories.csv\n"}
+2022-04-12T14:56:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:42	category.handler.upload:	{"filesize": "File Size: 2124\n"}
+2022-04-12T14:56:04+03:00	[35mDEBUG[0m	handler/categoryhandler.go:43	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categories.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T14:56:04+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 14:56:04 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 13.638834ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T15:07:30+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T15:07:30+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-12T15:09:06+03:00	[35mDEBUG[0m	cmd/main.go:67	Server started
+2022-04-12T15:09:26+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T15:09:26+03:00	[35mDEBUG[0m	handler/categoryhandler.go:42	category.handler.upload:	{"filesize": "File Size: 233\n"}
+2022-04-12T15:09:26+03:00	[35mDEBUG[0m	handler/categoryhandler.go:43	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T15:09:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 15:09:26 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 28.992667ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T15:10:14+03:00	[35mDEBUG[0m	handler/categoryhandler.go:41	category.handler.upload:	{"filename": "Uploaded File: categoriesadd.csv\n"}
+2022-04-12T15:10:14+03:00	[35mDEBUG[0m	handler/categoryhandler.go:42	category.handler.upload:	{"filesize": "File Size: 233\n"}
+2022-04-12T15:10:14+03:00	[35mDEBUG[0m	handler/categoryhandler.go:43	category.handler.upload:	{"MIME": "MIME Header: map[Content-Disposition:[form-data; name=\"myFile\"; filename=\"categoriesadd.csv\"] Content-Type:[text/csv]]\n"}
+2022-04-12T15:10:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Tue, 12 Apr 2022 15:10:14 +03] "POST /api/v1/e-commerce-api/category/upload HTTP/1.1 200 25.072709ms "PostmanRuntime/7.29.0" "
+
+2022-04-12T15:10:30+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-12T15:10:30+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

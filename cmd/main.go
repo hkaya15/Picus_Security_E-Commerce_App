@@ -4,20 +4,24 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/gin-gonic/gin"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/repository"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/db"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/graceful"
 	logger "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/log"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware"
+	"github.com/joho/godotenv"
 	"go.uber.org/zap"
+	"gorm.io/gorm"
 )
 
 func main() {
@@ -30,33 +34,21 @@ func main() {
 	logger.NewLogger(cfg)
 	defer logger.Close()
 
+	errload := godotenv.Load("../.env")
+	if errload != nil {
+		zap.L().Fatal("Error loading .env file")
+	}
+
 	// It is possible to integrate different db technologies
 	base := DBBase{DbType: &POSTGRES{}}
 	db, err := base.DbType.Create(cfg)
-
 	if err != nil {
 		zap.L().Fatal("DB cannot init", zap.Error(err))
 	}
 
 	gin.SetMode(gin.ReleaseMode)
 	g := gin.Default()
-
-	g.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
-		// your custom format
-		message := fmt.Sprintf("%s - [%s] \"%s %s %s %d %s \"%s\" %s\"\n",
-			param.ClientIP,
-			param.TimeStamp.Format(time.RFC1123),
-			param.Method,
-			param.Path,
-			param.Request.Proto,
-			param.StatusCode,
-			param.Latency,
-			param.Request.UserAgent(),
-			param.ErrorMessage,
-		)
-		zap.L().Info(message)
-		return message
-	}))
+	LoggerMiddleware(g)
 
 	srv := &http.Server{
 		Addr:         fmt.Sprintf(":%s", cfg.ServerConfig.Port),
@@ -65,25 +57,28 @@ func main() {
 		WriteTimeout: time.Duration(cfg.ServerConfig.WriteTimeoutSecs * int64(time.Second)),
 	}
 
+	getUp(g, db, cfg)
+
+	go func() {
+		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			zap.L().Fatal("main.listen and serve: ", zap.Error(err))
+		}
+	}()
+	zap.L().Debug(os.Getenv("START_SERVER"))
+	ShutdownGin(srv, time.Duration(cfg.ServerConfig.TimeoutSecs*int64(time.Second)))
+
+}
+
+func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	rootRouter := g.Group(cfg.ServerConfig.RoutePrefix)
-	authRooter := rootRouter.Group("/user")
+	userRooter := rootRouter.Group("/user")
 	categoryRooter := rootRouter.Group("/category")
 
 	userRepo := NewUserRepository(db)
 	userService := NewUserService(userRepo)
-	NewUserHandler(authRooter, userService, cfg)
-
+	NewUserHandler(userRooter, userService, cfg)
 
 	categoryRepo := NewCategoryRepository(db)
 	categoryService := NewCategoryService(categoryRepo)
 	NewCategoryHandler(categoryRooter, categoryService, cfg)
-
-	go func() {
-		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			zap.L().Fatal("main.listenandserve: ", zap.Error(err))
-		}
-	}()
-	zap.L().Debug("Server started")
-	ShutdownGin(srv, time.Duration(cfg.ServerConfig.TimeoutSecs*int64(time.Second)))
-
 }

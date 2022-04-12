@@ -3,12 +3,13 @@ package handler
 import (
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	"go.uber.org/zap"
 )
 
@@ -28,11 +29,12 @@ func (c *CategoryHandler) Migrate() {
 	c.categoryService.Migrate()
 }
 
+// upload helps to user create bulk category. If category has implemented before db, upload checks is without any fault. 
 func (ct *CategoryHandler) upload(c *gin.Context) {
 	file, handler, err := c.Request.FormFile("myFile")
 	if err != nil {
 		zap.L().Error("category.handler.upload", zap.Error(err))
-		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, "Fault on getting file", nil)))
+		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, os.Getenv("READ_FILE_FAULT"), nil)))
 		return
 	}
 	defer file.Close()
@@ -44,7 +46,7 @@ func (ct *CategoryHandler) upload(c *gin.Context) {
 
 	if err != nil {
 		zap.L().Error("category.handler.upload", zap.Error(err))
-		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, "Fault on getting file", err.Error())))
+		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, os.Getenv("UPLOAD_FILE_FAULT"), err.Error())))
 		return
 	}
 	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK,Message: fmt.Sprintf("%v Record",count),Details:str })

@@ -6,9 +6,8 @@ import (
 )
 
 func ResponseToUser(u *SignUp) *User {
-	userID := createId()
 	return &User{
-		UserId:    userID,
+		UserId:    uuid.New().String(),
 		FirstName: *u.Firstname,
 		LastName:  *u.Lastname,
 		Password:  *u.Password,
@@ -18,12 +17,4 @@ func ResponseToUser(u *SignUp) *User {
 	}
 }
 
-func createId() string {
-	id := uuid.New().String()
-	return id
-}
-
-func ResponseToLogin(u *Login) (email,password string){
-	return *u.Email,*u.Password
-}
 

@@ -30,5 +30,5 @@ func ShutdownGin(srv *http.Server, timeout time.Duration) {
 	if err := srv.Shutdown(ctx); err != nil {
 		zap.L().Fatal("base.graceful.shutdown Server forced to shutdown: ", zap.Error(err))
 	}
-	zap.L().Debug("base.graceful.shutdown Server exiting")
+	zap.L().Debug("base.graceful.shutdown server closing")
 }

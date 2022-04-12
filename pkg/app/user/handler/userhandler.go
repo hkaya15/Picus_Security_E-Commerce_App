@@ -2,10 +2,10 @@ package handler
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-openapi/strfmt"
-	"github.com/gorilla/securecookie"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
@@ -30,11 +30,12 @@ func NewUserHandler(r *gin.RouterGroup, u *UserService, cfg *config.Config) {
 	r.POST("/login", h.login)
 }
 
+// signup helps user to signup to system. It check user's e-mail & password validation regarding of rules. If it is completed with success, it creates Access & Refresh token and store it as a cookie.
 func (u *UserHandler) signup(c *gin.Context) {
 	var req SignUp
 	if err := c.Bind(&req); err != nil {
 		zap.L().Error("user.handler.signup", zap.Error(err))
-		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, "Check your request body", nil)))
+		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, os.Getenv("CHECK_YOUR_REQUEST"), nil)))
 		return
 	}
 
@@ -51,7 +52,7 @@ func (u *UserHandler) signup(c *gin.Context) {
 	}
 	if res {
 		zap.L().Error("user.handler.signup: User Already exist")
-		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, "User already exists", nil)))
+		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, os.Getenv("USER_ALREADY_EXIST"), nil)))
 		return
 	}
 
@@ -69,25 +70,16 @@ func (u *UserHandler) signup(c *gin.Context) {
 		return
 	}
 
-	var hashKey = []byte("very-secret")
-	var s = securecookie.New(hashKey, nil)
-	encoded, err := s.Encode("token", tkn)
-	if err == nil {
-		cookie := &http.Cookie{
-			Name:     user.UserId,
-			Value:    encoded,
-			Path:     "/",
-			Domain:   "127.0.0.1",
-			Secure:   false,
-			HttpOnly: true,
-		}
+	cookie := SetCookie(tkn, user)
+	if cookie != nil {
 		http.SetCookie(c.Writer, cookie)
-		//c.Header("Access-Control-Allow-Credentials","true")
 		c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
-
+		return
 	}
+
 }
 
+// login helps user to enter system. It checks user info and cookies. If it is complete in a success, return a valid token
 func (u *UserHandler) login(c *gin.Context) {
 	var req Login
 	if err := c.Bind(&req); err != nil {
@@ -105,7 +97,7 @@ func (u *UserHandler) login(c *gin.Context) {
 		return
 	}
 
-	value, err := DecodeToken(c.Request, user)
+	value, err := DecodeCookie(c.Request, user)
 	if err != nil {
 		zap.L().Error("user.handler.login: decodetoken", zap.Error(err))
 		c.JSON(ErrorResponse(err))
@@ -125,26 +117,12 @@ func (u *UserHandler) login(c *gin.Context) {
 						c.JSON(ErrorResponse(err))
 						return
 					}
-
-					var hashKey = []byte("very-secret")
-					var s = securecookie.New(hashKey, nil)
-					encoded, err := s.Encode("token", tkn)
-					if err == nil {
-						cookie := &http.Cookie{
-							Name:     user.UserId,
-							Value:    encoded,
-							Path:     "/",
-							Domain:   "127.0.0.1",
-							Secure:   false,
-							HttpOnly: true,
-						}
+					cookie := SetCookie(tkn, user)
+					if cookie != nil {
 						http.SetCookie(c.Writer, cookie)
-						//c.Header("Access-Control-Allow-Credentials","true")
-
 						c.JSON(http.StatusCreated, APIResponseSignUp{Code: http.StatusCreated, Token: tkn})
 						return
 					}
-
 				}
 				c.JSON(ErrorResponse(err))
 				return
