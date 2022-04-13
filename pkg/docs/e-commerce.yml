@@ -172,7 +172,40 @@ paths:
           description: Generic error response
           schema:
             $ref: "#/definitions/ApiResponse"
-
+  /product/{id}:
+    put:
+      tags:
+        - "product"
+      summary: "Update product"
+      description: "It works for updating product"
+      operationId: "updateProduct"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+        - name: "id"
+          in: "path"
+          type: "string"
+          required: true
+        - in: "body"
+          name: "body"
+          description: "Product object that needs to be updated on system"
+          required: true
+          schema:
+            $ref: "#/definitions/Product"
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
 definitions:
   SignUp:
     type: "object"

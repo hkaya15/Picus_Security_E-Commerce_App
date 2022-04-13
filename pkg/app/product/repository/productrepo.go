@@ -37,3 +37,17 @@ func (p *ProductRepository) Search(query string) (*ProductList,error) {
 
 	return &products,nil
 }
+
+// Update take product id. It can be uses without id with Save. But it creates different product id's. Here it can be uses with Save() without Where() conditions,
+// because id is implemented product. Here I would like to differentiate usage practices.
+func (p *ProductRepository) Update(pr *ProductBase, id string) (*ProductBase,error) {
+	zap.L().Debug("product.repo.update", zap.Reflect("query", pr))
+	pr.ProductId=id
+	if err := p.db.Where("product_id=?",id).Updates(&pr).Error; err!=nil{
+		zap.L().Error("product.repo.update failed to update product", zap.Error(err))
+		return nil,err
+	}
+
+	return pr, nil
+	
+}

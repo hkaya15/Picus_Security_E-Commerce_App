@@ -8175,3 +8175,126 @@ net/http.(*conn).serve
 
 2022-04-13T10:00:28+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-13T10:00:28+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:02:27+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:02:29+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:02:29 +03] "PUT /api/v1/e-commerce-api/product/1 HTTP/1.1 404 334ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:03:03+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:03:03 +03] "PUT /api/v1/e-commerce-api/product/{1} HTTP/1.1 404 167ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:03:26+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:03:26+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:03:28+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:03:33+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:03:33 +03] "PUT /api/v1/e-commerce-api/product/1 HTTP/1.1 404 334ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:03:39+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:03:39+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:04:01+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:04:04+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:04:04 +03] "PUT /api/v1/e-commerce-api/product/1 HTTP/1.1 404 333ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:04:13+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:04:13+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:04:14+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:04:17+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:04:17 +03] "PUT /api/v1/e-commerce-api/product/1 HTTP/1.1 404 292ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:05:32+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:05:32+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:05:34+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:05:44+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:05:44 +03] "PUT /api/v1/e-commerce-api/product/1 HTTP/1.1 200 20.458µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:22:44+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:22:44+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:23:41+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:23:46+03:00	[35mDEBUG[0m	repository/productrepo.go:42	product.repo.update	{"query": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"68ea7dfd-03b3-41a3-a13c-3a740c66504c","ProductName":"Yenilmezler 2","ProductDescription":"İnanılmaz Filmdi","ProductQuantity":300,"categoryId":"2123cd37-f53f-4754-b8de-125bc9d14ded","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://mcdn01.gittigidiyor.net/65051/tn50/650517123_tn50_0.jpg?1649832","Price":90.8,"Counter":0}}
+2022-04-13T11:23:46+03:00	[31mERROR[0m	repository/productrepo.go:45	product.repo.update failed to update product	{"error": "WHERE conditions required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository.(*ProductRepository).Update
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/repository/productrepo.go:45
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service.(*ProductService).Update
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/service/productservice.go:29
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).update
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:94
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T11:23:46+03:00	[31mERROR[0m	handler/producthandler.go:96	product.handler.update	{"error": "WHERE conditions required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).update
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:96
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T11:23:46+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:23:46 +03] "PUT /api/v1/e-commerce-api/product/1 HTTP/1.1 500 3.90075ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:24:38+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:24:38+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:26:47+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:27:17+03:00	[35mDEBUG[0m	repository/productrepo.go:42	product.repo.update	{"query": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"638c1059-f165-484e-aefb-04afe49033cf","ProductName":"Yenilmezler 2","ProductDescription":"İnanılmaz Filmdi","ProductQuantity":300,"categoryId":"2123cd37-f53f-4754-b8de-125bc9d14ded","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://mcdn01.gittigidiyor.net/65051/tn50/650517123_tn50_0.jpg?1649832","Price":90.8,"Counter":0}}
+2022-04-13T11:27:17+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:27:17 +03] "PUT /api/v1/e-commerce-api/product/0fea9b33-a8cc-49a0-8449-e1b8fc1f9cc3 HTTP/1.1 200 29.724083ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:28:58+03:00	[35mDEBUG[0m	repository/productrepo.go:42	product.repo.update	{"query": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"47582c76-a099-48f9-8a03-f6d8818a272b","ProductName":"Yenilmezler 2","ProductDescription":"İnanılmaz Filmdi","ProductQuantity":300,"categoryId":"2123cd37-f53f-4754-b8de-125bc9d14ded","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://mcdn01.gittigidiyor.net/65051/tn50/650517123_tn50_0.jpg?1649832","Price":90.8,"Counter":0}}
+2022-04-13T11:28:58+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:28:58 +03] "PUT /api/v1/e-commerce-api/product/0fea9b33-a8cc-49a0-8449-e1b8fc1f9cc3 HTTP/1.1 200 33.442917ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:31:56+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:31:56+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:32:00+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:32:27+03:00	[35mDEBUG[0m	repository/productrepo.go:42	product.repo.update	{"query": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"8453b872-5743-4b72-b3aa-8c0dc9978c5a","ProductName":"Yenilmezler 3","ProductDescription":"İnanılmaz Filmdi","ProductQuantity":300,"categoryId":"2123cd37-f53f-4754-b8de-125bc9d14ded","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://mcdn01.gittigidiyor.net/65051/tn50/650517123_tn50_0.jpg?1649832","Price":90.8,"Counter":0}}
+2022-04-13T11:32:27+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:32:27 +03] "PUT /api/v1/e-commerce-api/product/47582c76-a099-48f9-8a03-f6d8818a272b HTTP/1.1 200 30.940041ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:33:53+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:33:53+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:33:55+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:34:18+03:00	[35mDEBUG[0m	repository/productrepo.go:42	product.repo.update	{"query": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"24c8ce1d-5c22-480a-b51c-720b27e5afa4","ProductName":"Yenilmezler 3","ProductDescription":"İnanılmaz Filmdi","ProductQuantity":300,"categoryId":"2123cd37-f53f-4754-b8de-125bc9d14ded","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://mcdn01.gittigidiyor.net/65051/tn50/650517123_tn50_0.jpg?1649832","Price":90.8,"Counter":0}}
+2022-04-13T11:34:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:34:18 +03] "PUT /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 200 28.524167ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:36:40+03:00	[35mDEBUG[0m	repository/productrepo.go:42	product.repo.update	{"query": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"23e32615-d18e-42f4-9eab-f24f86172a49","ProductName":"Samsung s23","ProductDescription":"Harika telefon","ProductQuantity":500,"categoryId":"2123cd37-f53f-4754-b8de-125bc9d14ded","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://mcdn01.gittigidiyor.net/65051/tn50/650517123_tn50_0.jpg?1649832","Price":1090.8,"Counter":0}}
+2022-04-13T11:36:40+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:36:40 +03] "PUT /api/v1/e-commerce-api/product/e8788b88-f2a0-4a5e-9a50-c13bc0c1ce26 HTTP/1.1 200 31.087667ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:38:02+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:38:02+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T11:39:59+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T11:40:17+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:40:17 +03] "PUT /api/v1/e-commerce-api/product/e8788b88-f2a0-4a5e-9a50-c13bc0c1ce26 HTTP/1.1 401 196.542µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:40:43+03:00	[35mDEBUG[0m	jwt/jwt.go:165	jwt.verifytokenMiddleware: 	{"error": "invalid character 'È' looking for beginning of value"}
+2022-04-13T11:40:43+03:00	[35mDEBUG[0m	middleware/authmw.go:18	jwt.verifytokenMiddleware: decodedClaims 	{"error": "invalid character 'È' looking for beginning of value"}
+2022-04-13T11:40:43+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:40:43 +03] "PUT /api/v1/e-commerce-api/product/e8788b88-f2a0-4a5e-9a50-c13bc0c1ce26 HTTP/1.1 403 180.667µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:40:51+03:00	[35mDEBUG[0m	repository/productrepo.go:42	product.repo.update	{"query": {"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"f2bb44f7-a326-464d-bdd5-2fead488ad04","ProductName":"Samsung s56","ProductDescription":"Harika telefondur","ProductQuantity":500,"categoryId":"2123cd37-f53f-4754-b8de-125bc9d14ded","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://mcdn01.gittigidiyor.net/65051/tn50/650517123_tn50_0.jpg?1649832","Price":1090.8,"Counter":0}}
+2022-04-13T11:40:51+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 11:40:51 +03] "PUT /api/v1/e-commerce-api/product/e8788b88-f2a0-4a5e-9a50-c13bc0c1ce26 HTTP/1.1 200 32.410625ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T11:41:29+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T11:41:29+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

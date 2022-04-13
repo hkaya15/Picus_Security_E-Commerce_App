@@ -26,6 +26,7 @@ func NewProductHandler(r *gin.RouterGroup, p *ProductService, cfg *config.Config
 	p.Migrate()
 	r.POST("/create", AuthorizationMiddleware(h.cfg), h.create)
 	r.GET("/search", h.search)
+	r.PUT("/:id", AuthorizationMiddleware(h.cfg), h.update)
 }
 func (p *ProductHandler) Migrate() {
 	p.productService.Migrate()
@@ -64,12 +65,37 @@ func (p *ProductHandler) search(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, APIResponse{Code: http.StatusInternalServerError, Message: os.Getenv("NULL_SEARCH")})
 		return
 	}
-	products,err := p.productService.Search(query)
-	if err!=nil{
+	products, err := p.productService.Search(query)
+	if err != nil {
 		zap.L().Error("product.handler.search", zap.Error(err))
 		c.JSON(ErrorResponse(err))
 		return
 	}
 	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("SEARCH_PRODUCT_SUCCESS"), Details: model.SearchToResponse(products)})
+	return
+}
+
+// update helps user to update product by id 
+func (p *ProductHandler) update(c *gin.Context) {
+	id := c.Param("id")
+	var req Product
+	if err := c.Bind(&req); err != nil {
+		zap.L().Error("product.handler.update", zap.Error(err))
+		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, os.Getenv("CHECK_YOUR_REQUEST"), err)))
+		return
+	}
+	if err := req.Validate(strfmt.NewFormats()); err != nil {
+		zap.L().Error("product.handler.validate", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	pr, err := p.productService.Update(model.ResponseToProduct(req), id)
+	if err != nil {
+		zap.L().Error("product.handler.update", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+
+	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("UPDATE_PRODUCT_SUCCESS"), Details: model.ProductToResponse(pr)})
 	return
 }

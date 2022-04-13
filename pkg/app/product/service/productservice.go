@@ -24,3 +24,7 @@ func (p *ProductService) Create(pr *ProductBase)(*ProductBase, error){
 func (p *ProductService) Search(query string)(*ProductList, error){
 	return p.ProductRepo.Search(query)
 }
+
+func (p *ProductService) Update(pr *ProductBase,id string)(*ProductBase, error){
+	return p.ProductRepo.Update(pr,id)
+}
