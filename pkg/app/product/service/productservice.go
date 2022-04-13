@@ -30,7 +30,16 @@ func (p *ProductService) Search(query string) (*ProductList, error) {
 }
 
 func (p *ProductService) Update(pr *ProductBase, id string) (*ProductBase, error) {
-	return p.ProductRepo.Update(pr, id)
+	res,err:=p.ProductRepo.CheckProduct(id)
+	if err != nil {
+		return nil, NewRestError(http.StatusBadRequest, os.Getenv("UPDATE_CHECK_PRODUCT_ISSUE"), nil)
+	}
+	if res{
+		return p.ProductRepo.Update(pr, id)
+	}else{
+		return nil, NewRestError(http.StatusBadRequest, os.Getenv("NO_PRODUCT"), nil)
+	}
+	
 }
 
 func (p *ProductService) Delete(id string) (bool, error) {

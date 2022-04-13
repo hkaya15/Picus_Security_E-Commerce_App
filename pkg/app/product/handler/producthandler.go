@@ -113,6 +113,9 @@ func (p *ProductHandler) delete(c *gin.Context) {
 	if res {
 		c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("DELETE_PRODUCT_SUCCESS")})
 		return
+	} else {
+		c.JSON(ErrorResponse(err))
+		return
 	}
 
 }

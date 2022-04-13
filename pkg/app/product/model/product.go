@@ -11,8 +11,8 @@ type ProductBase struct{
 	ProductName string
 	ProductDescription string
 	ProductQuantity uint
-	CategoryId string `json:"categoryId"`
-	Category Category `gorm:"foreignKey:CategoryID; references:CategoryId"`
+	CategoryId string 
+	Category Category `gorm:"foreignKey:CategoryId; references:CategoryID"`
 	ImageURL string
 	Price float64
 	Counter uint `gorm:"default:0"`

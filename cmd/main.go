@@ -17,6 +17,9 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/db"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/graceful"
@@ -77,6 +80,7 @@ func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	userRooter := rootRouter.Group("/user")
 	categoryRooter := rootRouter.Group("/category")
 	productRooter := rootRouter.Group("/product")
+	cartRooter := rootRouter.Group("/cart")
 
 	userRepo := NewUserRepository(db)
 	userService := NewUserService(userRepo)
@@ -89,4 +93,9 @@ func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	productRepo := NewProductRepository(db)
 	productService := NewProductService(productRepo)
 	NewProductHandler(productRooter, productService, cfg)
+
+	cartRepo := NewCartRepository(db)
+	cartService := NewCartService(cartRepo)
+	NewCartHandler(cartRooter, cartService, cfg)
+
 }

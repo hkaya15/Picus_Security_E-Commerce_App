@@ -1,17 +1,12 @@
 package model
 
-import "fmt"
+import "gorm.io/gorm"
 
-// type Cart struct{
-// 	gorm.Model
-// 	UserId string
-// 	Items []CartItem `gorm:"foreignKey:CartItemID; references: ItemID"`
-// 	ItemID string
-// 	CompleteOrder bool
-// 	CartTotalPrice float64
-// 	CartLength int
-// }
-
-func model(){
-fmt.Print("d")
+type Cart struct {
+	gorm.Model
+	UserID         string  `gorm:"unique"`
+	Items          []CartItem 
+	CompleteOrder  bool	`gorm:"default:false"`
+	CartTotalPrice float64
+	CartLength     int
 }
