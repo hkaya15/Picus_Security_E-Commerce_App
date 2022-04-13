@@ -128,12 +128,40 @@ paths:
       produces:
         - "application/json"
       parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
         - in: "body"
           name: "body"
           description: "Create product"
           required: true
           schema:
             $ref: "#/definitions/Product"
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  /product/search?query:
+    get:
+      tags:
+        - "product"
+      summary: "Search product"
+      description: "It works for searching product"
+      operationId: "searchProduct"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "query"
+          in: "query"
+          type: "string"
+          required: true
       responses:
         "200":
           description: "Successful Operation"

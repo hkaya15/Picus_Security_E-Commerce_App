@@ -20,3 +20,7 @@ func (p *ProductService) Migrate() {
 func (p *ProductService) Create(pr *ProductBase)(*ProductBase, error){
 	return p.ProductRepo.Create(pr)
 }
+
+func (p *ProductService) Search(query string)(*ProductList, error){
+	return p.ProductRepo.Search(query)
+}

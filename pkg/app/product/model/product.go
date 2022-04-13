@@ -17,3 +17,5 @@ type ProductBase struct{
 	Price float64
 	Counter uint `gorm:"default:0"`
 }
+
+type ProductList []ProductBase

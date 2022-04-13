@@ -28,3 +28,12 @@ func ProductToResponse(p *ProductBase) *api.Product{
 		Quantity: &quantity,
 	}
 }
+
+
+func SearchToResponse(pl *ProductList) []*api.Product{
+	products := make([]*api.Product, 0)
+	for _, p := range *pl {
+		products = append(products, ProductToResponse(&p))
+	}
+	return products
+}

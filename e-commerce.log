@@ -7580,3 +7580,598 @@ net/http.(*conn).serve
 
 2022-04-13T01:56:34+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-13T01:56:34+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:36:12+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:38:20+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:38:20 +03] "GET /api/v1/e-commerce-api/product/search/ HTTP/1.1 404 167ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:39:03+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:39:03 +03] "GET /api/v1/e-commerce-api/product/search/:query HTTP/1.1 404 250ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:39:09+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:39:09 +03] "GET /api/v1/e-commerce-api/product/search/:query/car HTTP/1.1 404 125ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:39:47+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:39:47 +03] "GET /api/v1/e-commerce-api/product/search/:id HTTP/1.1 404 250ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:39:56+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:39:56 +03] "GET /api/v1/e-commerce-api/product/search/:query=1 HTTP/1.1 404 167ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:40:02+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:40:02 +03] "GET /api/v1/e-commerce-api/product/search/:query?sa HTTP/1.1 404 166ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:40:09+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:40:09 +03] "GET /api/v1/e-commerce-api/product/search/:query?sa HTTP/1.1 404 166ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:40:58+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:40:58+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:41:02+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:41:07+03:00	[35mDEBUG[0m	jwt/jwt.go:165	jwt.verifytokenMiddleware: 	{"error": "invalid character '\\b' in string literal"}
+2022-04-13T02:41:07+03:00	[35mDEBUG[0m	middleware/authmw.go:18	jwt.verifytokenMiddleware: decodedClaims 	{"error": "invalid character '\\b' in string literal"}
+2022-04-13T02:41:07+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:41:07 +03] "GET /api/v1/e-commerce-api/product/search/:query?sa HTTP/1.1 403 371.666µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:41:14+03:00	[31mERROR[0m	handler/producthandler.go:45	product.handler.validate	{"error": "validation failure list:\ncategoryId in body is required\ndescription in body is required\nimageUrl in body is required\nname in body is required\nprice in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).create
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:41:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:41:14 +03] "GET /api/v1/e-commerce-api/product/search/:query?sa HTTP/1.1 400 817.458µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:41:39+03:00	[31mERROR[0m	handler/producthandler.go:45	product.handler.validate	{"error": "validation failure list:\ncategoryId in body is required\ndescription in body is required\nimageUrl in body is required\nname in body is required\nprice in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).create
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:41:39+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:41:39 +03] "GET /api/v1/e-commerce-api/product/search/:query HTTP/1.1 400 352.5µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:41:57+03:00	[31mERROR[0m	handler/producthandler.go:45	product.handler.validate	{"error": "validation failure list:\ncategoryId in body is required\ndescription in body is required\nimageUrl in body is required\nname in body is required\nprice in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).create
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:45
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:41:57+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:41:57 +03] "GET /api/v1/e-commerce-api/product/search/:query HTTP/1.1 400 512.542µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:42:09+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:42:09+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:42:11+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:42:23+03:00	[35mDEBUG[0m	jwt/jwt.go:165	jwt.verifytokenMiddleware: 	{"error": "illegal base64 data at input byte 220"}
+2022-04-13T02:42:23+03:00	[35mDEBUG[0m	middleware/authmw.go:18	jwt.verifytokenMiddleware: decodedClaims 	{"error": "illegal base64 data at input byte 220"}
+2022-04-13T02:42:23+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:42:23 +03] "GET /api/v1/e-commerce-api/product/search/:query HTTP/1.1 403 480.458µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:42:28+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:42:28 +03] "GET /api/v1/e-commerce-api/product/search/:query HTTP/1.1 200 149.5µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:42:49+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:42:49 +03] "GET /api/v1/e-commerce-api/product/search/:araba HTTP/1.1 200 84.333µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:43:02+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:43:02 +03] "GET /api/v1/e-commerce-api/product/search/ HTTP/1.1 404 333ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:43:08+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:43:08 +03] "GET /api/v1/e-commerce-api/product/search/: HTTP/1.1 200 105.25µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:43:25+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:43:25+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:43:48+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:43:51+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:43:51 +03] "GET /api/v1/e-commerce-api/product/search/: HTTP/1.1 200 384.75µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:43:55+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:43:55 +03] "GET /api/v1/e-commerce-api/product/search/ HTTP/1.1 404 167ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:44:30+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:44:30 +03] "GET /api/v1/e-commerce-api/product/search/araba HTTP/1.1 200 135.625µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:44:39+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:44:39 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 404 166ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:44:49+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:44:49 +03] "GET /api/v1/e-commerce-api/product/search/ HTTP/1.1 404 125ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:48:19+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:48:19+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:50:22+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:50:39+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:50:39+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:50:39 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 500 675.041µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:50:52+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:50:52+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:50:52 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 500 148.958µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:51:03+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:51:03 +03] "GET /api/v1/e-commerce-api/product/searchquery=dms HTTP/1.1 404 334ns "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:51:27+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:51:27 +03] "GET /api/v1/e-commerce-api/product/search?query=dms HTTP/1.1 200 18.667µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:51:45+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:51:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:51:45 +03] "GET /api/v1/e-commerce-api/product/search?query HTTP/1.1 500 292.167µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:51:50+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:51:50+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:51:50 +03] "GET /api/v1/e-commerce-api/product/search?query= HTTP/1.1 500 125.792µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:51:56+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:51:56+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:51:56 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 500 221.667µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:52:07+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:52:07+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:52:10+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:52:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:52:14 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 200 18.75µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:52:41+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:52:41+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:52:44+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:53:02+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:53:02+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:53:04+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:53:11+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:53:11+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:53:11 +03] "GET /api/v1/e-commerce-api/product/search?query= HTTP/1.1 500 450.833µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:53:20+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:53:20+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:53:20 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 500 151.834µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:57:18+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:57:18+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:57:20+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:57:23+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:57:23+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:57:23 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 500 422.042µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T02:59:18+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T02:59:18+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T02:59:20+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T02:59:23+03:00	[31mERROR[0m	handler/producthandler.go:64	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:64
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T02:59:23+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 02:59:23 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 500 475.958µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:00:00+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T03:00:00+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T03:00:04+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T03:00:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 03:00:45 +03] "GET /api/v1/e-commerce-api/product/search?query=araba&name=bmw HTTP/1.1 200 23.292µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:01:21+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T03:01:21+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T03:14:48+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T03:15:00+03:00	[31mERROR[0m	handler/producthandler.go:68	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:68
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T03:15:00+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 03:15:00 +03] "GET /api/v1/e-commerce-api/product/search?query=araba&name=bmw HTTP/1.1 500 477.792µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:15:11+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 03:15:11 +03] "GET /api/v1/e-commerce-api/product/search?query=araba&name=bmw&id=1 HTTP/1.1 200 52.833µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:16:47+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T03:16:47+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T03:16:49+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T03:16:53+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 03:16:53 +03] "GET /api/v1/e-commerce-api/product/search?query=araba&name=bmw&id=1 HTTP/1.1 200 24.75µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:17:29+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T03:17:29+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T03:17:31+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T03:17:33+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 03:17:33 +03] "GET /api/v1/e-commerce-api/product/search?query=araba&name=bmw&id=1 HTTP/1.1 200 30.333µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:18:43+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T03:18:43+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T03:18:45+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T03:18:50+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 03:18:50 +03] "GET /api/v1/e-commerce-api/product/search?query=araba&name=bmw&id=1 HTTP/1.1 200 36.583µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:21:27+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T03:21:27+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T03:21:38+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T03:21:42+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 03:21:42 +03] "GET /api/v1/e-commerce-api/product/search?query=araba&name=bmw&id=1 HTTP/1.1 200 26.333µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T03:25:27+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T03:25:27+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T09:19:49+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T09:19:54+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:19:54 +03] "GET /api/v1/e-commerce-api/product/search?query=mutfak HTTP/1.1 200 25.625µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:20:14+03:00	[31mERROR[0m	handler/producthandler.go:67	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:67
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T09:20:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:20:14 +03] "GET /api/v1/e-commerce-api/product/search HTTP/1.1 500 446.334µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:20:19+03:00	[31mERROR[0m	handler/producthandler.go:67	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:67
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T09:20:19+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:20:19 +03] "GET /api/v1/e-commerce-api/product/search?query HTTP/1.1 500 205.25µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:20:24+03:00	[31mERROR[0m	handler/producthandler.go:67	product.handler.search	{"error": "You can't make null search!"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).search
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:67
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T09:20:24+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:20:24 +03] "GET /api/v1/e-commerce-api/product/search?query= HTTP/1.1 500 120.458µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:20:29+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:20:29 +03] "GET /api/v1/e-commerce-api/product/search?query=make HTTP/1.1 200 38.583µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:20:33+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T09:20:33+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T09:21:15+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T09:21:17+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:21:17 +03] "GET /api/v1/e-commerce-api/product/search?query=make HTTP/1.1 200 14.416µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:21:21+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T09:21:21+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T09:50:45+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T09:50:59+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "make"}
+2022-04-13T09:50:59+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:50:59 +03] "GET /api/v1/e-commerce-api/product/search?query=make HTTP/1.1 200 28.83175ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:51:11+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "samsung"}
+2022-04-13T09:51:11+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:51:11 +03] "GET /api/v1/e-commerce-api/product/search?query=samsung HTTP/1.1 200 28.354167ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:51:21+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "Samsung"}
+2022-04-13T09:51:21+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:51:21 +03] "GET /api/v1/e-commerce-api/product/search?query=Samsung HTTP/1.1 200 31.343667ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:51:37+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T09:51:37+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T09:51:57+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T09:52:11+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "wh"}
+2022-04-13T09:52:11+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:52:11 +03] "GET /api/v1/e-commerce-api/product/search?query=wh HTTP/1.1 200 32.701875ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:52:20+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "samsun"}
+2022-04-13T09:52:20+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:52:20 +03] "GET /api/v1/e-commerce-api/product/search?query=samsun HTTP/1.1 200 29.740792ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:56:07+03:00	[35mDEBUG[0m	repository/productrepo.go:22	product.repo.create	{"product": "Yenilmezler"}
+2022-04-13T09:56:07+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:56:07 +03] "POST /api/v1/e-commerce-api/product/create HTTP/1.1 201 31.684ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:56:43+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "yen"}
+2022-04-13T09:56:43+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:56:43 +03] "GET /api/v1/e-commerce-api/product/search?query=yen HTTP/1.1 200 30.759333ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:57:15+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "ded"}
+2022-04-13T09:57:15+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:57:15 +03] "GET /api/v1/e-commerce-api/product/search?query=ded HTTP/1.1 200 28.957ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T09:57:26+03:00	[35mDEBUG[0m	repository/productrepo.go:31	product.repo.search	{"query": "yen"}
+2022-04-13T09:57:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 09:57:26 +03] "GET /api/v1/e-commerce-api/product/search?query=yen HTTP/1.1 200 31.211042ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T10:00:28+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T10:00:28+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

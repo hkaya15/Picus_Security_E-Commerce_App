@@ -1,13 +1,14 @@
 package handler
 
 import (
+	"errors"
 	"net/http"
 	"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-openapi/strfmt"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
-	api "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/model"
+	model "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
@@ -24,6 +25,7 @@ func NewProductHandler(r *gin.RouterGroup, p *ProductService, cfg *config.Config
 	h := &ProductHandler{productService: p, cfg: cfg}
 	p.Migrate()
 	r.POST("/create", AuthorizationMiddleware(h.cfg), h.create)
+	r.GET("/search", h.search)
 }
 func (p *ProductHandler) Migrate() {
 	p.productService.Migrate()
@@ -43,13 +45,31 @@ func (p *ProductHandler) create(c *gin.Context) {
 		c.JSON(ErrorResponse(err))
 		return
 	}
-	pr, err := p.productService.Create(api.ResponseToProduct(req))
+	pr, err := p.productService.Create(model.ResponseToProduct(req))
 	if err != nil {
 		zap.L().Error("product.handler.create", zap.Error(err))
 		c.JSON(ErrorResponse(err))
 		return
 	}
-	c.JSON(http.StatusCreated, APIResponse{Code: http.StatusCreated, Message: os.Getenv("CREATE_PRODUCT_SUCCESS"), Details: api.ProductToResponse(pr)})
+	c.JSON(http.StatusCreated, APIResponse{Code: http.StatusCreated, Message: os.Getenv("CREATE_PRODUCT_SUCCESS"), Details: model.ProductToResponse(pr)})
 	return
 
+}
+
+// search helps user to search by product_id,name,description. It can be expanded.
+func (p *ProductHandler) search(c *gin.Context) {
+	query := c.Query("query")
+	if len(query) == 0 {
+		zap.L().Error("product.handler.search", zap.Error(errors.New(os.Getenv("NULL_SEARCH"))))
+		c.JSON(http.StatusInternalServerError, APIResponse{Code: http.StatusInternalServerError, Message: os.Getenv("NULL_SEARCH")})
+		return
+	}
+	products,err := p.productService.Search(query)
+	if err!=nil{
+		zap.L().Error("product.handler.search", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("SEARCH_PRODUCT_SUCCESS"), Details: model.SearchToResponse(products)})
+	return
 }
