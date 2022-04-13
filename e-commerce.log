@@ -8298,3 +8298,577 @@ net/http.(*conn).serve
 
 2022-04-13T11:41:29+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-13T11:41:29+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:21:45+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:22:26+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:22:26+03:00	[31mERROR[0m	repository/productrepo.go:58	product.repo.delete failed to delete product	{"error": "invalid value, should be pointer to struct or slice"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository.(*ProductRepository).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/repository/productrepo.go:58
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service.(*ProductService).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/service/productservice.go:33
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:22:26+03:00	[31mERROR[0m	handler/producthandler.go:108	product.handler.delete	{"error": "invalid value, should be pointer to struct or slice"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:22:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:22:26 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 18.0965ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:23:01+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:23:01+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:23:15+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:23:19+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:23:19+03:00	[31mERROR[0m	repository/productrepo.go:58	product.repo.delete failed to delete product	{"error": "invalid value, should be pointer to struct or slice"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository.(*ProductRepository).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/repository/productrepo.go:58
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service.(*ProductService).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/service/productservice.go:33
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:23:19+03:00	[31mERROR[0m	handler/producthandler.go:108	product.handler.delete	{"error": "invalid value, should be pointer to struct or slice"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:23:19+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:23:19 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 1.787792ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:23:38+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:23:38+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:23:40+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:23:45+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:23:45+03:00	[31mERROR[0m	repository/productrepo.go:58	product.repo.delete failed to delete product	{"error": "invalid value, should be pointer to struct or slice"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository.(*ProductRepository).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/repository/productrepo.go:58
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service.(*ProductService).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/service/productservice.go:33
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:23:45+03:00	[31mERROR[0m	handler/producthandler.go:108	product.handler.delete	{"error": "invalid value, should be pointer to struct or slice"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:23:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:23:45 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 18.797208ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:23:53+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:23:53+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:25:21+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:25:23+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:25:23+03:00	[31mERROR[0m	repository/productrepo.go:58	product.repo.delete failed to delete product	{"error": "WHERE conditions required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository.(*ProductRepository).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/repository/productrepo.go:58
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service.(*ProductService).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/service/productservice.go:33
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:25:23+03:00	[31mERROR[0m	handler/producthandler.go:108	product.handler.delete	{"error": "WHERE conditions required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:25:23+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:25:23 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 2.862875ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:25:50+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:25:50+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:25:52+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:25:56+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:25:56+03:00	[31mERROR[0m	repository/productrepo.go:58	product.repo.delete failed to delete product	{"error": "ERROR: syntax error at or near \"b872\" (SQLSTATE 42601)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository.(*ProductRepository).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/repository/productrepo.go:58
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service.(*ProductService).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/service/productservice.go:33
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:25:56+03:00	[31mERROR[0m	handler/producthandler.go:108	product.handler.delete	{"error": "ERROR: syntax error at or near \"b872\" (SQLSTATE 42601)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:25:56+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:25:56 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 4.597375ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:28:59+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:28:59+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:29:02+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:29:03+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:29:03+03:00	[31mERROR[0m	repository/productrepo.go:58	product.repo.delete failed to delete product	{"error": "ERROR: syntax error at or near \"b872\" (SQLSTATE 42601)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository.(*ProductRepository).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/repository/productrepo.go:58
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service.(*ProductService).Delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/service/productservice.go:33
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:106
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:29:03+03:00	[31mERROR[0m	handler/producthandler.go:108	product.handler.delete	{"error": "ERROR: syntax error at or near \"b872\" (SQLSTATE 42601)"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T12:29:03+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:29:03 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 5.005167ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:30:16+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:30:16+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:30:18+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:30:21+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:30:21+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:30:21 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 200 5.330542ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:33:10+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:33:10+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:33:14+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:33:17+03:00	[35mDEBUG[0m	repository/productrepo.go:56	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:33:17+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:33:17 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 200 5.181708ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:34:57+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:34:57+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T12:37:15+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T12:37:26+03:00	[35mDEBUG[0m	jwt/jwt.go:165	jwt.verifytokenMiddleware: 	{"error": "invalid character 'x' looking for beginning of value"}
+2022-04-13T12:37:26+03:00	[35mDEBUG[0m	middleware/authmw.go:18	jwt.verifytokenMiddleware: decodedClaims 	{"error": "invalid character 'x' looking for beginning of value"}
+2022-04-13T12:37:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:37:26 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 403 374.667µs "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:37:31+03:00	[35mDEBUG[0m	repository/productrepo.go:57	product.repo.delete	{"query": "8453b872-5743-4b72-b3aa-8c0dc9978c5a"}
+2022-04-13T12:37:31+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 12:37:31 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 200 29.005791ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T12:38:52+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T12:38:52+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T13:09:34+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T13:09:37+03:00	[35mDEBUG[0m	repository/productrepo.go:68	product.repo.checkproduct
+2022-04-13T13:09:37+03:00	[31mERROR[0m	handler/producthandler.go:109	product.handler.delete	{"error": "status: 400 - errors: There is no product by that id! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:109
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T13:09:37+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 13:09:37 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 2.324417ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T13:10:34+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T13:10:34+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T13:10:36+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T13:10:38+03:00	[35mDEBUG[0m	repository/productrepo.go:68	product.repo.checkproduct
+2022-04-13T13:10:38+03:00	[31mERROR[0m	handler/producthandler.go:109	product.handler.delete	{"error": "status: 400 - errors: There is no product by that id! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:109
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T13:10:38+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 13:10:38 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 2.054209ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T13:10:52+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T13:10:52+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T13:11:14+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T13:11:16+03:00	[35mDEBUG[0m	repository/productrepo.go:68	product.repo.checkproduct
+2022-04-13T13:11:16+03:00	[31mERROR[0m	handler/producthandler.go:109	product.handler.delete	{"error": "status: 400 - errors: There is no product by that id! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:109
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T13:11:16+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 13:11:16 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 4.01975ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T13:12:41+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T13:12:41+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-13T13:12:43+03:00	[35mDEBUG[0m	cmd/main.go:70	Server started
+2022-04-13T13:12:45+03:00	[35mDEBUG[0m	repository/productrepo.go:68	product.repo.checkproduct
+2022-04-13T13:12:45+03:00	[31mERROR[0m	handler/producthandler.go:109	product.handler.delete	{"error": "status: 400 - errors: There is no product by that id! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler.(*ProductHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/product/handler/producthandler.go:109
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthorizationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authmw.go:21
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-13T13:12:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 13:12:45 +03] "DELETE /api/v1/e-commerce-api/product/8453b872-5743-4b72-b3aa-8c0dc9978c5a HTTP/1.1 400 3.800125ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T13:13:24+03:00	[35mDEBUG[0m	repository/productrepo.go:68	product.repo.checkproduct
+2022-04-13T13:13:24+03:00	[35mDEBUG[0m	repository/productrepo.go:57	product.repo.delete	{"query": "d6917174-0854-43c8-8b78-0b1f51f8cb3f"}
+2022-04-13T13:13:24+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Wed, 13 Apr 2022 13:13:24 +03] "DELETE /api/v1/e-commerce-api/product/d6917174-0854-43c8-8b78-0b1f51f8cb3f HTTP/1.1 200 29.222583ms "PostmanRuntime/7.29.0" "
+
+2022-04-13T13:13:56+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-13T13:13:56+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

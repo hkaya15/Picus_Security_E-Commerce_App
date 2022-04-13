@@ -27,6 +27,7 @@ func NewProductHandler(r *gin.RouterGroup, p *ProductService, cfg *config.Config
 	r.POST("/create", AuthorizationMiddleware(h.cfg), h.create)
 	r.GET("/search", h.search)
 	r.PUT("/:id", AuthorizationMiddleware(h.cfg), h.update)
+	r.DELETE("/:id", AuthorizationMiddleware(h.cfg), h.delete)
 }
 func (p *ProductHandler) Migrate() {
 	p.productService.Migrate()
@@ -75,7 +76,7 @@ func (p *ProductHandler) search(c *gin.Context) {
 	return
 }
 
-// update helps user to update product by id 
+// update helps user to update product by id
 func (p *ProductHandler) update(c *gin.Context) {
 	id := c.Param("id")
 	var req Product
@@ -98,4 +99,20 @@ func (p *ProductHandler) update(c *gin.Context) {
 
 	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("UPDATE_PRODUCT_SUCCESS"), Details: model.ProductToResponse(pr)})
 	return
+}
+
+// delete helps user to delete product by id
+func (p *ProductHandler) delete(c *gin.Context) {
+	id := c.Param("id")
+	res, err := p.productService.Delete(id)
+	if err != nil {
+		zap.L().Error("product.handler.delete", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	if res {
+		c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("DELETE_PRODUCT_SUCCESS")})
+		return
+	}
+
 }

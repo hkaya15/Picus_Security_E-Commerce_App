@@ -41,7 +41,7 @@ func (p *ProductRepository) Search(query string) (*ProductList,error) {
 // Update take product id. It can be uses without id with Save. But it creates different product id's. Here it can be uses with Save() without Where() conditions,
 // because id is implemented product. Here I would like to differentiate usage practices.
 func (p *ProductRepository) Update(pr *ProductBase, id string) (*ProductBase,error) {
-	zap.L().Debug("product.repo.update", zap.Reflect("query", pr))
+	zap.L().Debug("product.repo.update", zap.Reflect("product", pr))
 	pr.ProductId=id
 	if err := p.db.Where("product_id=?",id).Updates(&pr).Error; err!=nil{
 		zap.L().Error("product.repo.update failed to update product", zap.Error(err))
@@ -50,4 +50,26 @@ func (p *ProductRepository) Update(pr *ProductBase, id string) (*ProductBase,err
 
 	return pr, nil
 	
+}
+
+// Delete helps user to delete product. Here is hard-delete. If you would like to change it soft-delete, just remove "Unscoped()".
+func (p *ProductRepository) Delete(id string)(bool,error){
+	zap.L().Debug("product.repo.delete", zap.Reflect("query", id))
+	if err:=p.db.Unscoped().Where("product_id=?",id).Delete(&ProductBase{}).Error; err!=nil{
+		zap.L().Error("product.repo.delete failed to delete product", zap.Error(err))
+		return false,err
+	}
+	return true,nil
+}
+
+// CheckProduct helps user to check product is exist or not
+func (p *ProductRepository) CheckProduct(id string) (bool,error){
+	var pr *ProductBase
+	var exists bool = false
+	zap.L().Debug("product.repo.checkproduct")	
+	r:=p.db.Where("product_id=?",id).Limit(1).Find(&pr)
+	if r.RowsAffected>0{
+		exists=true
+	}
+	return exists, nil
 }

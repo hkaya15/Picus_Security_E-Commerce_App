@@ -1,8 +1,12 @@
 package service
 
 import (
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository"
+	"net/http"
+	"os"
+
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/model"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
 )
 
 type ProductService struct {
@@ -17,14 +21,27 @@ func (p *ProductService) Migrate() {
 	p.ProductRepo.Migrate()
 }
 
-func (p *ProductService) Create(pr *ProductBase)(*ProductBase, error){
+func (p *ProductService) Create(pr *ProductBase) (*ProductBase, error) {
 	return p.ProductRepo.Create(pr)
 }
 
-func (p *ProductService) Search(query string)(*ProductList, error){
+func (p *ProductService) Search(query string) (*ProductList, error) {
 	return p.ProductRepo.Search(query)
 }
 
-func (p *ProductService) Update(pr *ProductBase,id string)(*ProductBase, error){
-	return p.ProductRepo.Update(pr,id)
+func (p *ProductService) Update(pr *ProductBase, id string) (*ProductBase, error) {
+	return p.ProductRepo.Update(pr, id)
+}
+
+func (p *ProductService) Delete(id string) (bool, error) {
+	res, err := p.ProductRepo.CheckProduct(id)
+	if err != nil {
+		return false, NewRestError(http.StatusBadRequest, os.Getenv("DELETE_CHECK_PRODUCT_ISSUE"), nil)
+	}
+	if res{
+		return p.ProductRepo.Delete(id)
+	}else{
+		return false, NewRestError(http.StatusBadRequest, os.Getenv("NO_PRODUCT"), nil)
+	}
+	
 }
