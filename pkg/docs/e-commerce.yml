@@ -17,6 +17,8 @@ tags:
     description: "Everything about Category"
   - name: "product"
     description: "Everything about Product"
+  - name: "cart"
+    description: "Everything about Cart"
 schemes:
   - "https"
   - "http"
@@ -240,6 +242,36 @@ paths:
         default:
           description: Generic error response
           schema:
+            $ref: "#/definitions/ApiResponse"
+  /cart/add:
+    post:
+      tags:
+        - "cart"
+      summary: "Add product to cart"
+      description: "It works for adding product to cart"
+      operationId: "addItemCart"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+        - in: "body"
+          name: "body"
+          description: "Add product to cart"
+          required: true
+          schema:
+            $ref: "#/definitions/CartItem"
+      responses:
+        "201":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
             $ref: "#/definitions/ApiResponse"  
 definitions:
   SignUp:
@@ -324,6 +356,51 @@ definitions:
       imageUrl:
         type: "string"
       price:
+        type: "number"
+        format: "float64"
+  CartItemToResponse:
+    type: "object"
+    properties: 
+      cartId:
+        type: "string"
+      productId:
+        type: "string"
+      product:
+        type: "object"
+        $ref: "#/definitions/Product"
+      quantity:
+        type: "integer"
+        format: "int"
+      totalPrice:
+        type: "number"
+        format: "float64"
+  CartItem:
+    type: "object"
+    required:
+      - productId
+      - quantity
+    properties:
+      productId:
+        type: "string"
+      quantity:
+        type: "integer"
+        format: "uint"
+  APICart:
+    type: "object"
+    properties:
+      userId:
+        type: "string"
+      cartitems:
+        type: "array"
+        items:
+            type: "object"
+            $ref: "#/definitions/CartItemToResponse"
+      completeOrder:
+        type: "boolean"
+      cartlength:
+        type: "integer"
+        format: "int"
+      totalPrice:
         type: "number"
         format: "float64"
       

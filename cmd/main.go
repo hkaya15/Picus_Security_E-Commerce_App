@@ -95,7 +95,7 @@ func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	NewProductHandler(productRooter, productService, cfg)
 
 	cartRepo := NewCartRepository(db)
-	cartService := NewCartService(cartRepo)
+	cartService := NewCartService(cartRepo, productRepo)
 	NewCartHandler(cartRooter, cartService, cfg)
 
 }
