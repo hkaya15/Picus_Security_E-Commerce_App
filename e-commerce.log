@@ -14906,3 +14906,58 @@ net/http.(*conn).serve
 
 2022-04-14T21:18:49+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-14T21:18:49+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T21:49:19+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T21:52:50+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T21:52:50+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:52:50+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "3a8d2d13-d943-4856-bee0-3eca5f131945"}
+2022-04-14T21:52:50+03:00	[35mDEBUG[0m	repository/cartrepo.go:79	cart.repo.delete	{"cartitem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"","ProductName":"","ProductDescription":"","ProductQuantity":0,"CategoryId":"","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"","Price":0,"Counter":0},"product_id":"3a8d2d13-d943-4856-bee0-3eca5f131945","quantity":3,"total_price":500}}
+2022-04-14T21:52:50+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:52:50 +03] "DELETE /api/v1/e-commerce-api/cart/3a8d2d13-d943-4856-bee0-3eca5f131945 HTTP/1.1 200 38.011ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:52:58+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:52:58+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:52:58 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 31.970333ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:53:34+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T21:53:34+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:53:34+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "f15e6170-f055-435f-adc6-1dc161f32d83"}
+2022-04-14T21:53:34+03:00	[35mDEBUG[0m	repository/cartrepo.go:79	cart.repo.delete	{"cartitem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"","ProductName":"","ProductDescription":"","ProductQuantity":0,"CategoryId":"","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"","Price":0,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":5,"total_price":6545.5}}
+2022-04-14T21:53:34+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:53:34 +03] "DELETE /api/v1/e-commerce-api/cart/f15e6170-f055-435f-adc6-1dc161f32d83 HTTP/1.1 200 36.093958ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:53:37+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:53:37+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:53:37 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 4.561166ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:53:47+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T21:53:47+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:53:47+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "f15e6170-f055-435f-adc6-1dc161f32d83"}
+2022-04-14T21:53:47+03:00	[31mERROR[0m	handler/carthandler.go:131	car.handler.delete	{"error": "status: 400 - errors: Cart hasn't this item - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).delete
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:131
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T21:53:47+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:53:47 +03] "DELETE /api/v1/e-commerce-api/cart/f15e6170-f055-435f-adc6-1dc161f32d83 HTTP/1.1 400 27.923333ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:54:19+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T21:54:19+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

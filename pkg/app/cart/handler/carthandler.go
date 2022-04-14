@@ -27,6 +27,7 @@ func NewCartHandler(r *gin.RouterGroup, c *CartService, cfg *config.Config) {
 	r.POST("/", AuthenticationMiddleware(h.cfg), h.add)
 	r.GET("/", AuthenticationMiddleware(h.cfg), h.getcartlist)
 	r.PUT("/", AuthenticationMiddleware(h.cfg), h.update)
+	r.DELETE("/:id",AuthenticationMiddleware(h.cfg),h.delete)
 }
 
 func (c *CartHandler) Migrate() {
@@ -114,4 +115,29 @@ func (crt *CartHandler) update(c *gin.Context){
 	}
 	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("CART_UPDATE_SUCCESS")})
 	return
+}
+
+func (crt *CartHandler) delete(c *gin.Context){
+	val, res := c.Get("User")
+	if res == false {
+		zap.L().Error("cart.handler.delete", zap.Bool("value: ", res))
+		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, os.Getenv("NO_CONTEXT"), nil)))
+		return
+	}
+	user := val.(*AccessTokenDetails)
+	id := c.Param("id")
+	res, err := crt.cartService.Delete(id,user.UserID)
+	if err != nil {
+		zap.L().Error("car.handler.delete", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	if res {
+		c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("DELETE_CARTITEM_SUCCESS")})
+		return
+	} else {
+		c.JSON(ErrorResponse(err))
+		return
+	}
+
 }

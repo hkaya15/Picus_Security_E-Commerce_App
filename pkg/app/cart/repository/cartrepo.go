@@ -65,6 +65,7 @@ func (c *CartRepository) GetCartList(crt *Cart) (*Cart, error) {
 	return cart, nil
 }
 
+// Update helps to update cartitem
 func (c *CartRepository) Update(crt *CartsItem)  error {
 	zap.L().Debug("cart.repo.update", zap.Reflect("item", crt))
 	if err := c.db.Save(&crt).Error; err != nil {
@@ -72,4 +73,14 @@ func (c *CartRepository) Update(crt *CartsItem)  error {
 		return err
 	}
 	return nil
+}
+
+// Delete helps to delete cartitem
+func (c *CartRepository) Delete(crt *CartsItem) (bool,error) {
+	zap.L().Debug("cart.repo.delete", zap.Reflect("cartitem", crt))
+	if err := c.db.Unscoped().Where("product_id=?", crt.ProductID).Delete(&CartsItem{}).Error; err != nil {
+		zap.L().Error("cart.repo.delete failed to delete cartitem", zap.Error(err))
+		return false, err
+	}
+	return true, nil
 }

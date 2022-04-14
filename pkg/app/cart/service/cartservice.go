@@ -27,7 +27,7 @@ func (c *CartService) Migrate() {
 	c.CartRepo.Migrate()
 }
 
-// Add checks that ordinary with checks product, cart
+// Add checks that ordinary with checks product, cart and add item to cart
 func (c *CartService) Add(user *AccessTokenDetails, item *api.CartItem) error {
 
 	product, err := c.ProductRepo.GetProductById(*item.ProductID)
@@ -68,7 +68,7 @@ func (c *CartService) GetCartList(cart *Cart) (*Cart,error){
 	return cart,nil
 }
 
-
+// Update  checks product whether exist or not. After that checks Cart that created before. After that it process logic and update cart item.
 func (c *CartService) Update(req *UpdatedCartItem, userid string)  error {
 
 	product,err:=c.ProductRepo.GetProductById(*req.ProductID)
@@ -99,4 +99,25 @@ func (c *CartService) Update(req *UpdatedCartItem, userid string)  error {
 	}
 	
 	return nil
+}
+
+// Delete checks products, cart and delete item.
+func (c *CartService) Delete(productid string ,userid string) (bool,error){
+
+	_,err:=c.ProductRepo.GetProductById(productid)
+	if err != nil {
+		return false, NewRestError(http.StatusBadRequest, os.Getenv("CHECK_USER_CART_PRODUCT_ISSUE"), err.Error())
+	}
+
+	_ , err = c.CartRepo.CreateCart(ResponseToCart(userid))
+	if err != nil {
+		return false, NewRestError(http.StatusBadRequest, os.Getenv("CREATE_CART_ISSUE"), err.Error())
+	}
+
+	item,bool := c.CartRepo.FindByID(productid,userid)
+	if !bool{
+		return false,NewRestError(http.StatusBadRequest, os.Getenv("CART_HASNT_PRODUCT"), nil)
+	}
+
+	return c.CartRepo.Delete(item)
 }
