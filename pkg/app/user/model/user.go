@@ -1,10 +1,6 @@
 package model
 
-import (
-
-	"gorm.io/gorm"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/model"
-)
+import "gorm.io/gorm"
 
 type User struct {
 	gorm.Model
@@ -14,5 +10,4 @@ type User struct {
 	Email     string
 	Password  string
 	IsAdmin   bool `gorm:"default:false"`
-	Order []Order 
 }
