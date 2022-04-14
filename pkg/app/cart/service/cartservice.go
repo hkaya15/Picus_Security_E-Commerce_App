@@ -57,3 +57,12 @@ func (c *CartService) Add(user *AccessTokenDetails, item *api.CartItem) error {
 
 	return nil
 }
+
+// GetCartList get cartlist includes all cart items
+func (c *CartService) GetCartList(cart *Cart) (*Cart,error){
+	cart, err := c.CartRepo.GetCartList(cart)
+	if err != nil {
+		return nil, NewRestError(http.StatusBadRequest, os.Getenv("GET_CART_ISSUE"), err.Error())
+	}
+	return cart,nil
+}

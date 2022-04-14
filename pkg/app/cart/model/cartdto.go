@@ -5,9 +5,9 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/model"
 )
 
-func ResponseToCartItem(c *api.CartItem, p *ProductBase, userId string) *CartItem {
+func ResponseToCartItem(c *api.CartItem, p *ProductBase, userId string) *CartsItem {
 	totalItemPrice := CalculateItemPrice(uint(*c.Quantity), p.Price)
-	return &CartItem{
+	return &CartsItem{
 		CartID:     userId,
 		Product:    *p,
 		ProductID:  *c.ProductID,
@@ -27,14 +27,14 @@ func ResponseToCart(userId string) *Cart {
 	}
 }
 
-func ResponseAPICart(cart *Cart)api.APICart{
+func ResponseAPICart(cart *Cart)*api.APICart{
 
 	items := make([]*api.CartItemToResponse, 0)
 	for _, v := range cart.Items{
-		items = append(items, CartItemToResponse(v))
+		items = append(items,ItemResponse(v))
 	}
 	totalPrice:=CalculateCartTotalPrice(items)
-	return api.APICart{
+	return &api.APICart{
 		UserID: cart.UserID,
 		Cartitems: items,
 		Cartlength: int64(len(items)),
@@ -45,7 +45,7 @@ func ResponseAPICart(cart *Cart)api.APICart{
 
 
 
-func CartItemToResponse(b *CartItem) *api.CartItemToResponse{
+func ItemResponse(b *CartsItem) *api.CartItemToResponse{
 	product:=ProductToResponse(&b.Product)
 	return &api.CartItemToResponse{
 		CartID: b.CartID,

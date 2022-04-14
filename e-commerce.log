@@ -14064,3 +14064,689 @@ net/http.(*conn).serve
 
 2022-04-14T14:40:44+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-14T14:40:44+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T15:45:23+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T15:45:27+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T15:45:27+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T15:48:15+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T15:48:21+03:00	[35mDEBUG[0m	repository/userrepo.go:32	user.repo.login	{"email": "user@gmail.com"}
+2022-04-14T15:48:22+03:00	[35mDEBUG[0m	jwt/jwt.go:105	jwt.verifytokenParse: 	{"error": "Token is expired"}
+2022-04-14T15:48:22+03:00	[31mERROR[0m	handler/userhandler.go:108	user.handler.login: verifyactoken	{"error": "Token is expired"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler.(*UserHandler).login
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/user/handler/userhandler.go:108
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T15:48:22+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 15:48:22 +03] "POST /api/v1/e-commerce-api/user/login HTTP/1.1 200 1.11936375s "PostmanRuntime/7.29.0" "
+
+2022-04-14T15:48:38+03:00	[31mERROR[0m	handler/carthandler.go:52	user.handler.signup	{"error": "validation failure list:\nproductId in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T15:48:38+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 15:48:38 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 400 378µs "PostmanRuntime/7.29.0" "
+
+2022-04-14T15:49:40+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T15:49:40+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T15:50:33+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T15:50:37+03:00	[31mERROR[0m	handler/carthandler.go:52	user.handler.signup	{"error": "validation failure list:\nproductId in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T15:50:37+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 15:50:37 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 400 1.384584ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T15:52:19+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T15:52:19+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T15:52:21+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T15:52:27+03:00	[31mERROR[0m	handler/carthandler.go:52	user.handler.signup	{"error": "validation failure list:\nproductId in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T15:52:27+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 15:52:27 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 400 806.625µs "PostmanRuntime/7.29.0" "
+
+2022-04-14T15:54:14+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T15:54:14+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T15:55:00+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T15:55:07+03:00	[31mERROR[0m	handler/carthandler.go:52	user.handler.signup	{"error": "validation failure list:\nproductId in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T15:55:07+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 15:55:07 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 400 1.523041ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T15:56:14+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T15:56:14+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T15:56:16+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T15:56:22+03:00	[31mERROR[0m	handler/carthandler.go:52	user.handler.signup	{"error": "validation failure list:\nproductId in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T15:56:22+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 15:56:22 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 400 737.458µs "PostmanRuntime/7.29.0" "
+
+2022-04-14T15:57:37+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T15:57:37+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T15:58:29+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T15:58:37+03:00	[31mERROR[0m	handler/carthandler.go:52	user.handler.signup	{"error": "validation failure list:\nproductId in body is required\nquantity in body is required"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:52
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T15:58:37+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 15:58:37 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 400 2.723834ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T15:59:16+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T15:59:16+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:00:42+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:00:49+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cartıd": "fa43f277-f571-47b2-86b5-b77c84974911"}
+2022-04-14T16:00:49+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:00:49 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 27.817ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:00:52+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cartıd": "fa43f277-f571-47b2-86b5-b77c84974911"}
+2022-04-14T16:00:52+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:00:52 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 664.417µs "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:01:30+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:01:30+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:01:32+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:01:40+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cartıd": "fa43f277-f571-47b2-86b5-b77c84974911"}
+2022-04-14T16:01:40+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:01:40 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 28.667167ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:06:50+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:06:50+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:06:52+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:06:56+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:06:56+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:06:56 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 2.924459ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:08:57+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:08:57+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:09:00+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:09:01+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:09:01+03:00	[31mERROR[0m	repository/cartrepo.go:61	cart.repo.getCartItem failed to get cart	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/repository.(*CartRepository).GetCartList
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/repository/cartrepo.go:61
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/service.(*CartService).GetCartList
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/service/cartservice.go:62
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).getcartlist
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:78
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:09:01+03:00	[31mERROR[0m	handler/carthandler.go:81	cart.handler.getcartlist	{"error": "status: 400 - errors: Cart has fault while getting! - causes: record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).getcartlist
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:81
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:09:01+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:09:01 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 500 4.510875ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:09:16+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:09:16+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:09:18+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:09:22+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:09:22+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:09:22 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 11.033875ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:11:00+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:11:00+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:11:03+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:11:06+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:11:06+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:11:06 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 4.873833ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:12:01+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:12:01+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:12:01+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":3,"CreatedAt":"2022-04-14T09:32:01.747214+03:00","UpdatedAt":"2022-04-14T09:32:01.747214+03:00","DeletedAt":null,"ProductId":"ebb243eb-7cb2-404e-82eb-2405382b6586","ProductName":"Xiammi","ProductDescription":"Xiammi","ProductQuantity":500,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":500,"Counter":0},"product_id":"ebb243eb-7cb2-404e-82eb-2405382b6586","quantity":400,"total_price":200000}}
+2022-04-14T16:12:01+03:00	[35mDEBUG[0m	repository/cartrepo.go:25	cart.repo.create.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":3,"CreatedAt":"2022-04-14T09:32:01.747214+03:00","UpdatedAt":"2022-04-14T09:32:01.747214+03:00","DeletedAt":null,"ProductId":"ebb243eb-7cb2-404e-82eb-2405382b6586","ProductName":"Xiammi","ProductDescription":"Xiammi","ProductQuantity":500,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":500,"Counter":0},"product_id":"ebb243eb-7cb2-404e-82eb-2405382b6586","quantity":400,"total_price":200000}}
+2022-04-14T16:12:01+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:12:01 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 201 39.217375ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:12:06+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:12:06+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:12:06 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 1.966167ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:12:38+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:12:38+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:12:40+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:12:46+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:12:46+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:12:46 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 28.7465ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:12:53+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:12:53+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:13:16+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:14:13+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:14:13+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:14:13+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":5,"total_price":32727.5}}
+2022-04-14T16:14:13+03:00	[35mDEBUG[0m	repository/cartrepo.go:25	cart.repo.create.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":5,"total_price":32727.5}}
+2022-04-14T16:14:13+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:14:13 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 201 41.253459ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:14:26+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:14:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:14:26 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 33.353958ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:15:04+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:15:04+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:15:28+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:15:36+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:15:36+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:15:36+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:15:36+03:00	[35mDEBUG[0m	repository/cartrepo.go:25	cart.repo.create.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:15:36+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:15:36 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 201 42.708167ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:15:45+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:15:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:15:45 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 35.35525ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:16:15+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:16:15+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:16:15+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:16:15+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:16:15+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:16:15 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 500 33.186417ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:19:09+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:19:09+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:19:11+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:19:14+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:19:14+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:19:14+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:19:14+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:19:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:19:14 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 500 8.206958ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:19:37+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:19:37+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:19:39+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:19:41+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:19:41+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:19:41+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:19:41+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:19:41+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:19:41 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 500 4.880583ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:21:12+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:21:12+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:21:15+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:21:18+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:21:18+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:21:18+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:21:18+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:21:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:21:18 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 500 11.26125ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:22:04+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:22:04+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:22:06+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:22:10+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:22:10+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:22:10+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:22:10+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:22:10+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:22:10 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 500 6.263ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:22:54+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:22:54+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:22:56+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:23:00+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:23:00+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:23:00+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:23:00+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:23:00+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:23:00 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 400 4.861416ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:23:40+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:23:40+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:23:42+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:23:45+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:23:45+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:23:45+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":1,"CreatedAt":"2022-04-14T03:01:19.977281+03:00","UpdatedAt":"2022-04-14T03:01:19.977281+03:00","DeletedAt":null,"ProductId":"f15e6170-f055-435f-adc6-1dc161f32d83","ProductName":"Samsung s22","ProductDescription":"32 GB Çift sim kart","ProductQuantity":200,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":6545.5,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":1,"total_price":6545.5}}
+2022-04-14T16:23:45+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:23:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:23:45 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 400 7.666959ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:23:51+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:23:51+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:23:51 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 31.143875ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:24:56+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:24:56+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:24:56+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":2,"CreatedAt":"2022-04-14T09:16:07.347015+03:00","UpdatedAt":"2022-04-14T09:16:07.347015+03:00","DeletedAt":null,"ProductId":"b6ea530d-96da-46b7-ac14-bb1e6fb8b32b","ProductName":"Iphone 10","ProductDescription":"Apple","ProductQuantity":100,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":1000,"Counter":0},"product_id":"b6ea530d-96da-46b7-ac14-bb1e6fb8b32b","quantity":1,"total_price":1000}}
+2022-04-14T16:24:56+03:00	[35mDEBUG[0m	repository/cartrepo.go:25	cart.repo.create.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":2,"CreatedAt":"2022-04-14T09:16:07.347015+03:00","UpdatedAt":"2022-04-14T09:16:07.347015+03:00","DeletedAt":null,"ProductId":"b6ea530d-96da-46b7-ac14-bb1e6fb8b32b","ProductName":"Iphone 10","ProductDescription":"Apple","ProductQuantity":100,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":1000,"Counter":0},"product_id":"b6ea530d-96da-46b7-ac14-bb1e6fb8b32b","quantity":1,"total_price":1000}}
+2022-04-14T16:24:56+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:24:56 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 201 35.826ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:25:01+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:25:01+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:25:01 +03] "GET /api/v1/e-commerce-api/cart/get HTTP/1.1 200 31.843625ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:25:49+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:25:49+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T16:30:05+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T16:30:09+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:30:09 +03] "POST /api/v1/e-commerce-api/cart/add HTTP/1.1 404 125ns "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:30:15+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T16:30:15+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:30:15+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":2,"CreatedAt":"2022-04-14T09:16:07.347015+03:00","UpdatedAt":"2022-04-14T09:16:07.347015+03:00","DeletedAt":null,"ProductId":"b6ea530d-96da-46b7-ac14-bb1e6fb8b32b","ProductName":"Iphone 10","ProductDescription":"Apple","ProductQuantity":100,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":1000,"Counter":0},"product_id":"b6ea530d-96da-46b7-ac14-bb1e6fb8b32b","quantity":1,"total_price":1000}}
+2022-04-14T16:30:15+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T16:30:15+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:30:15 +03] "POST /api/v1/e-commerce-api/cart/ HTTP/1.1 400 34.940584ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:30:26+03:00	[35mDEBUG[0m	repository/cartrepo.go:57	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T16:30:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 16:30:26 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 32.800459ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T16:30:56+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T16:30:56+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

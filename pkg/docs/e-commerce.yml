@@ -243,7 +243,7 @@ paths:
           description: Generic error response
           schema:
             $ref: "#/definitions/ApiResponse"
-  /cart/add:
+  /cart:
     post:
       tags:
         - "cart"
@@ -272,7 +272,30 @@ paths:
         default:
           description: Generic error response
           schema:
-            $ref: "#/definitions/ApiResponse"  
+            $ref: "#/definitions/ApiResponse" 
+    get:
+      tags:
+        - "cart"
+      summary: "Get cartlist"
+      description: "It works for getting cartlist"
+      operationId: "getCartList"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/APICart"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"   
 definitions:
   SignUp:
     type: "object"
