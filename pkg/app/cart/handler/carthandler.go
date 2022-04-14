@@ -26,6 +26,7 @@ func NewCartHandler(r *gin.RouterGroup, c *CartService, cfg *config.Config) {
 	c.Migrate()
 	r.POST("/", AuthenticationMiddleware(h.cfg), h.add)
 	r.GET("/", AuthenticationMiddleware(h.cfg), h.getcartlist)
+	r.PUT("/", AuthenticationMiddleware(h.cfg), h.update)
 }
 
 func (c *CartHandler) Migrate() {
@@ -73,7 +74,7 @@ func (crt *CartHandler) getcartlist(c *gin.Context) {
 	}
 	user := val.(*AccessTokenDetails)
 	ct := ResponseToCart(user.UserID)
-	
+
 	cart, err := crt.cartService.GetCartList(ct)
 	if err != nil {
 		zap.L().Error("cart.handler.getcartlist", zap.Error(err))
@@ -82,5 +83,35 @@ func (crt *CartHandler) getcartlist(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("ALL_CART_SUCCESS"), Details: ResponseAPICart(cart)})
+	return
+}
+
+func (crt *CartHandler) update(c *gin.Context){
+	val, res := c.Get("User")
+	if res == false {
+		zap.L().Error("cart.handler.update", zap.Bool("value: ", res))
+		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, os.Getenv("NO_CONTEXT"), nil)))
+		return
+	}
+	user := val.(*AccessTokenDetails)
+	var req UpdatedCartItem
+	if err := c.Bind(&req); err != nil {
+		zap.L().Error("product.handler.create", zap.Error(err))
+		c.JSON(ErrorResponse(NewRestError(http.StatusBadRequest, os.Getenv("CHECK_YOUR_REQUEST"), nil)))
+		return
+	}
+
+	if err := req.Validate(strfmt.NewFormats()); err != nil {
+		zap.L().Error("product.handler.validate", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	err:=crt.cartService.Update(&req, user.UserID)
+	if err!=nil{
+		zap.L().Error("cart.handler.update", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("CART_UPDATE_SUCCESS")})
 	return
 }

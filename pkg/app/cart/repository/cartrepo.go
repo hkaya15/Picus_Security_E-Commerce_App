@@ -31,26 +31,26 @@ func (c *CartRepository) AddItem(cartItem *CartsItem) error {
 }
 
 // FindByID helps to check the item that has product
-func (c *CartRepository) FindByID(cartItem *CartsItem) bool {
+func (c *CartRepository) FindByID(productId string, cartId string) (*CartsItem,bool) {
 	var item *CartsItem
 	var exists bool = false
-	zap.L().Debug("cart.repo.findbyıd.cartıtem", zap.Reflect("cartItem", cartItem))
-	r := c.db.Where("product_id=?", cartItem.ProductID).Limit(1).Find(&item)
+	zap.L().Debug("cart.repo.findbyıd.cartıtem", zap.String("cartItem", productId))
+	r := c.db.Where("product_id=?", productId).Limit(1).Find(&item)
 	if r.RowsAffected > 0 {
 		exists = true
 	}
-	return exists
+	return item, exists
 }
 
 // CreateCart helps to check cart is exist. if not create for you
-func (c *CartRepository) CreateCart(crt *Cart) error {
+func (c *CartRepository) CreateCart(crt *Cart) (*Cart,error) {
 	var cart *Cart
 	zap.L().Debug("cart.repo.create", zap.Reflect("cart", crt))
 	if err := c.db.Where(Cart{UserID: crt.UserID}).Attrs(crt).FirstOrCreate(&cart).Error; err != nil {
 		zap.L().Error("cart.repo.create failed to create cart", zap.Error(err))
-		return err
+		return nil, err
 	}
-	return nil
+	return cart, nil
 }
 
 // GetCartList helps to get cartlist
@@ -63,4 +63,13 @@ func (c *CartRepository) GetCartList(crt *Cart) (*Cart, error) {
 		return nil, err
 	}
 	return cart, nil
+}
+
+func (c *CartRepository) Update(crt *CartsItem)  error {
+	zap.L().Debug("cart.repo.update", zap.Reflect("item", crt))
+	if err := c.db.Save(&crt).Error; err != nil {
+		zap.L().Error("product.repo.update failed to update product", zap.Error(err))
+		return err
+	}
+	return nil
 }

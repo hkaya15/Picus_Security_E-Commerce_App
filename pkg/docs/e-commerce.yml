@@ -295,7 +295,36 @@ paths:
         default:
           description: Generic error response
           schema:
-            $ref: "#/definitions/ApiResponse"   
+            $ref: "#/definitions/ApiResponse"
+    patch:
+      tags:
+        - "cart"
+      summary: "update cartItem"
+      description: "It works for patching cartItem"
+      operationId: "patchCartItem"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+        - in: "body"
+          name: "body"
+          description: "Patch item on cart"
+          required: true
+          schema:
+            $ref: "#/definitions/UpdatedCartItem"
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"    
 definitions:
   SignUp:
     type: "object"
@@ -426,4 +455,16 @@ definitions:
       totalPrice:
         type: "number"
         format: "float64"
+  UpdatedCartItem:
+    type: "object"
+    required:
+      - productId
+      - quantity
+    properties: 
+      productId:
+        type: "string"
+      quantity:
+        type: "integer"
+        format: "uint"
+
       

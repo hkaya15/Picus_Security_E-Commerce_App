@@ -14750,3 +14750,159 @@ net/http.(*conn).serve
 
 2022-04-14T16:30:56+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-14T16:30:56+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T19:09:58+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T19:13:12+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T19:13:12+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 19:13:12 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 35.669833ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T19:14:25+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T19:14:25+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T19:14:25+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "3a8d2d13-d943-4856-bee0-3eca5f131945"}
+2022-04-14T19:14:25+03:00	[35mDEBUG[0m	repository/cartrepo.go:25	cart.repo.create.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":4,"CreatedAt":"2022-04-14T09:34:23.824406+03:00","UpdatedAt":"2022-04-14T09:34:23.824406+03:00","DeletedAt":null,"ProductId":"3a8d2d13-d943-4856-bee0-3eca5f131945","ProductName":"Telefon1","ProductDescription":"Telefon","ProductQuantity":500,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":500,"Counter":0},"product_id":"3a8d2d13-d943-4856-bee0-3eca5f131945","quantity":1,"total_price":500}}
+2022-04-14T19:14:25+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 19:14:25 +03] "POST /api/v1/e-commerce-api/cart/ HTTP/1.1 201 38.081083ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T19:14:28+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T19:14:28+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T19:14:28+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "3a8d2d13-d943-4856-bee0-3eca5f131945"}
+2022-04-14T19:14:28+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T19:14:28+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 19:14:28 +03] "POST /api/v1/e-commerce-api/cart/ HTTP/1.1 400 3.505791ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T19:14:33+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T19:14:33+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 19:14:33 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 30.593375ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T19:15:40+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T19:15:40+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T19:15:59+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T19:18:30+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T19:18:30+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T19:18:30+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "3a8d2d13-d943-4856-bee0-3eca5f131945"}
+2022-04-14T19:18:30+03:00	[35mDEBUG[0m	repository/cartrepo.go:69	cart.repo.update	{"item": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"","ProductName":"","ProductDescription":"","ProductQuantity":0,"CategoryId":"","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"","Price":0,"Counter":0},"product_id":"3a8d2d13-d943-4856-bee0-3eca5f131945","quantity":3,"total_price":500}}
+2022-04-14T19:18:30+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 19:18:30 +03] "PUT /api/v1/e-commerce-api/cart/ HTTP/1.1 200 35.460083ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T19:18:38+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T19:18:38+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 19:18:38 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 34.251708ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T19:20:13+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T19:20:13+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-14T21:15:27+03:00	[35mDEBUG[0m	cmd/main.go:73	Server started
+2022-04-14T21:15:34+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T21:15:34+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:15:34+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "3a8d2d13-d943-4856-bee0-3eca5f131945"}
+2022-04-14T21:15:34+03:00	[31mERROR[0m	handler/carthandler.go:59	cart.handler.add	{"error": "status: 400 - errors: Cart has already Product! - causes: <nil>"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).add
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:59
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T21:15:34+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:15:34 +03] "POST /api/v1/e-commerce-api/cart/ HTTP/1.1 400 38.478416ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:15:37+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:15:37+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:15:37 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 4.991333ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:16:18+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T21:16:18+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:16:18+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "f15e6170-f055-435f-adc6-1dc161f32d83"}
+2022-04-14T21:16:18+03:00	[35mDEBUG[0m	repository/cartrepo.go:69	cart.repo.update	{"item": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"","ProductName":"","ProductDescription":"","ProductQuantity":0,"CategoryId":"","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"","Price":0,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":0,"total_price":6545.5}}
+2022-04-14T21:16:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:16:18 +03] "PUT /api/v1/e-commerce-api/cart/ HTTP/1.1 200 36.167125ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:16:48+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:16:48+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:16:48 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 32.328ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:17:36+03:00	[31mERROR[0m	handler/carthandler.go:99	product.handler.create	{"error": "json: cannot unmarshal number -1 into Go struct field UpdatedCartItem.quantity of type uint64"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler.(*CartHandler).update
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/cart/handler/carthandler.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-14T21:17:36+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:17:36 +03] "PUT /api/v1/e-commerce-api/cart/ HTTP/1.1 400 362.75µs "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:17:50+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-14T21:17:50+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:17:50+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "f15e6170-f055-435f-adc6-1dc161f32d83"}
+2022-04-14T21:17:50+03:00	[35mDEBUG[0m	repository/cartrepo.go:69	cart.repo.update	{"item": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ProductId":"","ProductName":"","ProductDescription":"","ProductQuantity":0,"CategoryId":"","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"","Price":0,"Counter":0},"product_id":"f15e6170-f055-435f-adc6-1dc161f32d83","quantity":5,"total_price":6545.5}}
+2022-04-14T21:17:50+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:17:50 +03] "PUT /api/v1/e-commerce-api/cart/ HTTP/1.1 200 33.454583ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:17:55+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:17:55+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:17:55 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 4.796083ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:18:14+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:18:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:18:14 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 30.163709ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:18:32+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-14T21:18:32+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Thu, 14 Apr 2022 21:18:32 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 32.708917ms "PostmanRuntime/7.29.0" "
+
+2022-04-14T21:18:49+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-14T21:18:49+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
