@@ -19696,3 +19696,199 @@ net/http.(*conn).serve
 
 2022-04-15T22:24:17+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-15T22:24:17+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-15T22:57:22+03:00	[35mDEBUG[0m	cmd/main.go:76	Server started
+2022-04-15T22:57:25+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 22:57:25 +03] "GET /api/v1/e-commerce-api/order/ HTTP/1.1 200 9.824792ms "PostmanRuntime/7.29.0" "
+
+2022-04-15T23:00:52+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-15T23:00:52+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-15T23:00:55+03:00	[35mDEBUG[0m	cmd/main.go:76	Server started
+2022-04-15T23:01:02+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-15T23:01:02+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 23:01:02 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 28.358333ms "PostmanRuntime/7.29.0" "
+
+2022-04-15T23:01:07+03:00	[35mDEBUG[0m	repository/productrepo.go:82	product.repo.getproduct
+2022-04-15T23:01:07+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-15T23:01:07+03:00	[35mDEBUG[0m	repository/cartrepo.go:37	cart.repo.findbyıd.cartıtem	{"cartItem": "c984f97f-1a66-4ce1-8f7e-be79deddf2d0"}
+2022-04-15T23:01:07+03:00	[35mDEBUG[0m	repository/cartrepo.go:25	cart.repo.create.cartıtem	{"cartItem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":8,"CreatedAt":"2022-04-14T11:28:13.865152+03:00","UpdatedAt":"2022-04-14T11:28:13.865152+03:00","DeletedAt":null,"ProductId":"c984f97f-1a66-4ce1-8f7e-be79deddf2d0","ProductName":"TF 123","ProductDescription":"Make","ProductQuantity":500,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":1200,"Counter":0},"product_id":"c984f97f-1a66-4ce1-8f7e-be79deddf2d0","quantity":1,"total_price":1200}}
+2022-04-15T23:01:07+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 23:01:07 +03] "POST /api/v1/e-commerce-api/cart/ HTTP/1.1 201 39.388834ms "PostmanRuntime/7.29.0" "
+
+2022-04-15T23:01:11+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-15T23:01:11+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 23:01:11 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 2.795083ms "PostmanRuntime/7.29.0" "
+
+2022-04-15T23:01:27+03:00	[35mDEBUG[0m	repository/cartrepo.go:48	cart.repo.create	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-15T23:01:27+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-15T23:01:27+03:00	[35mDEBUG[0m	repository/cartrepo.go:90	cart.repo.getCartItems	{"cartid": "fa43f277-f571-47b2-86b5-b77c84974911"}
+2022-04-15T23:01:27+03:00	[35mDEBUG[0m	repository/orderrepo.go:24	order.repo.complete	{"order": {"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"ID":"bfe6dee8-0df5-4955-95e5-51816b52bd14","user_id":"fa43f277-f571-47b2-86b5-b77c84974911","User":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"","FirstName":"","LastName":"","Email":"","Password":"","IsAdmin":false},"order_items":[{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"order_id":"b4c7b782-d248-4308-a78d-4022691636bf","UserID":"fa43f277-f571-47b2-86b5-b77c84974911","user":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"","FirstName":"","LastName":"","Email":"","Password":"","IsAdmin":false},"product_id":"c984f97f-1a66-4ce1-8f7e-be79deddf2d0","product":{"ID":8,"CreatedAt":"2022-04-14T11:28:13.865152+03:00","UpdatedAt":"2022-04-14T11:28:13.865152+03:00","DeletedAt":null,"ProductId":"c984f97f-1a66-4ce1-8f7e-be79deddf2d0","ProductName":"TF 123","ProductDescription":"Make","ProductQuantity":500,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"CategoryID":"","CategoryName":"","IconURL":""},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":1200,"Counter":0},"Quantity":1}],"order_price":1200,"order_date":"2022-04-15T23:01:27.045029+03:00","is_canceled":false}}
+2022-04-15T23:01:27+03:00	[35mDEBUG[0m	repository/cartrepo.go:80	cart.repo.delete	{"cartitem": {"cart_id":"fa43f277-f571-47b2-86b5-b77c84974911","product":{"ID":8,"CreatedAt":"2022-04-14T11:28:13.865152+03:00","UpdatedAt":"2022-04-14T11:28:13.865152+03:00","DeletedAt":null,"ProductId":"c984f97f-1a66-4ce1-8f7e-be79deddf2d0","ProductName":"TF 123","ProductDescription":"Make","ProductQuantity":500,"CategoryId":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","Category":{"ID":7,"CreatedAt":"2022-04-14T03:00:18.36577+03:00","UpdatedAt":"2022-04-14T03:00:18.36577+03:00","DeletedAt":null,"CategoryID":"c0da625b-d2e6-4a52-960f-fd53e58b42a9","CategoryName":"Electronics","IconURL":"https://events.picussecurity.com/hs-fs/hubfs/picus-logo-1.png?width=1248&name=picus-logo-1.png"},"ImageURL":"https://i0.wp.com/shiftdelete.net/wp-content/uploads/2022/02/samsung-galaxy-s22-1.jpg?fit=1280%2C720&ssl=1","Price":1200,"Counter":0},"product_id":"c984f97f-1a66-4ce1-8f7e-be79deddf2d0","quantity":1,"total_price":1200}}
+2022-04-15T23:01:27+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 23:01:27 +03] "POST /api/v1/e-commerce-api/order/complete HTTP/1.1 200 45.132417ms "PostmanRuntime/7.29.0" "
+
+2022-04-15T23:01:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 23:01:45 +03] "GET /api/v1/e-commerce-api/order/ HTTP/1.1 200 30.879541ms "PostmanRuntime/7.29.0" "
+
+2022-04-15T23:06:43+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-15T23:06:43+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-15T23:06:46+03:00	[35mDEBUG[0m	cmd/main.go:76	Server started
+2022-04-15T23:06:57+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 23:06:57 +03] "GET /api/v1/e-commerce-api/order/ HTTP/1.1 200 32.934292ms "PostmanRuntime/7.29.0" "
+
+2022-04-15T23:14:11+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-15T23:14:11+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-15T23:58:18+03:00	[35mDEBUG[0m	cmd/main.go:76	Server started
+2022-04-15T23:59:35+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Fri, 15 Apr 2022 23:59:35 +03] "GET /api/v1/e-commerce-api/order/cancel/6339f1bd-e8f3-4ea4-95ed-a7e9a000479f HTTP/1.1 404 166ns "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:00:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:00:45 +03] "PUT /api/v1/e-commerce-api/cancel/order/6339f1bd-e8f3-4ea4-95ed-a7e9a000479f HTTP/1.1 404 125ns "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:00:57+03:00	[35mDEBUG[0m	repository/orderrepo.go:56	order.repo.findorderbyid	{"orderid": "6339f1bd-e8f3-4ea4-95ed-a7e9a000479f"}
+2022-04-16T00:00:57+03:00	[35mDEBUG[0m	repository/orderrepo.go:47	order.repo.cancelorder	{"orderid": {"CreatedAt":"2022-04-15T18:36:16.643297+03:00","UpdatedAt":"2022-04-15T18:36:16.643297+03:00","DeletedAt":null,"ID":"6339f1bd-e8f3-4ea4-95ed-a7e9a000479f","user_id":"fa43f277-f571-47b2-86b5-b77c84974911","User":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"","FirstName":"","LastName":"","Email":"","Password":"","IsAdmin":false},"order_items":null,"order_price":2200,"order_date":"2022-04-15T18:36:16.642743+03:00","is_canceled":false}}
+2022-04-16T00:00:57+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:00:57 +03] "PUT /api/v1/e-commerce-api/order/cancel/6339f1bd-e8f3-4ea4-95ed-a7e9a000479f HTTP/1.1 200 31.152292ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:01:31+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T00:01:31+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T00:01:51+03:00	[35mDEBUG[0m	cmd/main.go:76	Server started
+2022-04-16T00:02:45+03:00	[35mDEBUG[0m	repository/orderrepo.go:56	order.repo.findorderbyid	{"orderid": "6339f1bd-e8f3-4ea4-95ed-a7e9a000479f"}
+2022-04-16T00:02:45+03:00	[31mERROR[0m	repository/orderrepo.go:59	order.repo.findorderbyid failed to get order	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/repository.(*OrderRepository).FindByOrderID
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/repository/orderrepo.go:59
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/service.(*OrderService).CancelOrder
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/service/orderservice.go:81
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/handler.OrderHandler.cancel
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/handler/orderhandler.go:83
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-16T00:02:45+03:00	[31mERROR[0m	handler/orderhandler.go:85	order.handler.cancelorder	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/handler.OrderHandler.cancel
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/handler/orderhandler.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-16T00:02:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:02:45 +03] "PUT /api/v1/e-commerce-api/order/cancel/6339f1bd-e8f3-4ea4-95ed-a7e9a000479f HTTP/1.1 404 33.03325ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:03:08+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T00:03:08+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T00:04:04+03:00	[35mDEBUG[0m	cmd/main.go:76	Server started
+2022-04-16T00:04:07+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T00:04:07+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T00:04:49+03:00	[35mDEBUG[0m	cmd/main.go:76	Server started
+2022-04-16T00:04:56+03:00	[35mDEBUG[0m	repository/orderrepo.go:56	order.repo.findorderbyid	{"orderid": "6339f1bd-e8f3-4ea4-95ed-a7e9a000479f"}
+2022-04-16T00:04:56+03:00	[31mERROR[0m	repository/orderrepo.go:59	order.repo.findorderbyid failed to get order	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/repository.(*OrderRepository).FindByOrderID
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/repository/orderrepo.go:59
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/service.(*OrderService).CancelOrder
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/service/orderservice.go:82
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/handler.OrderHandler.cancel
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/handler/orderhandler.go:83
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-16T00:04:56+03:00	[31mERROR[0m	handler/orderhandler.go:85	order.handler.cancelorder	{"error": "record not found"}
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/handler.OrderHandler.cancel
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/app/order/handler/orderhandler.go:85
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware.AuthenticationMiddleware.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/pkg/base/middleware/authenticationmw.go:22
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/recovery.go:99
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.LoggerWithConfig.func1
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/logger.go:241
+github.com/gin-gonic/gin.(*Context).Next
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/context.go:168
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:555
+github.com/gin-gonic/gin.(*Engine).ServeHTTP
+	/Users/kaya/go/pkg/mod/github.com/gin-gonic/gin@v1.7.7/gin.go:511
+net/http.serverHandler.ServeHTTP
+	/usr/local/go/src/net/http/server.go:2916
+net/http.(*conn).serve
+	/usr/local/go/src/net/http/server.go:1966
+2022-04-16T00:04:56+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:04:56 +03] "PUT /api/v1/e-commerce-api/order/cancel/6339f1bd-e8f3-4ea4-95ed-a7e9a000479f HTTP/1.1 404 28.419667ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:05:23+03:00	[35mDEBUG[0m	repository/orderrepo.go:56	order.repo.findorderbyid	{"orderid": "7de77dad-3894-473d-9682-0726fecf7b20"}
+2022-04-16T00:05:23+03:00	[35mDEBUG[0m	repository/orderrepo.go:47	order.repo.cancelorder	{"orderid": {"CreatedAt":"2022-04-15T22:22:26.429944+03:00","UpdatedAt":"2022-04-15T22:22:26.429944+03:00","DeletedAt":null,"ID":"7de77dad-3894-473d-9682-0726fecf7b20","user_id":"fa43f277-f571-47b2-86b5-b77c84974911","User":{"ID":0,"CreatedAt":"0001-01-01T00:00:00Z","UpdatedAt":"0001-01-01T00:00:00Z","DeletedAt":null,"UserId":"","FirstName":"","LastName":"","Email":"","Password":"","IsAdmin":false},"order_items":null,"order_price":1200,"order_date":"2022-04-15T22:22:26.429326+03:00","is_canceled":false}}
+2022-04-16T00:05:23+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:05:23 +03] "PUT /api/v1/e-commerce-api/order/cancel/7de77dad-3894-473d-9682-0726fecf7b20 HTTP/1.1 200 32.185875ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:06:42+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-16T00:06:42+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:06:42 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 29.797292ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:06:54+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:06:54 +03] "GET /api/v1/e-commerce-api/order/ HTTP/1.1 200 36.673958ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:13:36+03:00	[35mDEBUG[0m	repository/cartrepo.go:58	cart.repo.getCartItem	{"cart": {"user_id":"fa43f277-f571-47b2-86b5-b77c84974911","items":null,"complete_order":false,"total_price":0,"cart_len":0}}
+2022-04-16T00:13:36+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 00:13:36 +03] "GET /api/v1/e-commerce-api/cart/ HTTP/1.1 200 29.343666ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T00:14:13+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T00:14:13+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

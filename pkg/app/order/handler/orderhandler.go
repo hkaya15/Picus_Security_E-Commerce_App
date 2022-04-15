@@ -26,6 +26,7 @@ func NewOrderHandler(r *gin.RouterGroup, o *OrderService, cfg *config.Config) {
 	o.Migrate()
 	r.POST("/complete", AuthenticationMiddleware(h.cfg), h.completeorder)
 	r.GET("/", AuthenticationMiddleware(h.cfg), h.getallorders)
+	r.PUT("/cancel/:id", AuthenticationMiddleware(h.cfg), h.cancel)
 }
 
 func (o *OrderHandler) Migrate() {
@@ -66,5 +67,25 @@ func (o *OrderHandler) getallorders(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("ORDER_SUCCESS"),Details:GetAllOrderToAPI(orders)})
+	return
+}
+
+func (o OrderHandler) cancel(c *gin.Context){
+	val, res := c.Get("User")
+	if res == false {
+		zap.L().Error("order.handler.cancel", zap.Bool("value: ", res))
+		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, os.Getenv("NO_CONTEXT"), nil)))
+		return
+	}
+	user := val.(*AccessTokenDetails)
+	id := c.Param("id")
+
+	err:= o.orderService.CancelOrder(user.UserID,id)
+	if err!=nil{
+		zap.L().Error("order.handler.cancelorder", zap.Error(err))
+		c.JSON(ErrorResponse(err))
+		return
+	}
+	c.JSON(http.StatusOK, APIResponse{Code: http.StatusOK, Message: os.Getenv("ORDER_DELETED")})
 	return
 }

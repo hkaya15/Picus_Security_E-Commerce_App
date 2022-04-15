@@ -2,7 +2,6 @@ package repository
 
 import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/model"
-	//. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/model"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )
@@ -44,12 +43,22 @@ func (o *OrderRepository)GetAllOrders(userid string) ([]Order, error){
 	return orders,nil
 }
 
-
-func (o *OrderRepository)CreateOrderItem(id string,order *OrderItem) error{
-	zap.L().Debug("cart.repo.create.cartıtem", zap.Reflect("cartItem", order))
-	if err := o.db.Create(OrderItem{OrderID: id}).Error; err != nil {
-		zap.L().Error("cart.repo.create.cartitem failed to create cartitem", zap.Error(err))
+func (o *OrderRepository) CancelOrder(order *Order)error{
+	zap.L().Debug("order.repo.cancelorder", zap.Reflect("orderid", order))
+	if err:= o.db.Model(Order{ID:order.ID}).Update("is_canceled", true).Error; err!=nil{
+		zap.L().Error("order.repo.cancelorder failed to cancel order", zap.Error(err))
 		return err
 	}
 	return nil
+}
+
+func (o *OrderRepository) FindByOrderID(orderid string) (*Order, error) {
+	zap.L().Debug("order.repo.findorderbyid", zap.String("orderid", orderid))
+	var order *Order
+	if err := o.db.Where("is_canceled = ?", false).Where("id", orderid).First(&order).Error; err != nil {
+		zap.L().Error("order.repo.findorderbyid failed to get order", zap.Error(err))
+		return nil, err
+	}
+	return order, nil
+
 }

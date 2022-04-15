@@ -4,6 +4,8 @@ import (
 	"errors"
 	"net/http"
 	"os"
+	"strconv"
+	"time"
 
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/repository"
@@ -36,7 +38,7 @@ func (o *OrderService) CompleteOrder(user *AccessTokenDetails) error {
 
 	userCart, err := o.CartRepo.GetCartList(cart)
 	if err != nil {
-		return  NewRestError(http.StatusBadRequest, os.Getenv("GET_CART_ISSUE"), err.Error())
+		return NewRestError(http.StatusBadRequest, os.Getenv("GET_CART_ISSUE"), err.Error())
 	}
 
 	cartItems, err := o.CartRepo.GetCartItems(cart.UserID)
@@ -73,4 +75,22 @@ func (o *OrderService) CompleteOrder(user *AccessTokenDetails) error {
 
 func (o *OrderService) GetAllOrders(userid string) ([]Order, error) {
 	return o.OrderRepo.GetAllOrders(userid)
+}
+
+func (o *OrderService) CancelOrder(userid string, orderid string) error {
+	order, err := o.OrderRepo.FindByOrderID(orderid)
+	if err != nil {
+		return err
+	}
+	cancelRule, _ := strconv.ParseFloat(os.Getenv("FOURTEEN_DAYS"), 64)
+
+	if order.OrderDate.Sub(time.Now()).Hours() > cancelRule {
+		return NewRestError(http.StatusNotAcceptable, os.Getenv("CANCEL_ORDER_DAY_ISSUE"), nil)
+	}
+
+	err = o.OrderRepo.CancelOrder(order)
+	if err != nil {
+		return err
+	}
+	return nil
 }

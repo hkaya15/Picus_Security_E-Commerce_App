@@ -43,8 +43,9 @@ func OrderToAPI(o Order) *OrderAPI {
 
 func ItemToOrderItemOrderList(o *OrderItem) *OrderItemResponse {
 	return &OrderItemResponse{
+		Orderid: o.OrderID,
 		Productid: o.ProductID,
-		Userid: o.OrderID,
+		Userid: o.UserID,
 		Quantity: uint64(o.Quantity),
 	}
 }
@@ -63,7 +64,7 @@ func GetAllOrderToAPI(o []Order) *[]OrderAPI {
 
 func NewOrderItem(userıd string, c CartsItem) *OrderItem {
 	return &OrderItem{
-		OrderID:   userıd,
+		OrderID:   uuid.NewString(),
 		ProductID: c.Product.ProductId,
 		UserID:    userıd,
 		Product: &c.Product,
