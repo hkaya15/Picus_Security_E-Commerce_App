@@ -42,7 +42,7 @@ func (c *CartService) Add(user *AccessTokenDetails, item *api.CartItem) error {
 
 	cartItem := ResponseToCartItem(item, product, user.UserID)
 
-	_,bool := c.CartRepo.FindByID(cartItem.ProductID,cartItem.CartID)
+	_,bool := c.CartRepo.FindCartItemByID(cartItem.ProductID,cartItem.CartID)
 	if bool == true {
 		return NewRestError(http.StatusBadRequest, os.Getenv("CART_HAS_PRODUCT"), nil)
 	}
@@ -82,7 +82,7 @@ func (c *CartService) Update(req *UpdatedCartItem, userid string)  error {
 	}
 
 	
-	item,bool := c.CartRepo.FindByID(*req.ProductID,userid)
+	item,bool := c.CartRepo.FindCartItemByID(*req.ProductID,userid)
 	if !bool{
 		return NewRestError(http.StatusBadRequest, os.Getenv("CART_HASNT_PRODUCT"), nil)
 	}
@@ -114,10 +114,13 @@ func (c *CartService) Delete(productid string ,userid string) (bool,error){
 		return false, NewRestError(http.StatusBadRequest, os.Getenv("CREATE_CART_ISSUE"), err.Error())
 	}
 
-	item,bool := c.CartRepo.FindByID(productid,userid)
+	item,bool := c.CartRepo.FindCartItemByID(productid,userid)
 	if !bool{
 		return false,NewRestError(http.StatusBadRequest, os.Getenv("CART_HASNT_PRODUCT"), nil)
 	}
 
 	return c.CartRepo.Delete(item)
 }
+
+
+

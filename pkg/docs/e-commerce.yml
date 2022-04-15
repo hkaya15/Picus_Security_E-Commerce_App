@@ -19,6 +19,8 @@ tags:
     description: "Everything about Product"
   - name: "cart"
     description: "Everything about Cart"
+  - name: "order"
+    description: "Everything about Order"
 schemes:
   - "https"
   - "http"
@@ -296,7 +298,7 @@ paths:
           description: Generic error response
           schema:
             $ref: "#/definitions/ApiResponse"
-    patch:
+    put:
       tags:
         - "cart"
       summary: "update cartItem"
@@ -324,7 +326,83 @@ paths:
         default:
           description: Generic error response
           schema:
+            $ref: "#/definitions/ApiResponse" 
+  /cart/{id}:
+    delete:
+      tags:
+        - "cart"
+      summary: "delete cartItem"
+      description: "It works for deleting cartItem"
+      operationId: "deleteCartItem"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+        - name: "id"
+          in: "path"
+          type: "string"
+          required: true
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
+  /order:
+    get:
+      tags:
+        - "order"
+      summary: "order list"
+      description: "It works for getting order list"
+      operationId: "orderList"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/OrderAPI"
+        default:
+          description: Generic error response
+          schema:
             $ref: "#/definitions/ApiResponse"    
+  /order/complete:
+    post:
+      tags:
+        - "order"
+      summary: "order complete"
+      description: "It works for completing cart"
+      operationId: "orderCart"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"      
 definitions:
   SignUp:
     type: "object"
@@ -410,6 +488,37 @@ definitions:
       price:
         type: "number"
         format: "float64"
+  OrderAPI:
+    type: "object"
+    properties:
+      userid:
+        type: "string"
+      orderprice:
+        type: "integer"
+        format: "float64"
+      orderdate:
+        type: "string"
+        format: "date-time"
+      iscanceled:
+        type: "boolean"
+      orderitems:
+        type: array
+        items:
+            type: "object"
+            $ref: "#/definitions/OrderItemResponse"
+  OrderItemResponse:
+    type: "object"
+    properties:
+      orderid:
+        type: "string"
+      userid:
+        type: "string"
+      productid:
+        type: "string"
+      quantity:
+        type: "integer"
+        format: "uint"
+
   CartItemToResponse:
     type: "object"
     properties: 
@@ -455,6 +564,29 @@ definitions:
       totalPrice:
         type: "number"
         format: "float64"
+  OrderList:
+    type: "object"
+    properties:
+      userıd:
+         type: "string"
+      orderitems:
+        type: "array"
+        items:
+          type: "object"
+          $ref: "#/definitions/OrderItemsOrderList"
+      orderprice:
+        type: "integer"
+        format: "int"
+      orderdate:
+        type: "string"
+        format: "date-time"
+
+  OrderItemsOrderList:
+    type: "object"
+    properties:
+      product:
+        type: "object"
+        $ref: "#/definitions/Product"
   UpdatedCartItem:
     type: "object"
     required:

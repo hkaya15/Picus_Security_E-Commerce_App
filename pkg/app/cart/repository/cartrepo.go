@@ -31,7 +31,7 @@ func (c *CartRepository) AddItem(cartItem *CartsItem) error {
 }
 
 // FindByID helps to check the item that has product
-func (c *CartRepository) FindByID(productId string, cartId string) (*CartsItem,bool) {
+func (c *CartRepository) FindCartItemByID(productId string, cartId string) (*CartsItem,bool) {
 	var item *CartsItem
 	var exists bool = false
 	zap.L().Debug("cart.repo.findbyıd.cartıtem", zap.String("cartItem", productId))
@@ -83,4 +83,22 @@ func (c *CartRepository) Delete(crt *CartsItem) (bool,error) {
 		return false, err
 	}
 	return true, nil
+}
+
+// GetCartItems helps to get cartItems that related Product
+func (c *CartRepository) GetCartItems(cartId string) ([]CartsItem, error) {
+	zap.L().Debug("cart.repo.getCartItems", zap.Reflect("cartid", cartId))
+	var cartItems []CartsItem
+	err := c.db.Where(&CartsItem{CartID: cartId}).Find(&cartItems).Error
+	if err != nil {
+		return nil, err
+	}
+	for i, item := range cartItems {
+		err := c.db.Model(item).Association("Product").Find(&cartItems[i].Product)
+		if err != nil {
+			zap.L().Error("cart.repo.getCartItems failed to get cartıtems that bind with product", zap.Error(err))
+			return nil, err
+		}
+	}
+	return cartItems, nil
 }

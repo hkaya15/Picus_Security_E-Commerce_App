@@ -28,31 +28,49 @@ func (o *OrderService) Migrate() {
 	o.OrderRepo.Migrate()
 }
 
-func (o *OrderService) CompleteOrder(user *AccessTokenDetails) (*Order,error) {
+func (o *OrderService) CompleteOrder(user *AccessTokenDetails) error {
 	cart, err := o.CartRepo.CreateCart(ResponseToCart(user.UserID))
 	if err != nil {
-		return nil,NewRestError(http.StatusBadRequest, os.Getenv("CREATE_CART_ISSUE"), err.Error())
+		return NewRestError(http.StatusBadRequest, os.Getenv("CREATE_CART_ISSUE"), err.Error())
 	}
-	fullcart, err := o.CartRepo.GetCartList(cart)
+
+	userCart, err := o.CartRepo.GetCartList(cart)
 	if err != nil {
-		return nil,NewRestError(http.StatusBadRequest, os.Getenv("GET_CART_ISSUE"), err.Error())
+		return  NewRestError(http.StatusBadRequest, os.Getenv("GET_CART_ISSUE"), err.Error())
 	}
-	if len(fullcart.Items) == 0 {
-		return nil, errors.New(os.Getenv("CART_EMPTY_FAIL"))
+
+	cartItems, err := o.CartRepo.GetCartItems(cart.UserID)
+	if err != nil {
+		return err
 	}
-	order,err:= o.OrderRepo.CompleteOrder(NewOrder(fullcart))
-	if err!=nil{
-		return nil, NewRestError(http.StatusBadRequest, os.Getenv("ORDER_ISSUE"), err.Error())
+
+	if len(cartItems) == 0 {
+		return errors.New(os.Getenv("CART_EMPTY_FAIL"))
 	}
-	for _,v:=range fullcart.Items{
-		 res,err := o.CartRepo.Delete(v)
-		 if err != nil {
-			return nil, errors.New(os.Getenv("DELETE_ITEM_ISSUE"))
+
+	orderItems := make([]OrderItem, 0)
+	for _, v := range cartItems {
+		orderItems = append(orderItems, *NewOrderItem(user.UserID, v))
+	}
+
+	err = o.OrderRepo.CompleteOrder(NewOrder(user.UserID, orderItems))
+	if err != nil {
+		return err
+	}
+
+	for _, v := range userCart.Items {
+		res, err := o.CartRepo.Delete(v)
+		if err != nil {
+			return errors.New(os.Getenv("DELETE_ITEM_ISSUE"))
 		}
-		if res==true{
+		if res == true {
 			continue
 		}
 	}
-	return order,nil
-	
+
+	return nil
+}
+
+func (o *OrderService) GetAllOrders(userid string) ([]Order, error) {
+	return o.OrderRepo.GetAllOrders(userid)
 }

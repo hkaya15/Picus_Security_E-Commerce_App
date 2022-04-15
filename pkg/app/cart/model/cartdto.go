@@ -28,7 +28,6 @@ func ResponseToCart(userId string) *Cart {
 }
 
 func ResponseAPICart(cart *Cart)*api.APICart{
-
 	items := make([]*api.CartItemToResponse, 0)
 	for _, v := range cart.Items{
 		items = append(items,ItemResponse(v))
@@ -42,7 +41,6 @@ func ResponseAPICart(cart *Cart)*api.APICart{
 		TotalPrice: totalPrice,
 	}
 }
-
 
 
 func ItemResponse(b *CartsItem) *api.CartItemToResponse{
