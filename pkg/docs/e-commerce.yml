@@ -402,7 +402,36 @@ paths:
         default:
           description: Generic error response
           schema:
-            $ref: "#/definitions/ApiResponse"      
+            $ref: "#/definitions/ApiResponse"
+  /order/cancel/{id}:
+    put:
+      tags:
+        - "order"
+      summary: "cancel order"
+      description: "It works for canceling order"
+      operationId: "cancelOrder"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "token"
+          in: "header"
+          type: "string"
+          required: true
+        - name: "id"
+          in: "path"
+          type: "string"
+          required: true
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/ApiResponse"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
+        
 definitions:
   SignUp:
     type: "object"
