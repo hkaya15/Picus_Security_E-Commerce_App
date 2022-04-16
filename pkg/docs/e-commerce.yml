@@ -122,6 +122,34 @@ paths:
           description: Generic error response
           schema:
             $ref: "#/definitions/ApiResponse"
+  /category/?page=num&pagesize=size:
+    get:
+      tags:
+        - "category"
+      summary: "Get category list"
+      description: "It works for getting category list"
+      operationId: "getCategoryList"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "page"
+          in: "query"
+          type: "string"
+          required: true
+        - name: "pagesize"
+          in: "query"
+          type: "string"
+          required: true
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/Pagination"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
   /product/create:
     post:
       tags:
@@ -609,7 +637,6 @@ definitions:
       orderdate:
         type: "string"
         format: "date-time"
-
   OrderItemsOrderList:
     type: "object"
     properties:
@@ -627,5 +654,17 @@ definitions:
       quantity:
         type: "integer"
         format: "uint"
+  Pagination:
+    properties:
+      items:
+        type: "object"
+      page:
+        type: integer
+      pageCount:
+        type: integer
+      pageSize:
+        type: integer
+      totalCount:
+        type: integer
 
       

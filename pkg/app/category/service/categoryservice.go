@@ -9,6 +9,7 @@ import (
 	"go.uber.org/zap"
 
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/helper"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 )
 
 type CategoryService struct {
@@ -62,4 +63,15 @@ func (c *CategoryService) Upload(file *multipart.File) (int, string, error) {
 // GetAll returns all categories
 func (c *CategoryService) GetAll() (*CategoryList, error) {
 	return c.CategoryRepo.GetAll()
+}
+
+
+func (c *CategoryService) GetAllCategoriesWithPagination(pag Pagination)(*Pagination,error){
+	categories, count,err:= c.CategoryRepo.GetAllCategoriesWithPagination(pag)
+	if err!=nil{
+		return nil,err
+	}
+	pag.Items=categories
+	pag.TotalCount=int64(count)
+	return &pag,nil
 }

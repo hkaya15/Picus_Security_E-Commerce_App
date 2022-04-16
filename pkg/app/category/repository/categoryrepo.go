@@ -5,6 +5,7 @@ import (
 
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/model"
 	"gorm.io/gorm"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 )
 
 type CategoryRepository struct {
@@ -32,4 +33,14 @@ func (c *CategoryRepository) GetAll() (*CategoryList, error) {
 		return nil, err
 	}
 	return &categories, nil
+}
+
+func (c *CategoryRepository) GetAllCategoriesWithPagination(pag Pagination)([]Category, int,error){
+	var categories []Category
+	var count int64
+	err:=c.db.Offset(int(pag.Page) - 1 * int(pag.PageSize)).Limit(int(pag.PageSize)).Find(&categories).Count(&count).Error
+	if err!=nil{
+		return nil,-1,err
+	}
+	return categories,int(count),nil
 }
