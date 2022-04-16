@@ -7,7 +7,7 @@ import (
 
 func ResponseToProduct(p api.Product) *ProductBase {
 	return &ProductBase{
-		ProductId: uuid.New().String(),
+		Id: uuid.New().String(),
 		ProductName: *p.Name,
 		ProductDescription: *p.Description,
 		ProductQuantity: uint(*p.Quantity),

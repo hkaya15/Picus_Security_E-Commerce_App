@@ -10,10 +10,8 @@ type OrderItem struct {
 	gorm.Model
 	OrderID   string `gorm:"primary_key;" json:"order_id"`
 	UserID    string
-	User      User         `gorm:"foreignKey:UserID; references:UserId" json:"user"`
+	User      User         `gorm:"foreignKey:UserID; references: Id" json:"user"`
 	ProductID string       `json:"product_id"`
-	Product   *ProductBase `gorm:"foreignkey:ProductID; references:ProductId" json:"product"`
+	Product   *ProductBase `gorm:"foreignkey:ProductID; references:Id" json:"product"`
 	Quantity uint
-	// CreatedAt time.Time    `gorm:"<-:create" json:"created_at"`
-	// UpdatedAt time.Time    `json:"updated_at"`
 }

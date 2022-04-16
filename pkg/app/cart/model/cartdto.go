@@ -1,6 +1,8 @@
 package model
 
 import (
+	"time"
+
 	api "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/model"
 )
@@ -24,6 +26,7 @@ func ResponseToCart(userId string) *Cart {
 	return &Cart{
 		UserID: userId,
 		CompleteOrder: false,
+		CreatedAt: time.Now(),
 	}
 }
 

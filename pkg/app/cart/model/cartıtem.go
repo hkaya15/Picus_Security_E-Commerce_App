@@ -5,7 +5,7 @@ import (
 )
 type CartsItem struct{
 	CartID string `gorm:"primary_key" json:"cart_id"`
-	Product ProductBase `gorm:"foreignKey:ProductID; references:ProductId" json:"product"`
+	Product ProductBase `gorm:"foreignKey:ProductID; references:Id" json:"product"`
 	ProductID string `gorm:"primary_key" json:"product_id"`
 	Quantity uint `gorm:"not null" json:"quantity"`
 	TotalPrice float64 `json:"total_price"`

@@ -65,7 +65,7 @@ func GetAllOrderToAPI(o []Order) *[]OrderAPI {
 func NewOrderItem(userıd string, c CartsItem) *OrderItem {
 	return &OrderItem{
 		OrderID:   uuid.NewString(),
-		ProductID: c.Product.ProductId,
+		ProductID: c.Product.Id,
 		UserID:    userıd,
 		Product: &c.Product,
 		Quantity: c.Quantity,

@@ -14,6 +14,7 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/model"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/model"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -65,7 +66,7 @@ func DecodeCookie(req *http.Request, user *User) (*Token, error) {
 	var hashKey = []byte(os.Getenv("COOKIE_SECRET"))
 	var s = securecookie.New(hashKey, nil)
 	var value Token
-	if cookie, err := req.Cookie(user.UserId); err == nil {
+	if cookie, err := req.Cookie(user.Id); err == nil {
 		if err = s.Decode(os.Getenv("TOKEN_NAME"), cookie.Value, &value); err != nil {
 			return nil, err
 		}
@@ -126,7 +127,7 @@ func SetCookie(tkn *Token, user *User) *http.Cookie{
 	encoded, err := s.Encode(os.Getenv("TOKEN_NAME"), tkn)
 	if err==nil{
 		cookie := &http.Cookie{
-			Name:     user.UserId,
+			Name:     user.Id,
 			Value:    encoded,
 			Path:     "/",
 			Domain:   "127.0.0.1",
@@ -136,4 +137,18 @@ func SetCookie(tkn *Token, user *User) *http.Cookie{
 		return cookie
 	}
 	return nil
+}
+
+
+
+func UpdateValues(cart Cart, cartitems []CartsItem) *Cart{
+
+	cart.CartLength = len(cartitems)
+	var val = 0
+	for i := 0; i < len(cartitems); i++ {
+		val += int(cartitems[i].TotalPrice)
+	}
+	cart.CartTotalPrice = float64(val)
+
+	return &cart
 }

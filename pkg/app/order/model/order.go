@@ -11,7 +11,7 @@ type Order struct {
 	gorm.Model
 	ID string 
 	UserID     string		`json:"user_id"`
-	User       User         `gorm:"foreignKey:UserID;references:UserId"`
+	User       User         `gorm:"foreignKey:UserID;references:Id"`
 	OrderItems []OrderItem `gorm:"foreignkey:OrderID;" json:"order_items"`
 	OrderPrice float64      `json:"order_price"`
 	OrderDate  time.Time    `json:"order_date"`

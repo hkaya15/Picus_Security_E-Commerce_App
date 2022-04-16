@@ -7,7 +7,7 @@ import (
 
 type ProductBase struct{
 	gorm.Model
-	ProductId string `gorm:"unique"`
+	Id string `gorm:"unique"`
 	ProductName string
 	ProductDescription string
 	ProductQuantity uint

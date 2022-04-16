@@ -35,7 +35,7 @@ func (c *CartRepository) FindCartItemByID(productId string, cartId string) (*Car
 	var item *CartsItem
 	var exists bool = false
 	zap.L().Debug("cart.repo.findbyıd.cartıtem", zap.String("cartItem", productId))
-	r := c.db.Where("product_id=?", productId).Limit(1).Find(&item)
+	r := c.db.Where("cart_id=? AND product_id=?",cartId,productId).Limit(1).Find(&item)
 	if r.RowsAffected > 0 {
 		exists = true
 	}
@@ -69,7 +69,7 @@ func (c *CartRepository) GetCartList(crt *Cart) (*Cart, error) {
 func (c *CartRepository) Update(crt *CartsItem)  error {
 	zap.L().Debug("cart.repo.update", zap.Reflect("item", crt))
 	if err := c.db.Save(&crt).Error; err != nil {
-		zap.L().Error("product.repo.update failed to update product", zap.Error(err))
+		zap.L().Error("cart.repo.update failed to update cart item", zap.Error(err))
 		return err
 	}
 	return nil
@@ -78,7 +78,7 @@ func (c *CartRepository) Update(crt *CartsItem)  error {
 // Delete helps to delete cartitem
 func (c *CartRepository) Delete(crt *CartsItem) (bool,error) {
 	zap.L().Debug("cart.repo.delete", zap.Reflect("cartitem", crt))
-	if err := c.db.Unscoped().Where("product_id=?", crt.ProductID).Delete(&CartsItem{}).Error; err != nil {
+	if err := c.db.Unscoped().Where("product_id=? AND cart_id=?", crt.ProductID,crt.CartID).Delete(&CartsItem{}).Error; err != nil {
 		zap.L().Error("cart.repo.delete failed to delete cartitem", zap.Error(err))
 		return false, err
 	}
@@ -101,4 +101,14 @@ func (c *CartRepository) GetCartItems(cartId string) ([]CartsItem, error) {
 		}
 	}
 	return cartItems, nil
+}
+
+// UpdateCart helps to update Cart Infos
+func (c *CartRepository) UpdateCart(cart *Cart)error{
+	zap.L().Debug("cart.repo.updatecart", zap.Reflect("cart", cart))
+	if err := c.db.Save(&cart).Error; err != nil {
+		zap.L().Error("cart.repo.updatecart failed to update cart", zap.Error(err))
+		return err
+	}
+	return nil
 }

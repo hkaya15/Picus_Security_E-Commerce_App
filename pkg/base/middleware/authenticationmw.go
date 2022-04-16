@@ -28,6 +28,7 @@ func AuthenticationMiddleware(cfg *config.Config) gin.HandlerFunc {
 			return
 		} else {
 			c.JSON(http.StatusUnauthorized, APIResponse{Code: http.StatusUnauthorized, Message: "You are not authenticated!"})
+			
 		}
 		c.Abort()
 		return

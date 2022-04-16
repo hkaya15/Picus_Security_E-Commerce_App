@@ -27,7 +27,7 @@ func NewCartHandler(r *gin.RouterGroup, c *CartService, cfg *config.Config) {
 	r.POST("/", AuthenticationMiddleware(h.cfg), h.add)
 	r.GET("/", AuthenticationMiddleware(h.cfg), h.getcartlist)
 	r.PUT("/", AuthenticationMiddleware(h.cfg), h.update)
-	r.DELETE("/:id",AuthenticationMiddleware(h.cfg),h.delete)
+	r.DELETE("/:id", AuthenticationMiddleware(h.cfg), h.delete)
 }
 
 func (c *CartHandler) Migrate() {
@@ -87,7 +87,7 @@ func (crt *CartHandler) getcartlist(c *gin.Context) {
 	return
 }
 
-func (crt *CartHandler) update(c *gin.Context){
+func (crt *CartHandler) update(c *gin.Context) {
 	val, res := c.Get("User")
 	if res == false {
 		zap.L().Error("cart.handler.update", zap.Bool("value: ", res))
@@ -107,8 +107,8 @@ func (crt *CartHandler) update(c *gin.Context){
 		c.JSON(ErrorResponse(err))
 		return
 	}
-	err:=crt.cartService.Update(&req, user.UserID)
-	if err!=nil{
+	err := crt.cartService.Update(&req, user.UserID)
+	if err != nil {
 		zap.L().Error("cart.handler.update", zap.Error(err))
 		c.JSON(ErrorResponse(err))
 		return
@@ -117,7 +117,7 @@ func (crt *CartHandler) update(c *gin.Context){
 	return
 }
 
-func (crt *CartHandler) delete(c *gin.Context){
+func (crt *CartHandler) delete(c *gin.Context) {
 	val, res := c.Get("User")
 	if res == false {
 		zap.L().Error("cart.handler.delete", zap.Bool("value: ", res))
@@ -126,7 +126,7 @@ func (crt *CartHandler) delete(c *gin.Context){
 	}
 	user := val.(*AccessTokenDetails)
 	id := c.Param("id")
-	res, err := crt.cartService.Delete(id,user.UserID)
+	res, err := crt.cartService.Delete(id, user.UserID)
 	if err != nil {
 		zap.L().Error("car.handler.delete", zap.Error(err))
 		c.JSON(ErrorResponse(err))

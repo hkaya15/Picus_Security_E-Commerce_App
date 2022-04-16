@@ -127,7 +127,7 @@ func (u *UserHandler) login(c *gin.Context) {
 				c.JSON(ErrorResponse(err))
 				return
 			}
-			if rftokendetails.UserID == user.UserId {
+			if rftokendetails.UserID == user.Id {
 				c.JSON(http.StatusOK, SoleToken{Code: http.StatusOK, Token: rftokendetails.RefreshToken})
 				return
 			}
@@ -137,7 +137,7 @@ func (u *UserHandler) login(c *gin.Context) {
 		return
 	}
 
-	if tokendetails.UserID == user.UserId {
+	if tokendetails.UserID == user.Id {
 		c.JSON(http.StatusOK, SoleToken{Code: http.StatusOK, Token: tokendetails.AccessToken})
 		return
 	}

@@ -46,12 +46,12 @@ func GenerateToken(user *User, cfg *config.Config) (*Token, error) {
 	// AccessToken Create
 	td.AccessTokenDetails.AtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.AccessSessionTime) * time.Second).Unix() // 15 minute
 	td.AccessTokenDetails.AccessUuid = uuid.New().String()
-	td.AccessTokenDetails.UserID = user.UserId
+	td.AccessTokenDetails.UserID = user.Id
 	td.AccessTokenDetails.Email = user.Email
 	td.AccessTokenDetails.Role = user.IsAdmin
 
 	// RefreshToken Create
-	td.RefreshTokenDetails.UserID = user.UserId
+	td.RefreshTokenDetails.UserID = user.Id
 	td.RefreshTokenDetails.Email = user.Email
 	td.RefreshTokenDetails.RtExpires = time.Now().Add(time.Duration(cfg.JWTConfig.RefreshSessionTime) * time.Second).Unix() // 7 days
 	td.RefreshTokenDetails.RefreshUuid = uuid.New().String()

@@ -116,9 +116,9 @@ func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	NewStatusHandler(statusrooter, cfg, db)
 }
 
-
+// HealthCheck checks the db is ready with 10 seconds break
 func healthCheck() {
-	tck := time.NewTicker(5 * time.Second)
+	tck := time.NewTicker(10 * time.Second)
 	issueOnHealth := make(chan bool)
 	go func() {
 		for {
