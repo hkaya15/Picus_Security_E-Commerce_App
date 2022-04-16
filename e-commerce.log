@@ -19997,3 +19997,262 @@ net/http.(*conn).serve
 
 2022-04-16T04:08:58+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
 2022-04-16T04:08:58+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T04:25:42+03:00	[35mDEBUG[0m	cmd/main.go:89	Server started
+2022-04-16T04:26:19+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:26:19 +03] "GET /api/v1/e-commerce-api/status HTTP/1.1 404 125ns "PostmanRuntime/7.29.0" "
+
+2022-04-16T04:29:01+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:29:01 +03] "GET /api/v1/e-commerce-api/status HTTP/1.1 404 125ns "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15" "
+
+2022-04-16T04:29:01+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:29:01 +03] "GET /apple-touch-icon-precomposed.png HTTP/1.1 404 167ns "Safari/17613.1.17.1.13 CFNetwork/1331.0.7 Darwin/21.4.0" "
+
+2022-04-16T04:29:01+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:29:01 +03] "GET /apple-touch-icon.png HTTP/1.1 404 125ns "Safari/17613.1.17.1.13 CFNetwork/1331.0.7 Darwin/21.4.0" "
+
+2022-04-16T04:29:01+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:29:01 +03] "GET /favicon.ico HTTP/1.1 404 125ns "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15" "
+
+2022-04-16T04:29:39+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:29:39 +03] "GET /api/v1/e-commerce-api/status HTTP/1.1 404 292ns "curl/7.79.1" "
+
+2022-04-16T04:30:19+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:30:19 +03] "GET /api/v1/e-commerce-api/status HTTP/1.1 404 333ns "curl/7.79.1" "
+
+2022-04-16T04:30:33+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:30:33 +03] "GET /status HTTP/1.1 404 166ns "curl/7.79.1" "
+
+2022-04-16T04:34:08+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 04:34:08 +03] "GET /api/v1/e-commerce-api/category/?page=2&pagesize=5 HTTP/1.1 200 29.29375ms "PostmanRuntime/7.29.0" "
+
+2022-04-16T04:37:53+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T04:37:53+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T09:51:14+03:00	[35mDEBUG[0m	cmd/main.go:80	Server started
+2022-04-16T10:04:36+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:04:36+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:05:02+03:00	[35mDEBUG[0m	cmd/main.go:79	Server started
+2022-04-16T10:05:18+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:05:18+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:06:06+03:00	[35mDEBUG[0m	cmd/main.go:79	Server started
+2022-04-16T10:10:03+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:10:03+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:10:07+03:00	[35mDEBUG[0m	cmd/main.go:79	Server started
+2022-04-16T10:12:55+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:19:16+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:19:49+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:19:49 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 17.75µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15" "
+
+2022-04-16T10:20:38+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:20:38+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:20:41+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:21:50+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:21:50+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:21:57+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:21:58+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:21:58 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 22.042µs "Go-http-client/1.1" "
+
+2022-04-16T10:21:59+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:21:59 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 14.542µs "Go-http-client/1.1" "
+
+2022-04-16T10:22:00+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:22:00 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 14.541µs "Go-http-client/1.1" "
+
+2022-04-16T10:22:31+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:22:31+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:22:33+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:22:48+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:22:48+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:26:43+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:27:50+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:27:51+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:27:51 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 18.792µs "Go-http-client/1.1" "
+
+2022-04-16T10:27:52+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:27:52 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 13.125µs "Go-http-client/1.1" "
+
+2022-04-16T10:27:53+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:27:53 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 12.084µs "Go-http-client/1.1" "
+
+2022-04-16T10:31:36+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:31:36+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:31:39+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:31:40+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:31:40 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 361.167µs "Go-http-client/1.1" "
+
+2022-04-16T10:31:41+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:31:41 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 423.833µs "Go-http-client/1.1" "
+
+2022-04-16T10:31:42+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:31:42 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 398.042µs "Go-http-client/1.1" "
+
+2022-04-16T10:35:33+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:35:33+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:35:39+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:35:40+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: %!v(MISSING)"}
+2022-04-16T10:35:40+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:35:40 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 546.792µs "Go-http-client/1.1" "
+
+2022-04-16T10:35:41+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: %!v(MISSING)"}
+2022-04-16T10:35:41+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:35:41 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 637.25µs "Go-http-client/1.1" "
+
+2022-04-16T10:35:42+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: %!v(MISSING)"}
+2022-04-16T10:35:42+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:35:42 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 380.209µs "Go-http-client/1.1" "
+
+2022-04-16T10:35:58+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:35:58+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:36:23+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:36:24+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: &{0x140005852f0 <nil>  <nil> false <nil> <invalid Value> map[] [] false [] [] [] map[] {{0 0} {<nil>} map[] 0} 0x14000515e10 <nil> context.Background false false {<nil> []} [] 0 [] [] []}"}
+2022-04-16T10:36:24+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:36:24 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 836.833µs "Go-http-client/1.1" "
+
+2022-04-16T10:36:25+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: &{0x140005852f0 <nil>  <nil> false <nil> <invalid Value> map[] [] false [] [] [] map[] {{0 0} {<nil>} map[] 0} 0x14000515e10 <nil> context.Background false false {<nil> []} [] 0 [] [] []}"}
+2022-04-16T10:36:25+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:36:25 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 833.375µs "Go-http-client/1.1" "
+
+2022-04-16T10:36:26+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: &{0x140005852f0 <nil>  <nil> false <nil> <invalid Value> map[] [] false [] [] [] map[] {{0 0} {<nil>} map[] 0} 0x14000515e10 <nil> context.Background false false {<nil> []} [] 0 [] [] []}"}
+2022-04-16T10:36:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:36:26 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 795µs "Go-http-client/1.1" "
+
+2022-04-16T10:36:46+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:36:46+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:37:14+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:37:15+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: false"}
+2022-04-16T10:37:15+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:37:15 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 741.458µs "Go-http-client/1.1" "
+
+2022-04-16T10:37:16+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: false"}
+2022-04-16T10:37:16+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:37:16 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 678.916µs "Go-http-client/1.1" "
+
+2022-04-16T10:37:17+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: false"}
+2022-04-16T10:37:17+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:37:17 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 459.417µs "Go-http-client/1.1" "
+
+2022-04-16T10:38:08+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:38:08+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:38:11+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:38:12+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: &{false { false <nil> false} false 0x1400065a7e0 0x100ef4e30 false false false false false false false 0 map[] 0x140005144e0 0x140000acaa8 map[] 0x140000acab8 0x1400033d290}"}
+2022-04-16T10:38:12+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:38:12 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 1.013833ms "Go-http-client/1.1" "
+
+2022-04-16T10:38:13+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: &{false { false <nil> false} false 0x1400065a7e0 0x100ef4e30 false false false false false false false 0 map[] 0x140005144e0 0x140000acaa8 map[] 0x140000acab8 0x1400033d290}"}
+2022-04-16T10:38:13+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:38:13 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 351.709µs "Go-http-client/1.1" "
+
+2022-04-16T10:38:14+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: &{false { false <nil> false} false 0x1400065a7e0 0x100ef4e30 false false false false false false false 0 map[] 0x140005144e0 0x140000acaa8 map[] 0x140000acab8 0x1400033d290}"}
+2022-04-16T10:38:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:38:14 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 508.875µs "Go-http-client/1.1" "
+
+2022-04-16T10:39:14+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:39:14+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:39:16+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:39:17+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:39:17+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:39:17 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 665.542µs "Go-http-client/1.1" "
+
+2022-04-16T10:39:18+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:39:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:39:18 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 678.042µs "Go-http-client/1.1" "
+
+2022-04-16T10:39:19+03:00	[34mINFO[0m	handler/statushandler.go:31	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:39:19+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:39:19 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 660.458µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:38+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:44:38+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:44:40+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:44:41+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:44:41+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:41 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 643.833µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:42+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:44:42+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:42 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 671.375µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:43+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:44:43+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:43 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 708.334µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:44+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:44:44+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:44 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 633.375µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:45+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T10:44:45+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:45 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 15.823708ms "Go-http-client/1.1" "
+
+2022-04-16T10:44:46+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T10:44:46+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:46 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 999.166µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:47+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T10:44:47+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:47 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 651.375µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:48+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T10:44:48+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:48 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 680.333µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:49+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T10:44:49+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:49 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 546.708µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:50+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T10:44:50+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:50 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 538.167µs "Go-http-client/1.1" "
+
+2022-04-16T10:44:51+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 2}"}
+2022-04-16T10:44:51+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:51 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 16.224791ms "Go-http-client/1.1" "
+
+2022-04-16T10:44:52+03:00	[34mINFO[0m	handler/statushandler.go:34	DBHEALTHCHECK:	{"DB:": "Postgre: {50 1 0 1 0 0s 0 0 2}"}
+2022-04-16T10:44:52+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:44:52 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 952.792µs "Go-http-client/1.1" "
+
+2022-04-16T10:49:13+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T10:49:14+03:00	[34mINFO[0m	handler/statushandler.go:34	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:49:14+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:49:14 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 648.084µs "Go-http-client/1.1" "
+
+2022-04-16T10:49:15+03:00	[34mINFO[0m	handler/statushandler.go:34	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:49:15+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:49:15 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 526.542µs "Go-http-client/1.1" "
+
+2022-04-16T10:49:16+03:00	[34mINFO[0m	handler/statushandler.go:34	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 0}"}
+2022-04-16T10:49:16+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 10:49:16 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 700.125µs "Go-http-client/1.1" "
+
+2022-04-16T10:59:51+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T10:59:51+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T10:59:58+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:00:03+03:00	[34mINFO[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:00:03.782323+03:00"}
+2022-04-16T11:00:03+03:00	[31mFATAL[0m	cmd/main.go:131	DB doesn't work	{"error": "parse \"/api/v1/e-commerce-api%!(EXTRA string=/status)\": invalid URL escape \"%!(\""}
+main.health.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:131
+2022-04-16T11:04:13+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:04:18+03:00	[34mINFO[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:04:18.391317+03:00"}
+2022-04-16T11:04:18+03:00	[31mFATAL[0m	cmd/main.go:131	DB doesn't work	{"error": "parse \"/api/v1/e-commerce-api%!(EXTRA string=//status)\": invalid URL escape \"%!(\""}
+main.health.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:131
+2022-04-16T11:05:28+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:05:33+03:00	[34mINFO[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:05:33.949533+03:00"}
+2022-04-16T11:05:33+03:00	[31mFATAL[0m	cmd/main.go:131	DB doesn't work	{"error": "Get \"/api/v1/e-commerce-api/status\": unsupported protocol scheme \"\""}
+main.health.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:131
+2022-04-16T11:07:07+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:07:12+03:00	[34mINFO[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:07:12.271597+03:00"}
+2022-04-16T11:07:12+03:00	[31mFATAL[0m	cmd/main.go:131	DB doesn't work	{"error": "parse \"/api/v1/e-commerce-api%!(EXTRA string=\\\\/status)\": invalid URL escape \"%!(\""}
+main.health.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:131
+2022-04-16T11:07:54+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:07:59+03:00	[34mINFO[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:07:59.849431+03:00"}
+2022-04-16T11:07:59+03:00	[31mFATAL[0m	cmd/main.go:131	DB doesn't work	{"error": "Get \"/api/v1/e-commerce-api%5C/status\": unsupported protocol scheme \"\""}
+main.health.func1
+	/Users/kaya/go/src/github.com/hkaya15/PicusSecurity/Final_Project_HKaya15/cmd/main.go:131
+2022-04-16T11:09:08+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:09:13+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:09:13.657984+03:00"}
+2022-04-16T11:09:13+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T11:09:13+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:09:13 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 23.142459ms "Go-http-client/1.1" "
+
+2022-04-16T11:09:13+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:Error": "json: unsupported type: func() (io.ReadCloser, error)"}
+2022-04-16T11:09:18+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:09:18.657884+03:00"}
+2022-04-16T11:09:18+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T11:09:18+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:09:18 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 840.208µs "Go-http-client/1.1" "
+
+2022-04-16T11:09:18+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:Error": "json: unsupported type: func() (io.ReadCloser, error)"}
+2022-04-16T11:09:23+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:09:23.657763+03:00"}
+2022-04-16T11:09:23+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 2}"}
+2022-04-16T11:09:23+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:09:23 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 25.938375ms "Go-http-client/1.1" "
+
+2022-04-16T11:09:23+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:Error": "json: unsupported type: func() (io.ReadCloser, error)"}
+2022-04-16T11:09:28+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:09:28.657642+03:00"}
+2022-04-16T11:09:28+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 2}"}
+2022-04-16T11:09:28+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:09:28 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 819.333µs "Go-http-client/1.1" "
+
+2022-04-16T11:09:28+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:Error": "json: unsupported type: func() (io.ReadCloser, error)"}
+2022-04-16T11:09:33+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:09:33.657537+03:00"}
+2022-04-16T11:09:33+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 3}"}
+2022-04-16T11:09:33+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:09:33 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 24.853958ms "Go-http-client/1.1" "
+
+2022-04-16T11:09:33+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:Error": "json: unsupported type: func() (io.ReadCloser, error)"}
+2022-04-16T11:09:37+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T11:09:37+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T11:10:16+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:10:21+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:10:21.387278+03:00"}
+2022-04-16T11:10:21+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T11:10:21+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:10:21 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 23.678583ms "Go-http-client/1.1" "
+
+2022-04-16T11:10:21+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:": {}}
+2022-04-16T11:10:26+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:10:26.387216+03:00"}
+2022-04-16T11:10:26+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T11:10:26+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:10:26 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 469.584µs "Go-http-client/1.1" "
+
+2022-04-16T11:10:26+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:": {}}
+2022-04-16T11:10:28+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T11:10:28+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing
+2022-04-16T11:10:58+03:00	[35mDEBUG[0m	cmd/main.go:77	Server started
+2022-04-16T11:11:03+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:11:03.650346+03:00"}
+2022-04-16T11:11:03+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T11:11:03+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:11:03 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 18.271833ms "Go-http-client/1.1" "
+
+2022-04-16T11:11:03+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:": "200 OK"}
+2022-04-16T11:11:08+03:00	[35mDEBUG[0m	cmd/main.go:128	Time	{"time:": "2022-04-16T11:11:08.650257+03:00"}
+2022-04-16T11:11:08+03:00	[34mINFO[0m	handler/statushandler.go:36	DB HEALTH CHECK OK :	{"DB:": "Postgres: {50 1 0 1 0 0s 0 0 1}"}
+2022-04-16T11:11:08+03:00	[34mINFO[0m	middleware/loggermw.go:25	127.0.0.1 - [Sat, 16 Apr 2022 11:11:08 +03] "GET /api/v1/e-commerce-api/status/ HTTP/1.1 200 860.958µs "Go-http-client/1.1" "
+
+2022-04-16T11:11:08+03:00	[35mDEBUG[0m	cmd/main.go:134	Response	{"resp:": "200 OK"}
+2022-04-16T11:11:09+03:00	[35mDEBUG[0m	graceful/graceful.go:24	base.graceful.shutdown
+2022-04-16T11:11:09+03:00	[35mDEBUG[0m	graceful/graceful.go:33	base.graceful.shutdown server closing

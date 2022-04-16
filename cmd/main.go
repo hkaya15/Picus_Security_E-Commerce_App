@@ -8,21 +8,22 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/repository"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository"
-	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/handler"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/repository"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/service"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/service"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/handler"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/repository"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/order/service"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/service"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/status/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/handler"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/repository"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/service"
 	"github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/config"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/db"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/graceful"
@@ -74,6 +75,11 @@ func main() {
 		}
 	}()
 	zap.L().Debug(os.Getenv("START_SERVER"))
+	
+	// HealthCheck On DB
+	go healthCheck()
+          
+
 	ShutdownGin(srv, time.Duration(cfg.ServerConfig.TimeoutSecs*int64(time.Second)))
 
 }
@@ -106,4 +112,30 @@ func getUp(g *gin.Engine, db *gorm.DB, cfg *config.Config) {
 	orderService := NewOrderService(orderRepo, cartRepo, productRepo)
 	NewOrderHandler(orderRooter, orderService, cfg)
 
+	statusrooter := rootRouter.Group("/status")
+	NewStatusHandler(statusrooter, cfg, db)
+}
+
+
+func healthCheck() {
+	tck := time.NewTicker(5 * time.Second)
+	issueOnHealth := make(chan bool)
+	go func() {
+		for {
+			select {
+			case <-issueOnHealth:
+				return
+			case time := <-tck.C:
+				zap.L().Debug("Time", zap.Reflect("time:",time))
+				resp, err := http.Get("http://127.0.0.1:8080/api/v1/e-commerce-api/status")
+				if err != nil {
+					zap.L().Fatal("DB doesn't work", zap.Error(err))
+					issueOnHealth<-true
+				}
+				zap.L().Debug("Response", zap.String("resp:",resp.Status))
+
+			}
+		}
+	}()
+	<- issueOnHealth   
 }
