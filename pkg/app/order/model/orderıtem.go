@@ -14,4 +14,5 @@ type OrderItem struct {
 	ProductID string       `json:"product_id"`
 	Product   *ProductBase `gorm:"foreignkey:ProductID; references:Id" json:"product"`
 	Quantity uint
+	TotalPrice float64
 }

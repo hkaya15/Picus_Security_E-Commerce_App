@@ -14,7 +14,7 @@ import (
 func NewOrder(userid string, list []OrderItem) *Order {
 	var orderPrice float64
 	for _, item := range list {
-		orderPrice += item.Product.Price
+		orderPrice += item.TotalPrice
 	}
 	return &Order{
 		ID:         uuid.NewString(),
@@ -27,9 +27,10 @@ func NewOrder(userid string, list []OrderItem) *Order {
 }
 
 func OrderToAPI(o Order) *OrderAPI {
-	orderItems := make([]*OrderItemResponse, 0)
+		orderItems := make([]*OrderItemResponse, 0)
 	for _, item := range o.OrderItems {
-		orderItems = append(orderItems, ItemToOrderItemOrderList(&item))
+		res:=ItemToOrderItemOrderList(&item)
+		orderItems = append(orderItems,res)
 	}
 
 	return &OrderAPI{
@@ -69,5 +70,6 @@ func NewOrderItem(userıd string, c CartsItem) *OrderItem {
 		UserID:    userıd,
 		Product: &c.Product,
 		Quantity: c.Quantity,
+		TotalPrice: c.TotalPrice,
 	}
 }

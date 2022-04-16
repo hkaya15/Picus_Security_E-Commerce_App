@@ -70,6 +70,15 @@ func (o *OrderService) CompleteOrder(user *AccessTokenDetails) error {
 		}
 	}
 
+	cart.CartLength=0
+	cart.CartTotalPrice=0
+	
+
+	err = o.CartRepo.UpdateCart(cart)
+	if err != nil {
+		return NewRestError(http.StatusBadRequest, os.Getenv("ISSUE_ON_UPDATE_CART"), nil)
+	}
+
 	return nil
 }
 

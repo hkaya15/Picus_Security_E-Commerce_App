@@ -25,7 +25,6 @@ func CalculateItemPrice(quantity uint, price float64) float64 {
 func ResponseToCart(userId string) *Cart {
 	return &Cart{
 		UserID: userId,
-		CompleteOrder: false,
 		CreatedAt: time.Now(),
 	}
 }
@@ -40,7 +39,6 @@ func ResponseAPICart(cart *Cart)*api.APICart{
 		UserID: cart.UserID,
 		Cartitems: items,
 		Cartlength: int64(len(items)),
-		CompleteOrder: *&cart.CompleteOrder,
 		TotalPrice: totalPrice,
 	}
 }
