@@ -7,6 +7,7 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/repository"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 )
 
 type ProductService struct {
@@ -54,3 +55,13 @@ func (p *ProductService) Delete(id string) (bool, error) {
 	}
 	
 }
+
+func (p *ProductService) GetAllProductsWithPagination (pag Pagination)(*Pagination,error){
+	products,count,err:=p.ProductRepo.GetAllProductsWithPagination(pag)
+	if err!=nil{
+		return nil,err
+	}
+	pag.Items=products
+	pag.TotalCount=int64(count)
+	return &pag,nil
+} 

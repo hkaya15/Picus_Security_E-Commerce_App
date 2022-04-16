@@ -4,6 +4,7 @@ import (
 	"errors"
 
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/product/model"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/api/model"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
 )
@@ -88,4 +89,16 @@ func (p *ProductRepository) GetProductById(id string) (*ProductBase, error) {
 	}
 
 	return product,nil
+}
+
+func (p *ProductRepository) GetAllProductsWithPagination(pag Pagination) (ProductList,int,error){
+	var products ProductList
+	var count int64
+	zap.L().Debug("product.repo.getAllProductsWithPagination")
+	err:=p.db.Offset(int(pag.Page) - 1 * int(pag.PageSize)).Limit(int(pag.PageSize)).Find(&products).Count(&count).Error
+	if err!=nil{
+		zap.L().Error("product.repo.getAllProductsWithPagination failed to get all products", zap.Error(err))
+		return nil,-1,err
+	}
+	return products,int(count),nil
 }

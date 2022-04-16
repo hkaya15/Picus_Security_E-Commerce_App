@@ -14,6 +14,7 @@ import (
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/errors"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/middleware"
 	"go.uber.org/zap"
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/base/pagination"
 )
 
 type ProductHandler struct {
@@ -28,6 +29,7 @@ func NewProductHandler(r *gin.RouterGroup, p *ProductService, cfg *config.Config
 	r.GET("/search", h.search)
 	r.PUT("/:id", AuthorizationMiddleware(h.cfg), h.update)
 	r.DELETE("/:id", AuthorizationMiddleware(h.cfg), h.delete)
+	r.GET("/getlist", PaginationMiddleware(h.cfg), h.getAll)
 }
 func (p *ProductHandler) Migrate() {
 	p.productService.Migrate()
@@ -118,4 +120,21 @@ func (p *ProductHandler) delete(c *gin.Context) {
 		return
 	}
 
+}
+
+func (p *ProductHandler) getAll(c *gin.Context){
+	val,res:=c.Get("Pagination")
+	if res == false {
+		zap.L().Error("product.handler.getproducts", zap.Bool("value: ", res))
+		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, os.Getenv("NO_CONTEXT"), nil)))
+		return
+	}
+	pag:=val.(Pagination)
+	product,err:= p.productService.GetAllProductsWithPagination(pag)
+	if err != nil {
+		zap.L().Error("product.handler.getallproductswithpagination", zap.Error(err))
+		c.JSON(ErrorResponse(NewRestError(http.StatusInternalServerError, os.Getenv("PAGINATION_PRODUCTS_FAULT"), nil)))
+		return
+	}
+	c.JSON(http.StatusOK,APIResponse{Code: http.StatusOK, Message: os.Getenv("PRODUCTS_GET_SUCCESS"),Details: NewPage(*product)})
 }

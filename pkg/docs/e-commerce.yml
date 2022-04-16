@@ -238,6 +238,34 @@ paths:
           description: Generic error response
           schema:
             $ref: "#/definitions/ApiResponse"
+  /product/getlist?page=num&pagesize=size:
+    get:
+      tags:
+        - "product"
+      summary: "Get product list"
+      description: "It works for getting product list"
+      operationId: "getProductList"
+      produces:
+        - "application/json"
+      parameters:
+        - name: "page"
+          in: "query"
+          type: "string"
+          required: true
+        - name: "pagesize"
+          in: "query"
+          type: "string"
+          required: true
+      responses:
+        "200":
+          description: "Successful Operation"
+          schema:
+            type: "string"
+            $ref: "#/definitions/Pagination"
+        default:
+          description: Generic error response
+          schema:
+            $ref: "#/definitions/ApiResponse"
     delete:
       tags:
         - "product"
