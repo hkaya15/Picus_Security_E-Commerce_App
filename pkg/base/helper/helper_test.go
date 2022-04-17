@@ -1,13 +1,14 @@
 package helper
 
 import (
+	"net/http"
 	"reflect"
 	"testing"
 
-
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/cart/model"
 	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/category/model"
-
+	. "github.com/hkaya15/PicusSecurity/Final_Project/pkg/app/user/model"
+	"github.com/magiconair/properties/assert"
 )
 
 func TestVerifyEMail(t *testing.T) {
@@ -100,6 +101,27 @@ func TestCheckPasswordHash(t *testing.T) {
 	}
 }
 
+func TestDecodeCookie(t *testing.T) {
+	type args struct {
+		reg  *http.Request
+		user *User
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		{name: "WithUserResultSuccess", args: args{reg: &http.Request{}, user: &User{Id: "1"}}, want: false},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			_, got := DecodeCookie(tt.args.reg, tt.args.user)
+
+			assert.Equal(t, tt.want, got != nil)
+		})
+	}
+}
+
 func Test_contains(t *testing.T) {
 	type args struct {
 		clist CategoryList
@@ -140,16 +162,16 @@ func TestUpdateValues(t *testing.T) {
 		args args
 		want *Cart
 	}{
-		{name: "UpdateWithSameValuesResultSuccess",args: args{
+		{name: "UpdateWithSameValuesResultSuccess", args: args{
 			cart: Cart{UserID: "1"},
 			cartitems: []CartsItem{
 				{TotalPrice: 25},
 				{TotalPrice: 25},
 			},
 		},
-	want: &Cart{UserID: "1",CartTotalPrice: 50, CartLength: 2},},
+			want: &Cart{UserID: "1", CartTotalPrice: 50, CartLength: 2}},
 	}
-	
+
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := UpdateValues(tt.args.cart, tt.args.cartitems); !reflect.DeepEqual(got, tt.want) {
@@ -158,3 +180,48 @@ func TestUpdateValues(t *testing.T) {
 		})
 	}
 }
+
+func TestCompareCategories(t *testing.T) {
+	type args struct {
+		db       *CategoryList
+		uploaded *CategoryList
+	}
+	tests := []struct {
+		name string
+		args args
+		want CategoryList
+	}{
+		{
+			name: "WithDifferentListResultDifference",
+			args: args{db: &CategoryList{
+				Category{CategoryID: "1", CategoryName: "ABC", IconURL: "abc"},
+			},
+				uploaded: &CategoryList{
+					Category{CategoryID: "2", CategoryName: "ABCD", IconURL: "abc"},
+				},
+			},
+			want: []Category{
+				{CategoryID: "2", CategoryName: "ABCD", IconURL: "abc"},
+			},
+		},
+		{
+			name: "WithSameListResultEmpty",
+			args: args{db: &CategoryList{
+				Category{CategoryID: "1", CategoryName: "ABC", IconURL: "abc"},
+			},
+				uploaded: &CategoryList{
+					Category{CategoryID: "2", CategoryName: "ABC", IconURL: "abc"},
+				},
+			},
+			want: nil,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := CompareCategories(tt.args.db, tt.args.uploaded); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("CompareCategories() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
