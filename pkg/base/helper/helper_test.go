@@ -147,12 +147,12 @@ func TestUpdateValues(t *testing.T) {
 				{TotalPrice: 25},
 			},
 		},
-	want: &Cart{CartTotalPrice: 50, CartLength: 2},},
+	want: &Cart{UserID: "1",CartTotalPrice: 50, CartLength: 2},},
 	}
 	
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := UpdateValues(tt.args.cart, tt.args.cartitems); reflect.DeepEqual(got, tt.want) {
+			if got := UpdateValues(tt.args.cart, tt.args.cartitems); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("UpdateValues() = %v, want %v", got, tt.want)
 			}
 		})
