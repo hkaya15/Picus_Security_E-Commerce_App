@@ -10,6 +10,13 @@ type UserRepository struct {
 	db *gorm.DB
 }
 
+type UserRepositoryInterface interface {
+	Save(user *User) (*User, error)
+	Login(email string) (*User,error)
+	CheckUser(user *User) (bool,error)
+	Migrate()
+}
+
 func NewUserRepository(db *gorm.DB) *UserRepository {
 	return &UserRepository{db: db}
 }
