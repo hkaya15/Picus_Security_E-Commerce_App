@@ -5,6 +5,7 @@ go 1.18
 require github.com/google/uuid v1.3.0
 
 require (
+	github.com/DATA-DOG/go-sqlmock v1.5.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/hellofresh/health-go/v4 v4.5.0 // indirect
 	github.com/joho/godotenv v1.4.0 // indirect
