@@ -19,7 +19,7 @@ import (
 )
 
 type UserHandler struct {
-	userService *UserService
+	userService UserServiceInterface
 	cfg         *config.Config
 }
 

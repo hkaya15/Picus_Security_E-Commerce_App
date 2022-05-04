@@ -5,11 +5,14 @@ go 1.18
 require github.com/google/uuid v1.3.0
 
 require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/hellofresh/health-go/v4 v4.5.0 // indirect
 	github.com/joho/godotenv v1.4.0 // indirect
 	github.com/lib/pq v1.10.3 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 	go.opentelemetry.io/otel v1.6.3 // indirect
 	go.opentelemetry.io/otel/trace v1.6.3 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
 
 require (
@@ -63,6 +66,7 @@ require (
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/spf13/viper v1.10.1 // indirect
+	github.com/stretchr/testify v1.7.1
 	github.com/subosito/gotenv v1.2.0 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	go.mongodb.org/mongo-driver v1.9.0 // indirect
